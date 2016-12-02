@@ -30,11 +30,11 @@ https://[your company].slack.com/services/new/incoming-webhook, select a
 channel you would like the messages to be posted to and click on "Add
 Incoming WebHooks Integration" button.
 
-![Step 1](/_images/slack_generate_webhook_url_1.png)
+![Step 1](/etc/slack_generate_webhook_url_1.png)
 
 On the next page you will find an automatically generated webhook URL.
 
-![Step 2](/_images/slack_generate_webhook_url_2.png)
+![Step 2](/etc/slack_generate_webhook_url_2.png)
 
 ### Obtaining Auth Token
 
@@ -54,7 +54,7 @@ go to `Network` tab, filter on `XHR` requests and refresh the page. Find a
 request to `file.list` or a similar endpoint and in the right page, under the
 `Form Data` section you will see auth token your client uses to authenticate.
 
-![Chrome developer console](/_images/slack_obtain_test_auth_token.png)
+![Chrome developer console](/etc/slack_obtain_test_auth_token.png)
 
 ## Sensors
 
