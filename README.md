@@ -49,10 +49,12 @@ This is a lot simpler than going through the whole oAuth flow, but because of
 the obvious security reasons and a temporary natural of the token, you should
 only use that token for testing and debugging
 
-To do that, navigate to your Slack instance, open Chrome developer console,
-go to `Network` tab, filter on `XHR` requests and refresh the page. Find a
-request to `file.list` or a similar endpoint and in the right page, under the
-`Form Data` section you will see auth token your client uses to authenticate.
+To do that, navigate to your Slack instance (e.g. mycompany.slack.com),
+open Chrome developer console, go to `Network` tab, filter on `XHR` requests
+and refresh the page. Find a request to `file.list` or a similar endpoint
+and in the right page, under the `Requests Payload` section you will see
+an item identified as `Content-Disposition: form-data; name="token"`.  This
+will contain the token that your client uses to authenticate.
 
 ![Chrome developer console](/etc/slack_obtain_test_auth_token.png)
 
