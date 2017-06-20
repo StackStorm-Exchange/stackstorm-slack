@@ -23,6 +23,10 @@ to `/opt/stackstorm/configs/slack.yaml` and edit as required.
   channels, and usernames. This option removes formatting and only returns the raw
   data from the client (URL only today)
 
+**Note** : When modifying the configuration in `/opt/stackstorm/configs/` please
+           remember to tell StackStorm to load these new values by running
+           `st2ctl reload --register-configs`
+
 ### Obtaining a Webhook URL
 
 To configure a webhook and obtain a URL, go to

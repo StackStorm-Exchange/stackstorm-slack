@@ -47,7 +47,7 @@ for method in method_dict:
 
     file_name = 'actions/%s.yaml' % method
     output_dict = {'name': method,
-                   'runner_type': 'run-python',
+                   'runner_type': 'python-script',
                    'enabled': True,
                    'entry_point': 'run.py',
                    'description': method_dict[method]['description'],
