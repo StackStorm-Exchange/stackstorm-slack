@@ -1,6 +1,6 @@
 ---
   name: "post_message"
-  runner_type: "run-python"
+  runner_type: "python-script"
   description: "Post a message to the Slack channel."
   enabled: true
   entry_point: "post_message.py"

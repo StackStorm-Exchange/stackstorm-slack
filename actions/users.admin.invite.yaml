@@ -1,6 +1,6 @@
 ---
   name: "users.admin.invite"
-  runner_type: "run-python"
+  runner_type: "python-script"
   description: "Send an invitation to join a Slack Org"
   enabled: true
   entry_point: "send_invite.py"
