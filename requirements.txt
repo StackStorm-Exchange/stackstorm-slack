@@ -1,3 +1,6 @@
 requests>=2.5.0,<2.6
 websocket-client
+beautifulsoup4
+lxml
+jinja2
 -e git+https://github.com/Kami/python-slackclient.git@stackstorm_patched#egg=slackclient
