@@ -6,7 +6,7 @@ import requests
 
 env = Environment(loader=FileSystemLoader('.'))
 
-template = env.get_template('template.yaml')
+template = env.get_template('template.jinja')
 
 # TODO: Scrape list of methods from https://api.slack.com/methods
 # For now, just hardcode the list.
