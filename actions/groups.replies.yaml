@@ -1,0 +1,19 @@
+description: This method returns an entire thread (a message plus all the messages in reply to it).
+enabled: true
+entry_point: run.py
+name: groups.replies
+parameters:
+  end_point:
+    default: groups.replies
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  thread_ts:
+    required: true
+    type: string
+runner_type: python-script

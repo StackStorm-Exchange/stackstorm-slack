@@ -1,0 +1,29 @@
+description: This method removes a reaction (emoji) from an item (file, file comment, channel message, group message, or direct message).
+  One of file, file_comment, or the combination of channel and timestamp must be specified.
+enabled: true
+entry_point: run.py
+name: reactions.remove
+parameters:
+  end_point:
+    default: reactions.remove
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  name:
+    required: true
+    type: string
+  channel:
+    required: false
+    type: string
+  file:
+    required: false
+    type: string
+  file_comment:
+    required: false
+    type: string
+  timestamp:
+    required: false
+    type: string
+runner_type: python-script

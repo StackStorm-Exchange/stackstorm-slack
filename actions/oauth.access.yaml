@@ -1,9 +1,13 @@
-description: This method allows you to exchange a temporary OAuth code for an API
-  access token. This is used as part of the OAuth authentication flow.
+description: This method allows you to exchange a temporary OAuth code for an API access token.
+  This is used as part of the OAuth authentication flow.
 enabled: true
 entry_point: run.py
 name: oauth.access
 parameters:
+  end_point:
+    default: oauth.access
+    immutable: true
+    type: string
   client_id:
     required: true
     type: string
@@ -12,10 +16,6 @@ parameters:
     type: string
   code:
     required: true
-    type: string
-  end_point:
-    default: oauth.access
-    immutable: true
     type: string
   redirect_uri:
     required: false

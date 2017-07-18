@@ -1,0 +1,13 @@
+description: This method lists all reminders created by or for a given user.
+enabled: true
+entry_point: run.py
+name: reminders.list
+parameters:
+  end_point:
+    default: reminders.list
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+runner_type: python-script

@@ -1,0 +1,28 @@
+description: This method is used to create a User Group.
+enabled: true
+entry_point: run.py
+name: usergroups.create
+parameters:
+  end_point:
+    default: usergroups.create
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  name:
+    required: true
+    type: string
+  channels:
+    required: false
+    type: string
+  description:
+    required: false
+    type: string
+  handle:
+    required: false
+    type: string
+  include_count:
+    required: false
+    type: string
+runner_type: python-script

@@ -1,5 +1,5 @@
-description: This method is used to join a channel. If the channel does not exist,
-  it is created.
+description: This method is used to join a channel. If the channel does not exist, it is
+  created.
 enabled: true
 entry_point: run.py
 name: channels.join
@@ -8,10 +8,13 @@ parameters:
     default: channels.join
     immutable: true
     type: string
+  token:
+    required: false
+    type: string
   name:
     required: true
     type: string
-  token:
+  validate:
     required: false
     type: string
 runner_type: python-script

@@ -1,0 +1,19 @@
+description: This method returns a list of all users within a User Group.
+enabled: true
+entry_point: run.py
+name: usergroups.users.list
+parameters:
+  end_point:
+    default: usergroups.users.list
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  usergroup:
+    required: true
+    type: string
+  include_disabled:
+    required: false
+    type: string
+runner_type: python-script

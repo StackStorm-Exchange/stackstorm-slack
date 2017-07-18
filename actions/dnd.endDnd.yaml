@@ -1,0 +1,13 @@
+description: Ends the user's currently scheduled Do Not Disturb session immediately.
+enabled: true
+entry_point: run.py
+name: dnd.endDnd
+parameters:
+  end_point:
+    default: dnd.endDnd
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+runner_type: python-script

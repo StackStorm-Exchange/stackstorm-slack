@@ -1,6 +1,5 @@
-description: This method returns a list of groups in the team that the caller is in
-  and archived groups that the caller was in. The list of (non-deactivated) members
-  in each group is also returned.
+description: This method returns a list of private channels in the team that the caller is in and archived groups that the caller was in.
+  The list of (non-deactivated) members in each private channel is also returned.
 enabled: true
 entry_point: run.py
 name: groups.list
@@ -9,11 +8,15 @@ parameters:
     default: groups.list
     immutable: true
     type: string
-  exclude_archived:
-    default: '0'
-    required: false
-    type: string
   token:
     required: false
+    type: string
+  exclude_archived:
+    required: false
+    default: '0'
+    type: string
+  exclude_members:
+    required: false
+    default: false
     type: string
 runner_type: python-script

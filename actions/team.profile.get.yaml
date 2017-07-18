@@ -1,0 +1,16 @@
+description: This method is used to get the profile field definitions for this team.
+enabled: true
+entry_point: run.py
+name: team.profile.get
+parameters:
+  end_point:
+    default: team.profile.get
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  visibility:
+    required: false
+    type: string
+runner_type: python-script

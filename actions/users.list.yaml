@@ -1,5 +1,4 @@
-description: This method returns a list of all users in the team. This includes deleted/deactivated
-  users.
+description: This method returns a list of all users in the team. This includes deleted/deactivated users.
 enabled: true
 entry_point: run.py
 name: users.list
@@ -9,6 +8,16 @@ parameters:
     immutable: true
     type: string
   token:
+    required: false
+    type: string
+  cursor:
+    required: false
+    type: string
+  limit:
+    required: false
+    default: '0'
+    type: string
+  presence:
     required: false
     type: string
 runner_type: python-script

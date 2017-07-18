@@ -7,10 +7,13 @@ parameters:
     default: channels.create
     immutable: true
     type: string
+  token:
+    required: false
+    type: string
   name:
     required: true
     type: string
-  token:
+  validate:
     required: false
     type: string
 runner_type: python-script

@@ -1,0 +1,25 @@
+description: Use this method to set a user's profile information, including name, email, current status, and other attributes.
+enabled: true
+entry_point: run.py
+name: users.profile.set
+parameters:
+  end_point:
+    default: users.profile.set
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  name:
+    required: false
+    type: string
+  profile:
+    required: false
+    type: string
+  user:
+    required: false
+    type: string
+  value:
+    required: false
+    type: string
+runner_type: python-script

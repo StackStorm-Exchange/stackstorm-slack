@@ -1,0 +1,19 @@
+description: This method moves the read cursor in a multiparty direct message channel.
+enabled: true
+entry_point: run.py
+name: mpim.mark
+parameters:
+  end_point:
+    default: mpim.mark
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  ts:
+    required: true
+    type: string
+runner_type: python-script

@@ -1,20 +1,26 @@
-description: This method posts a message to a channel.
+description: This method posts a message to a public channel, private channel, or direct message/IM channel.
 enabled: true
 entry_point: run.py
 name: chat.postMessage
 parameters:
-  as_user:
-    required: false
+  end_point:
+    default: chat.postMessage
+    immutable: true
     type: string
-  attachments:
+  token:
     required: false
     type: string
   channel:
     required: true
     type: string
-  end_point:
-    default: chat.postMessage
-    immutable: true
+  text:
+    required: true
+    type: string
+  as_user:
+    required: false
+    type: string
+  attachments:
+    required: false
     type: string
   icon_emoji:
     required: false
@@ -28,10 +34,10 @@ parameters:
   parse:
     required: false
     type: string
-  text:
-    required: true
+  reply_broadcast:
+    required: false
     type: string
-  token:
+  thread_ts:
     required: false
     type: string
   unfurl_links:
