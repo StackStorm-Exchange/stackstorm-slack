@@ -1,4 +1,4 @@
-description: This method takes an existing private channel and performs the following steps
+description: This method takes an existing private channel and performs the following steps-
 enabled: true
 entry_point: run.py
 name: groups.createChild
