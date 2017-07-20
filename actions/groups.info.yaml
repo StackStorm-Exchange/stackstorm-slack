@@ -1,16 +1,16 @@
-description: This method returns information about a private group.
+description: This method returns information about a private channel.
 enabled: true
 entry_point: run.py
 name: groups.info
 parameters:
-  channel:
-    required: true
-    type: string
   end_point:
     default: groups.info
     immutable: true
     type: string
   token:
     required: false
+    type: string
+  channel:
+    required: true
     type: string
 runner_type: python-script

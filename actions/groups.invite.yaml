@@ -1,18 +1,17 @@
-description: This method is used to invite a user to a private group. The calling
-  user must be a member of the group.
+description: This method is used to invite a user to a private channel. The calling user must be a member of the private channel.
 enabled: true
 entry_point: run.py
 name: groups.invite
 parameters:
-  channel:
-    required: true
-    type: string
   end_point:
     default: groups.invite
     immutable: true
     type: string
   token:
     required: false
+    type: string
+  channel:
+    required: true
     type: string
   user:
     required: true

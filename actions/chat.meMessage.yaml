@@ -1,0 +1,19 @@
+description: This method sends a me message to a channel from the calling user.
+enabled: true
+entry_point: run.py
+name: chat.meMessage
+parameters:
+  end_point:
+    default: chat.meMessage
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  text:
+    required: true
+    type: string
+runner_type: python-script

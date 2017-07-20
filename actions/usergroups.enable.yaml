@@ -1,0 +1,19 @@
+description: This method enables a User Group which was previously disabled.
+enabled: true
+entry_point: run.py
+name: usergroups.enable
+parameters:
+  end_point:
+    default: usergroups.enable
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  usergroup:
+    required: true
+    type: string
+  include_count:
+    required: false
+    type: string
+runner_type: python-script

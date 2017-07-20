@@ -1,0 +1,16 @@
+description: This method returns information about a bot user.
+enabled: true
+entry_point: run.py
+name: bots.info
+parameters:
+  end_point:
+    default: bots.info
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  bot:
+    required: false
+    type: string
+runner_type: python-script

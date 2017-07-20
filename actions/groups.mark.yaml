@@ -1,17 +1,17 @@
-description: This method moves the read cursor in a private group.
+description: This method moves the read cursor in a private channel.
 enabled: true
 entry_point: run.py
 name: groups.mark
 parameters:
-  channel:
-    required: true
-    type: string
   end_point:
     default: groups.mark
     immutable: true
     type: string
   token:
     required: false
+    type: string
+  channel:
+    required: true
     type: string
   ts:
     required: true

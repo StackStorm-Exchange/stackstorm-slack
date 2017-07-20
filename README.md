@@ -97,5 +97,116 @@ Example trigger payload:
 
 ## Actions
 
-* ``post_message`` - Action which posts a message to the channel using an
-  incoming webhook.
+The following two actions are provided by the Slack pack.
+
+* ``post_message`` - Post a message to the specified channel using an incoming webhook.
+* ``users.admin.invite`` - Send an invitation to join a Slack Org.
+
+All other actions are as documented on the [Slack API Methods](https://api.slack.com/methods) page.
+
+Let's consider the [chat.postMessage](https://api.slack.com/methods/chat.postMessage)
+method. You'll notice that it lists 14 parameters. Three of the 14 parameters are required, and
+the remainder are optional.
+
+You can also list the actions available in st2 using `st2 action list -p slack`, and get help on
+each action using `st2 action get slack.<action>`, where `<action>` is the name of an action. Given
+our above example action:
+
+```
+root@c603fc2f139a:/opt/stackstorm/packs.dev/slack# st2 action list -p slack
++-------------------------------+-------+--------------------------------------------------------------+
+| ref                           | pack  | description                                                  |
++-------------------------------+-------+--------------------------------------------------------------+
+...
+| slack.chat.meMessage          | slack | This method sends a me message to a channel from the calling |
+|                               |       | user.                                                        |
+| slack.chat.postMessage        | slack | This method posts a message to a public channel, private     |
+|                               |       | channel, or direct message/IM channel.                       |
+| slack.chat.unfurl             | slack | This method attaches Slack app unfurl behavior to a          |
+|                               |       | specified and relevant message.                              |
+...
++-------------------------------+-------+--------------------------------------------------------------+
+root@c603fc2f139a:/opt/stackstorm/packs.dev/slack# st2 action get slack.chat.postMessage
++-------------+--------------------------------------------------------------+
+| Property    | Value                                                        |
++-------------+--------------------------------------------------------------+
+| id          | 596d3f26cf8580020317b9ca                                     |
+| uid         | action:slack:chat.postMessage                                |
+| ref         | slack.chat.postMessage                                       |
+| pack        | slack                                                        |
+| name        | chat.postMessage                                             |
+| description | This method posts a message to a public channel, private     |
+|             | channel, or direct message/IM channel.                       |
+| enabled     | True                                                         |
+| entry_point | run.py                                                       |
+| runner_type | python-script                                                |
+| parameters  | {                                                            |
+|             |     "username": {                                            |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "thread_ts": {                                           |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "attachments": {                                         |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "unfurl_links": {                                        |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "end_point": {                                           |
+|             |         "default": "chat.postMessage",                       |
+|             |         "type": "string",                                    |
+|             |         "immutable": true                                    |
+|             |     },                                                       |
+|             |     "link_names": {                                          |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "unfurl_media": {                                        |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "parse": {                                               |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "token": {                                               |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "text": {                                                |
+|             |         "required": true,                                    |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "icon_emoji": {                                          |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "as_user": {                                             |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "icon_url": {                                            |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "channel": {                                             |
+|             |         "required": true,                                    |
+|             |         "type": "string"                                     |
+|             |     },                                                       |
+|             |     "reply_broadcast": {                                     |
+|             |         "required": false,                                   |
+|             |         "type": "string"                                     |
+|             |     }                                                        |
+|             | }                                                            |
+| notify      |                                                              |
+| tags        |                                                              |
++-------------+--------------------------------------------------------------+
+```
+
+Notice how there are 15 parameters. The extra one is "end_point", which is used by run.py
+to construct the end point URL.

@@ -3,15 +3,15 @@ enabled: true
 entry_point: run.py
 name: channels.mark
 parameters:
-  channel:
-    required: true
-    type: string
   end_point:
     default: channels.mark
     immutable: true
     type: string
   token:
     required: false
+    type: string
+  channel:
+    required: true
     type: string
   ts:
     required: true

@@ -1,20 +1,19 @@
-description: This method is used to change the purpose of a channel. The calling user
-  must be a member of the channel.
+description: This method is used to change the purpose of a channel. The calling user must be a member of the channel.
 enabled: true
 entry_point: run.py
 name: channels.setPurpose
 parameters:
-  channel:
-    required: true
-    type: string
   end_point:
     default: channels.setPurpose
     immutable: true
     type: string
-  purpose:
-    required: true
-    type: string
   token:
     required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  purpose:
+    required: true
     type: string
 runner_type: python-script

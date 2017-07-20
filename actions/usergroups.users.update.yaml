@@ -1,0 +1,22 @@
+description: This method updates the list of users that belong to a User Group. This method replaces all users in a User Group with the list of users provided in the users parameter.
+enabled: true
+entry_point: run.py
+name: usergroups.users.update
+parameters:
+  end_point:
+    default: usergroups.users.update
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  usergroup:
+    required: true
+    type: string
+  users:
+    required: true
+    type: string
+  include_count:
+    required: false
+    type: string
+runner_type: python-script

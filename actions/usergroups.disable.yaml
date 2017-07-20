@@ -1,0 +1,19 @@
+description: This method disables an existing User Group.
+enabled: true
+entry_point: run.py
+name: usergroups.disable
+parameters:
+  end_point:
+    default: usergroups.disable
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  usergroup:
+    required: true
+    type: string
+  include_count:
+    required: false
+    type: string
+runner_type: python-script

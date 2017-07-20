@@ -1,0 +1,26 @@
+description: This method removes a star from an item (message, file, file comment, channel, private group, or DM) on behalf of the authenticated user.
+  One of file, file_comment, channel, or the combination of channel and timestamp must be specified.
+enabled: true
+entry_point: run.py
+name: stars.remove
+parameters:
+  end_point:
+    default: stars.remove
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: false
+    type: string
+  file:
+    required: false
+    type: string
+  file_comment:
+    required: false
+    type: string
+  timestamp:
+    required: false
+    type: string
+runner_type: python-script

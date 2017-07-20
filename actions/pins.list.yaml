@@ -1,0 +1,16 @@
+description: This method lists the items pinned to a channel.
+enabled: true
+entry_point: run.py
+name: pins.list
+parameters:
+  end_point:
+    default: pins.list
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+runner_type: python-script

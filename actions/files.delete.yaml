@@ -7,10 +7,10 @@ parameters:
     default: files.delete
     immutable: true
     type: string
-  file:
-    required: true
-    type: string
   token:
     required: false
+    type: string
+  file:
+    required: true
     type: string
 runner_type: python-script

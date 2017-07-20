@@ -1,0 +1,20 @@
+description: Use this method to retrieve a user's profile information.
+enabled: true
+entry_point: run.py
+name: users.profile.get
+parameters:
+  end_point:
+    default: users.profile.get
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  include_labels:
+    required: false
+    default: false
+    type: string
+  user:
+    required: false
+    type: string
+runner_type: python-script

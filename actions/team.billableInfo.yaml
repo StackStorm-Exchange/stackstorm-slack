@@ -1,0 +1,17 @@
+description: This method lists billable information for each user on the team. Currently this consists solely of whether the user is
+  subject to billing per Slack's Fair Billing policy.
+enabled: true
+entry_point: run.py
+name: team.billableInfo
+parameters:
+  end_point:
+    default: team.billableInfo
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  user:
+    required: false
+    type: string
+runner_type: python-script

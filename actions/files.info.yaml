@@ -3,22 +3,22 @@ enabled: true
 entry_point: run.py
 name: files.info
 parameters:
-  count:
-    default: '100'
-    required: false
-    type: string
   end_point:
     default: files.info
     immutable: true
     type: string
+  token:
+    required: false
+    type: string
   file:
     required: true
     type: string
-  page:
-    default: '1'
+  count:
     required: false
+    default: '100'
     type: string
-  token:
+  page:
     required: false
+    default: '1'
     type: string
 runner_type: python-script

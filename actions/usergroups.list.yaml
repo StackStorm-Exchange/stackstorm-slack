@@ -1,0 +1,22 @@
+description: This method returns a list of all User Groups in the team. This can optionally include disabled User Groups.
+enabled: true
+entry_point: run.py
+name: usergroups.list
+parameters:
+  end_point:
+    default: usergroups.list
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  include_count:
+    required: false
+    type: string
+  include_disabled:
+    required: false
+    type: string
+  include_users:
+    required: false
+    type: string
+runner_type: python-script

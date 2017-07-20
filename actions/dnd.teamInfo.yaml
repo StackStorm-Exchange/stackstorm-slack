@@ -1,0 +1,16 @@
+description: Provides information about the current Do Not Disturb settings for users of a Slack team.
+enabled: true
+entry_point: run.py
+name: dnd.teamInfo
+parameters:
+  end_point:
+    default: dnd.teamInfo
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  users:
+    required: false
+    type: string
+runner_type: python-script

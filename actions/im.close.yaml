@@ -3,14 +3,14 @@ enabled: true
 entry_point: run.py
 name: im.close
 parameters:
-  channel:
-    required: true
-    type: string
   end_point:
     default: im.close
     immutable: true
     type: string
   token:
     required: false
+    type: string
+  channel:
+    required: true
     type: string
 runner_type: python-script

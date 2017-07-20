@@ -1,0 +1,26 @@
+description: This method pins an item (file, file comment, channel message, or group message) to a particular channel.
+  The channel argument is required and one of file, file_comment, or timestamp must also be specified.
+enabled: true
+entry_point: run.py
+name: pins.add
+parameters:
+  end_point:
+    default: pins.add
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  file:
+    required: false
+    type: string
+  file_comment:
+    required: false
+    type: string
+  timestamp:
+    required: false
+    type: string
+runner_type: python-script

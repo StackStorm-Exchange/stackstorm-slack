@@ -1,0 +1,16 @@
+description: This method disables public/external sharing for a file.
+enabled: true
+entry_point: run.py
+name: files.revokePublicURL
+parameters:
+  end_point:
+    default: files.revokePublicURL
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  file:
+    required: true
+    type: string
+runner_type: python-script
