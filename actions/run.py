@@ -23,6 +23,10 @@ class SlackAction(Action):
         headers = {}
         headers['Content-Type'] = 'application/x-www-form-urlencoded'
 
+        for key in params.keys():
+            if params[key] is None:
+                del params[key]
+
         data = urllib.urlencode(params)
         self.logger.info(data)
         response = requests.get(url=url,
