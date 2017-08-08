@@ -28,7 +28,7 @@ class SlackAction(Action):
                 del params[key]
 
         data = urllib.urlencode(params)
-        self.logger.info(data)
+
         response = requests.get(url=url,
                                 headers=headers, params=data)
 
