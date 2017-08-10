@@ -43,7 +43,7 @@
   action_token:
     description: "Slack Action token."
     type: "string"
-    required: true
+    required: false
     secret: true
   admin:
     description: "Admin-action specific settings."
