@@ -26,3 +26,7 @@
       description: "Disable formatting, don't parse the message and treat it as raw text"
       required: false
       default: false
+    webhook_url:
+      type: "string"
+      description: "Optional Webhook url"
+      required: false
