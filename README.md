@@ -121,7 +121,8 @@ root@c603fc2f139a:/opt/stackstorm/packs.dev/slack# st2 action list -p slack
 | slack.chat.meMessage          | slack | This method sends a me message to a channel from the calling |
 |                               |       | user.                                                        |
 | slack.chat.postMessage        | slack | This method posts a message to a public channel, private     |
-|                               |       | channel, or direct message/IM channel.                       |
+|                               |       | channel, or direct message/IM channel (Allows posting to any |
+|                               |       | slack channel using the unique webhook url).                       |
 | slack.chat.unfurl             | slack | This method attaches Slack app unfurl behavior to a          |
 |                               |       | specified and relevant message.                              |
 ...
