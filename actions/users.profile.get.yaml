@@ -1,4 +1,4 @@
-description: Use this method to retrieve a user's profile information.
+description: "Use this method to retrieve a user's profile information."
 enabled: true
 entry_point: run.py
 name: users.profile.get
@@ -13,7 +13,7 @@ parameters:
   include_labels:
     required: false
     default: false
-    type: string
+    type: boolean
   user:
     required: false
     type: string

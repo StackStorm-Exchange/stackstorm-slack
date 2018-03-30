@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.6.4
+
+- Fixed `include_labels` parameter type for `users.profile.get` action.
+
 # 0.6.2
 
 - Remove required flag from `action_token` since other sections could be configured without relying on it.
