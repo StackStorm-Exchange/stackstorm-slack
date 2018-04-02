@@ -51,7 +51,6 @@ methods = [
     'files.sharedPublicURL',
     'files.upload',
     'groups.archive',
-    'groups.close',
     'groups.create',
     'groups.createChild',
     'groups.history',
