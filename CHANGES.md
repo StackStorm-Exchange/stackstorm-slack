@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.6.5
+
+- Remove `groups.close` action that is no longer available among Slack API methods.
+
 # 0.6.2
 
 - Remove required flag from `action_token` since other sections could be configured without relying on it.
