@@ -1,5 +1,10 @@
 # Change Log
 
+# 0.7.0
+
+- Enforce default values to be a string type in YAML action definitions.
+- Update actions according to latest Slack API changes.
+
 # 0.6.5
 
 - Remove `groups.close` action that is no longer available among Slack API methods.

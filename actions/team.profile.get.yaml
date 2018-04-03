@@ -1,4 +1,4 @@
-description: This method is used to get the profile field definitions for this team.
+description: "Retrieve a team's profile."
 enabled: true
 entry_point: run.py
 name: team.profile.get

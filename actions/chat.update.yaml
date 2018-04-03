@@ -1,4 +1,4 @@
-description: This method updates a message in a channel. Though related to chat.postMessage, some parameters of chat.update are handled differently.
+description: "Updates a message."
 enabled: true
 entry_point: run.py
 name: chat.update

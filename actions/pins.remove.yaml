@@ -1,5 +1,4 @@
-description: This method un-pins an item (file, file comment, channel message, or group message) from a channel.
-  The channel argument is required and one of file, file_comment, or timestamp must also be specified.
+description: "Un-pins an item from a channel."
 enabled: true
 entry_point: run.py
 name: pins.remove

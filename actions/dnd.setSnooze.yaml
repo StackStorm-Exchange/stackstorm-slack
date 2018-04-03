@@ -1,4 +1,4 @@
-description: Adjusts the snooze duration for a user's Do Not Disturb settings. If a snooze session is not already active for the user, invoking this method will begin one for the specified duration.
+description: "Turns on Do Not Disturb mode for the current user, or changes its duration."
 enabled: true
 entry_point: run.py
 name: dnd.setSnooze

@@ -1,4 +1,4 @@
-description: This method returns a portion of message events from the specified public channel.
+description: "Fetches history of messages and events from a channel."
 enabled: true
 entry_point: run.py
 name: channels.history
@@ -15,22 +15,22 @@ parameters:
     type: string
   count:
     required: false
-    default: '100'
+    default: "100"
     type: string
   inclusive:
     required: false
-    default: '0'
+    default: "0"
     type: string
   latest:
     required: false
-    default: now
+    default: "now"
     type: string
   oldest:
     required: false
-    default: '0'
+    default: "0"
     type: string
   unreads:
     required: false
-    default: '0'
+    default: "0"
     type: string
 runner_type: python-script

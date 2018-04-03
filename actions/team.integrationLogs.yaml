@@ -1,4 +1,4 @@
-description: This method lists the integration activity logs for a team, including when integrations are added, modified and removed. This method can only be called by Admins.
+description: "Gets the integration logs for the current team."
 enabled: true
 entry_point: run.py
 name: team.integrationLogs
@@ -18,11 +18,11 @@ parameters:
     type: string
   count:
     required: false
-    default: '100'
+    default: "100"
     type: string
   page:
     required: false
-    default: '1'
+    default: "1"
     type: string
   service_id:
     required: false

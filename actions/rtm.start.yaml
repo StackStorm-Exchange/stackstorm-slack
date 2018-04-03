@@ -1,4 +1,4 @@
-description: This method begins a Real Time Messaging API session and reserves your application a specific URL with which to connect via websocket.
+description: "Starts a Real Time Messaging session."
 enabled: true
 entry_point: run.py
 name: rtm.start
@@ -12,21 +12,24 @@ parameters:
     type: string
   batch_presence_aware:
     required: false
-    default: false
+    default: "false"
+    type: string
+  include_locale:
+    required: false
     type: string
   mpim_aware:
     required: false
     type: string
   no_latest:
     required: false
-    default: '0'
+    default: "0"
     type: string
   no_unreads:
     required: false
     type: string
   presence_sub:
     required: false
-    default: false
+    default: "true"
     type: string
   simple_latest:
     required: false

@@ -139,13 +139,9 @@ for method in methods:
             name = cols[0].text
 
             default = ""
-            m = re.match(r'.*default=(\d+)$', cols[2].text, re.M | re.I)
+            m = re.match(r'.*default=(.+)$', cols[2].text, re.M | re.I)
             if m:
-                default = "'" + m.group(1) + "'"
-            else:
-                m = re.match(r'.*default=(.+)$', cols[2].text, re.M | re.I)
-                if m:
-                    default = m.group(1)
+                default = m.group(1)
 
             req = "false"
             if "Required" in cols[2].text:

@@ -1,4 +1,4 @@
-description: This method posts a message to a public channel, private channel, or direct message/IM channel.
+description: "Sends a message to a channel."
 enabled: true
 entry_point: run.py
 name: chat.postMessage
@@ -30,6 +30,10 @@ parameters:
     type: string
   link_names:
     required: false
+    type: string
+  mrkdwn:
+    required: false
+    default: "true"
     type: string
   parse:
     required: false

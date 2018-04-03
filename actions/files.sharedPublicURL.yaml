@@ -1,4 +1,4 @@
-description: This method enables public/external sharing for a file.
+description: "Enables a file for public/external sharing."
 enabled: true
 entry_point: run.py
 name: files.sharedPublicURL

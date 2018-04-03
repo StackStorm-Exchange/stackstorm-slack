@@ -1,4 +1,4 @@
-description: This method returns a list of files within the team. It can be filtered and sliced in various ways.
+description: "Lists & filters team files."
 enabled: true
 entry_point: run.py
 name: files.list
@@ -15,23 +15,23 @@ parameters:
     type: string
   count:
     required: false
-    default: '100'
+    default: "100"
     type: string
   page:
     required: false
-    default: '1'
+    default: "1"
     type: string
   ts_from:
     required: false
-    default: '0'
+    default: "0"
     type: string
   ts_to:
     required: false
-    default: now
+    default: "now"
     type: string
   types:
     required: false
-    default: all
+    default: "all"
     type: string
   user:
     required: false

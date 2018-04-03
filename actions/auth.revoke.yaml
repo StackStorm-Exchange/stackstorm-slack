@@ -1,4 +1,4 @@
-description: This method revokes an access token. Use it when you no longer need a token. For example, with a Sign In With Slack app, call this to log a user out.
+description: "Revokes a token."
 enabled: true
 entry_point: run.py
 name: auth.revoke

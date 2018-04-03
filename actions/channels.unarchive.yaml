@@ -1,4 +1,4 @@
-description: This method unarchives a channel. The calling user is added to the channel.
+description: "Unarchives a channel."
 enabled: true
 entry_point: run.py
 name: channels.unarchive

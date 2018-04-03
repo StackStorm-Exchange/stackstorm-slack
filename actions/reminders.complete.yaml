@@ -1,4 +1,4 @@
-description: This method completes a reminder.
+description: "Marks a reminder as complete."
 enabled: true
 entry_point: run.py
 name: reminders.complete

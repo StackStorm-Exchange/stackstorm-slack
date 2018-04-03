@@ -1,4 +1,4 @@
-description: This method returns files matching a search query.
+description: "Searches for files matching a query."
 enabled: true
 entry_point: run.py
 name: search.files
@@ -15,21 +15,21 @@ parameters:
     type: string
   count:
     required: false
-    default: '20'
+    default: "20"
     type: string
   highlight:
     required: false
     type: string
   page:
     required: false
-    default: '1'
+    default: "1"
     type: string
   sort:
     required: false
-    default: score
+    default: "score"
     type: string
   sort_dir:
     required: false
-    default: desc
+    default: "desc"
     type: string
 runner_type: python-script

@@ -1,4 +1,4 @@
-description: This method updates the properties of an existing User Group.
+description: "Update an existing User Group"
 enabled: true
 entry_point: run.py
 name: usergroups.update
