@@ -1,4 +1,4 @@
-description: This method deletes a message from a channel.
+description: "Deletes a message."
 enabled: true
 entry_point: run.py
 name: chat.delete

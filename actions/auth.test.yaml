@@ -1,4 +1,4 @@
-description: This method checks authentication and tells you who you are.
+description: "Checks authentication & identity."
 enabled: true
 entry_point: run.py
 name: auth.test

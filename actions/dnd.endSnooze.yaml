@@ -1,4 +1,4 @@
-description: Ends the current user's snooze mode immediately.
+description: "Ends the current user's snooze mode immediately."
 enabled: true
 entry_point: run.py
 name: dnd.endSnooze

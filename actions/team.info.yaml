@@ -1,4 +1,4 @@
-description: This method provides information about your team.
+description: "Gets information about the current team."
 enabled: true
 entry_point: run.py
 name: team.info

@@ -1,4 +1,4 @@
-description: This method opens a multiparty direct message.
+description: "This method opens a multiparty direct message."
 enabled: true
 entry_point: run.py
 name: mpim.open

@@ -1,4 +1,4 @@
-description: This method attaches Slack app unfurl behavior to a specified and relevant message. A user token is required as this method does not support bot user tokens.
+description: "Provide custom unfurl behavior for user-posted URLs"
 enabled: true
 entry_point: run.py
 name: chat.unfurl
@@ -19,8 +19,14 @@ parameters:
   unfurls:
     required: true
     type: string
+  user_auth_message:
+    required: false
+    type: string
   user_auth_required:
     required: false
-    default: '0'
+    default: "0"
+    type: string
+  user_auth_url:
+    required: false
     type: string
 runner_type: python-script

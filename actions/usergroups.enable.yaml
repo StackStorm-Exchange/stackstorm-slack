@@ -1,4 +1,4 @@
-description: This method enables a User Group which was previously disabled.
+description: "Enable a User Group"
 enabled: true
 entry_point: run.py
 name: usergroups.enable

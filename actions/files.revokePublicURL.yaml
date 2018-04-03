@@ -1,4 +1,4 @@
-description: This method disables public/external sharing for a file.
+description: "Revokes public/external sharing access for a file"
 enabled: true
 entry_point: run.py
 name: files.revokePublicURL

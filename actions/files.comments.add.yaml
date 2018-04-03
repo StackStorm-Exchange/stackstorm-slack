@@ -1,4 +1,4 @@
-description: Add a comment to an existing file.
+description: "Add a comment to an existing file."
 enabled: true
 entry_point: run.py
 name: files.comments.add

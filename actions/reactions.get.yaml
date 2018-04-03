@@ -1,4 +1,4 @@
-description: This method returns a list of all reactions for a single item (file, file comment, channel message, group message, or direct message).
+description: "Gets reactions for an item."
 enabled: true
 entry_point: run.py
 name: reactions.get

@@ -1,4 +1,4 @@
-description: This method creates a reminder.
+description: "Creates a reminder."
 enabled: true
 entry_point: run.py
 name: reminders.add

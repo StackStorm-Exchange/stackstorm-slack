@@ -1,4 +1,4 @@
-description: Ends the user's currently scheduled Do Not Disturb session immediately.
+description: "Ends the current user's Do Not Disturb session immediately."
 enabled: true
 entry_point: run.py
 name: dnd.endDnd

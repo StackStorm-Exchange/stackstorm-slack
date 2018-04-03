@@ -1,4 +1,4 @@
-description: This method returns information about a bot user.
+description: "Gets information about a bot user."
 enabled: true
 entry_point: run.py
 name: bots.info

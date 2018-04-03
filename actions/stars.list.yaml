@@ -1,4 +1,4 @@
-description: This method lists the items starred by the authed user.
+description: "Lists stars for a user."
 enabled: true
 entry_point: run.py
 name: stars.list
@@ -12,10 +12,10 @@ parameters:
     type: string
   count:
     required: false
-    default: '100'
+    default: "100"
     type: string
   page:
     required: false
-    default: '1'
+    default: "1"
     type: string
 runner_type: python-script

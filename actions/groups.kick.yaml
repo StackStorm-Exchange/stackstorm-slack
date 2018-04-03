@@ -1,4 +1,4 @@
-description: This method allows a user to remove another member from a private channel.
+description: "Removes a user from a private channel."
 enabled: true
 entry_point: run.py
 name: groups.kick

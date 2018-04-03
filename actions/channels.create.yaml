@@ -1,4 +1,4 @@
-description: This method is used to create a channel.
+description: "Creates a channel."
 enabled: true
 entry_point: run.py
 name: channels.create
