@@ -1,4 +1,4 @@
-description: {{ description | indent(2, false) | replace(":", "-") }}
+description: "{{ description }}"
 enabled: true
 entry_point: run.py
 name: {{ method }}
@@ -6,9 +6,13 @@ parameters:
   end_point:
     default: {{ method }}
     immutable: true
-    type: string{% for name, default, required in parameters %}
+    type: string
+  {%- for name, default, required in parameters %}
   {{ name }}:
-    required: {{ required }}{% if default != "" %}
-    default: {{ default }}{% endif %}
-    type: string{% endfor %}
+    required: {{ required }}
+    {%- if default %}
+    default: "{{ default }}"
+    {%- endif %}
+    type: string
+  {%- endfor %}
 runner_type: python-script
