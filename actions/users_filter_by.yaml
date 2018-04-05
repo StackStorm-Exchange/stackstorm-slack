@@ -1,0 +1,21 @@
+description: "Lists users in a Slack team matching certain creterias."
+enabled: true
+entry_point: users_filter_by.py
+name: users_filter_by
+parameters:
+  end_point:
+    default: users.list
+    immutable: true
+    type: string
+  attributes:
+    required: false
+    type: object
+    description: >-
+      Dictionary of user attributes to match against.
+      It supports shell-style wildcards for the string values.
+      Example: '{"name": "joe", "real_name": "Joe*", "is_bot": false}'.
+    default: {}
+  token:
+    required: false
+    type: string
+runner_type: python-script

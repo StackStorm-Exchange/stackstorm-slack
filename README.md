@@ -101,6 +101,7 @@ The following two actions are provided by the Slack pack.
 
 * ``post_message`` - Post a message to the specified channel using an incoming webhook.
 * ``users.admin.invite`` - Send an invitation to join a Slack Org.
+* ``users_filter_by`` - List users in a Slack team matching certain creterias.
 
 All other actions are as documented on the [Slack API Methods](https://api.slack.com/methods) page.
 

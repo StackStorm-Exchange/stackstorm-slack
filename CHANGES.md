@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.8.0
+
+- Added custom `users_filter_by` action.
+
 # 0.7.0
 
 - Enforce default values to be a string type in YAML action definitions.
