@@ -9,6 +9,7 @@
         type: "string"
         description: "Webhook URL, e.g. https://hooks.slack.com/services/<replace me>"
         required: true
+        secret: true
       channel:
         type: "string"
         description: "Channel to send message to - e.g. #mychannel. If not specified, will use channel selected when configuring webook"
