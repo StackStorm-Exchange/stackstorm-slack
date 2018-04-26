@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.9.0
+
+- Add `secret: true` for `webhook_url` in config.schema.yaml.
+
 # 0.8.0
 
 - Added custom `users_filter_by` action.
