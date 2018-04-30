@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.10.0
+
+* Fortify `send_invite.py` to better handle optional parameters.
+
 # 0.9.0
 
 - Add `secret: true` for `webhook_url` in config.schema.yaml.
