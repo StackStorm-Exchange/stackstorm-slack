@@ -14,7 +14,8 @@ class SendInviteAction(Action):
         token = token if token else self.config['admin']['admin_token']
         set_active = set_active if set_active else self.config['admin'].get('set_active', True)
         attempts = attempts if attempts else self.config['admin'].get('attempts', 1)
-        auto_join_channels = channels if channels else self.config['admin'].get('auto_join_channels', "")
+        auto_join_channels = channels if channels \
+            else self.config['admin'].get('auto_join_channels', "")
         url = "https://%s.slack.com/api/users.admin.invite" % \
             self.config['admin']['organization']
         headers = {}
