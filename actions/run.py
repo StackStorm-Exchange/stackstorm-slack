@@ -6,6 +6,10 @@ from st2common.runners.base_action import Action
 
 BASE_URL = 'https://slack.com/api/'
 
+# End points listed below use POST instead of GET
+POST_END_POINTS = [
+    'files.upload'
+]
 
 class SlackAction(Action):
 
@@ -13,9 +17,9 @@ class SlackAction(Action):
         if kwargs.get('token', None) is None:
             kwargs['token'] = self.config['action_token']
 
-        return self._get_request(kwargs)
+        return self._do_request(kwargs)
 
-    def _get_request(self, params):
+    def _do_request(self, params):
         end_point = params['end_point']
         url = urlparse.urljoin(BASE_URL, end_point)
         del params['end_point']
@@ -29,8 +33,12 @@ class SlackAction(Action):
 
         data = urllib.urlencode(params)
 
-        response = requests.get(url=url,
-                                headers=headers, params=data)
+        if end_point in POST_END_POINTS:
+            response = requests.post(url=url,
+                                     headers=headers, data=data)
+        else:
+            response = requests.get(url=url,
+                                    headers=headers, params=data)
 
         results = response.json()
         if not results['ok']:
