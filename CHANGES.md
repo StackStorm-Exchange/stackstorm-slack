@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.10.1
+
+* Fix to use POST in `files.upload` action so that it can upload larger content.
+
 # 0.10.0
 
 * Fortify `send_invite.py` to better handle optional parameters.
