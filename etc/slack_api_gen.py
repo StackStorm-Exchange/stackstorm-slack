@@ -11,6 +11,7 @@ Make sure to have following packages in place to use this script.
 - html5lib
 '''
 
+import os
 import yaml
 import re
 import urllib2
@@ -84,7 +85,10 @@ for method in api_methods.stripped_strings:
 
 for method in method_dict:
 
-    file_name = 'actions/%s.yaml' % method
+    actions_dir = os.path.normpath(os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        '../actions'))
+    file_name = '%s/%s.yaml' % (actions_dir, method)
     output_dict = {
         'name': method,
         'runner_type': 'python-script',
