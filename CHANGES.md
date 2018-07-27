@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.10.2
+
+* Add thread_ts parameter to `files.upload` action.
+
 # 0.10.1
 
 * Fix to use POST in `files.upload` action so that it can upload larger content.
