@@ -1,16 +1,3 @@
-'''
-slack_api_gen.py
-Auto-generate st2 action meta yamls by scraping api.slack.com
-
-Usage: python slack_api_gen.py
-
-Make sure to have following packages in place to use this script.
-
-- pyyaml
-- bs4
-- html5lib
-'''
-
 import os
 import yaml
 import re
