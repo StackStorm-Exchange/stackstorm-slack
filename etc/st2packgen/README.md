@@ -5,7 +5,7 @@
 ## Quickstart
 
 ```
-# (in etc/ directory)
+# (in etc/st2packgen/ directory)
 virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt

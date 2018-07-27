@@ -74,7 +74,7 @@ for method in method_dict:
 
     actions_dir = os.path.normpath(os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
-        '../actions'))
+        '../../actions'))
     file_name = '%s/%s.yaml' % (actions_dir, method)
     output_dict = {
         'name': method,
