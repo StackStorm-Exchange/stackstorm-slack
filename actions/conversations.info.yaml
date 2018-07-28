@@ -1,0 +1,19 @@
+description: "Retrieve information about a conversation."
+enabled: true
+entry_point: run.py
+name: conversations.info
+parameters:
+  end_point:
+    default: conversations.info
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  include_locale:
+    required: false
+    type: string
+runner_type: python-script

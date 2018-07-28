@@ -1,0 +1,19 @@
+description: "Invites users to a channel."
+enabled: true
+entry_point: run.py
+name: conversations.invite
+parameters:
+  end_point:
+    default: conversations.invite
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  users:
+    required: true
+    type: string
+runner_type: python-script

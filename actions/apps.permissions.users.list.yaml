@@ -1,0 +1,19 @@
+description: "Returns list of user grants and corresponding scopes this app has on a team."
+enabled: true
+entry_point: run.py
+name: apps.permissions.users.list
+parameters:
+  end_point:
+    default: apps.permissions.users.list
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  cursor:
+    required: false
+    type: string
+  limit:
+    required: false
+    type: string
+runner_type: python-script

@@ -1,0 +1,16 @@
+description: "Archives a conversation."
+enabled: true
+entry_point: run.py
+name: conversations.archive
+parameters:
+  end_point:
+    default: conversations.archive
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+runner_type: python-script

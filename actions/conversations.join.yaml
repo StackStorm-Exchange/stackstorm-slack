@@ -1,0 +1,16 @@
+description: "Joins an existing conversation."
+enabled: true
+entry_point: run.py
+name: conversations.join
+parameters:
+  end_point:
+    default: conversations.join
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+runner_type: python-script

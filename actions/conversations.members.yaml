@@ -1,0 +1,23 @@
+description: "Retrieve members of a conversation."
+enabled: true
+entry_point: run.py
+name: conversations.members
+parameters:
+  end_point:
+    default: conversations.members
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  cursor:
+    required: false
+    type: string
+  limit:
+    required: false
+    default: "100"
+    type: string
+runner_type: python-script

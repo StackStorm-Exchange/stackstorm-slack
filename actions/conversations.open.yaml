@@ -1,0 +1,22 @@
+description: "Opens or resumes a direct message or multi-person direct message."
+enabled: true
+entry_point: run.py
+name: conversations.open
+parameters:
+  end_point:
+    default: conversations.open
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: false
+    type: string
+  return_im:
+    required: false
+    type: string
+  users:
+    required: false
+    type: string
+runner_type: python-script

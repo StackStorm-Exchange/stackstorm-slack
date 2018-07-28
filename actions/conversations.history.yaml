@@ -1,0 +1,35 @@
+description: "Fetches a conversation's history of messages and events."
+enabled: true
+entry_point: run.py
+name: conversations.history
+parameters:
+  end_point:
+    default: conversations.history
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  cursor:
+    required: false
+    type: string
+  inclusive:
+    required: false
+    default: "0"
+    type: string
+  latest:
+    required: false
+    default: "now"
+    type: string
+  limit:
+    required: false
+    default: "100"
+    type: string
+  oldest:
+    required: false
+    default: "0"
+    type: string
+runner_type: python-script
