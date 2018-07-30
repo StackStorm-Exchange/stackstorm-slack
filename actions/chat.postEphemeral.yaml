@@ -1,0 +1,34 @@
+description: "Sends an ephemeral message to a user in a channel."
+enabled: true
+entry_point: run.py
+name: chat.postEphemeral
+parameters:
+  end_point:
+    default: chat.postEphemeral
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  text:
+    required: true
+    type: string
+  user:
+    required: true
+    type: string
+  as_user:
+    required: false
+    type: string
+  attachments:
+    required: false
+    type: string
+  link_names:
+    required: false
+    type: string
+  parse:
+    required: false
+    type: string
+runner_type: python-script

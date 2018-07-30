@@ -1,0 +1,19 @@
+description: "Removes a user from a conversation."
+enabled: true
+entry_point: run.py
+name: conversations.kick
+parameters:
+  end_point:
+    default: conversations.kick
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  user:
+    required: true
+    type: string
+runner_type: python-script

@@ -1,0 +1,19 @@
+description: "Sets the purpose for a conversation."
+enabled: true
+entry_point: run.py
+name: conversations.setPurpose
+parameters:
+  end_point:
+    default: conversations.setPurpose
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  channel:
+    required: true
+    type: string
+  purpose:
+    required: true
+    type: string
+runner_type: python-script

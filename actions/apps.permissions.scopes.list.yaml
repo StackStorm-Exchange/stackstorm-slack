@@ -1,0 +1,13 @@
+description: "Returns list of scopes this app has on a team."
+enabled: true
+entry_point: run.py
+name: apps.permissions.scopes.list
+parameters:
+  end_point:
+    default: apps.permissions.scopes.list
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+runner_type: python-script

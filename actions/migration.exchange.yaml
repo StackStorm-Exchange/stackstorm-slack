@@ -1,0 +1,20 @@
+description: "For Enterprise Grid workspaces, map local user IDs to global user IDs"
+enabled: true
+entry_point: run.py
+name: migration.exchange
+parameters:
+  end_point:
+    default: migration.exchange
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  users:
+    required: true
+    type: string
+  to_old:
+    required: false
+    default: ""
+    type: string
+runner_type: python-script

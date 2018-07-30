@@ -1,5 +1,43 @@
 # Change Log
 
+# 0.10.3
+
+- Sync with the latest Slack API.
+- Added:
+    - `apps.permissions.info`
+    - `apps.permissions.request`
+    - `apps.permissions.resources.list`
+    - `apps.permissions.scopes.list`
+    - `apps.permissions.users.list`
+    - `apps.permissions.users.request`
+    - `chat.getPermalink`
+    - `chat.postEphemeral`
+    - `conversations.archive`
+    - `conversations.close`
+    - `conversations.create`
+    - `conversations.history`
+    - `conversations.info`
+    - `conversations.invite`
+    - `conversations.join`
+    - `conversations.kick`
+    - `conversations.leave`
+    - `conversations.list`
+    - `conversations.members`
+    - `conversations.open`
+    - `conversations.rename`
+    - `conversations.replies`
+    - `conversations.setPurpose`
+    - `conversations.setTopic`
+    - `conversations.unarchive`
+    - `dialog.open`
+    - `migration.exchange`
+    - `oauth.token`
+    - `users.conversations`
+    - `users.lookupByEmail`
+- Modified:
+    - `oauth.access`
+        - Add `single_channel` optional parameter
+
 # 0.10.2
 
 * Add thread_ts parameter to `files.upload` action.

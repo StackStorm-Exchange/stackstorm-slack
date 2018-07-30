@@ -1,0 +1,22 @@
+description: "Initiates a public or private channel-based conversation"
+enabled: true
+entry_point: run.py
+name: conversations.create
+parameters:
+  end_point:
+    default: conversations.create
+    immutable: true
+    type: string
+  token:
+    required: false
+    type: string
+  name:
+    required: true
+    type: string
+  is_private:
+    required: false
+    type: string
+  user_ids:
+    required: false
+    type: string
+runner_type: python-script
