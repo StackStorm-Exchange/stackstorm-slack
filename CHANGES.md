@@ -1,5 +1,16 @@
 # Change Log
 
+# 0.10.4
+
+- Sync with the latest Slack API.
+- Modified:
+    - `files.info`
+    - `groups.list`
+    - `mpim.list`
+    - `reactions.list`
+    - `stars.list`
+        - Add optional parameters: `cursor`, `limit`
+
 # 0.10.3
 
 - Sync with the latest Slack API.
