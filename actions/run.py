@@ -6,11 +6,6 @@ from st2common.runners.base_action import Action
 
 BASE_URL = 'https://slack.com/api/'
 
-# End points listed below use POST instead of GET
-POST_END_POINTS = [
-    'files.upload'
-]
-
 
 class SlackAction(Action):
 
@@ -25,6 +20,9 @@ class SlackAction(Action):
         url = urlparse.urljoin(BASE_URL, end_point)
         del params['end_point']
 
+        http_method = params['http_method']
+        del params['http_method']
+
         headers = {}
         headers['Content-Type'] = 'application/x-www-form-urlencoded'
 
@@ -34,12 +32,17 @@ class SlackAction(Action):
 
         data = urllib.urlencode(params)
 
-        if end_point in POST_END_POINTS:
+        if http_method == 'POST':
             response = requests.post(url=url,
                                      headers=headers, data=data)
-        else:
+        elif http_method == 'GET':
             response = requests.get(url=url,
                                     headers=headers, params=data)
+        else:
+            failure_reason = ('Failed to perform action %s: Invalid HTTP method: %s' % (
+                end_point, http_method))
+            self.logger.exception(failure_reason)
+            raise Exception(failure_reason)
 
         results = response.json()
         if not results['ok']:
