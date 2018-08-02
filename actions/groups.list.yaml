@@ -10,6 +10,9 @@ parameters:
   token:
     required: false
     type: string
+  cursor:
+    required: false
+    type: string
   exclude_archived:
     required: false
     default: "0"
@@ -17,5 +20,9 @@ parameters:
   exclude_members:
     required: false
     default: "false"
+    type: string
+  limit:
+    required: false
+    default: "0"
     type: string
 runner_type: python-script

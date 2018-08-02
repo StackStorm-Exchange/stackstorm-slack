@@ -10,4 +10,11 @@ parameters:
   token:
     required: false
     type: string
+  cursor:
+    required: false
+    type: string
+  limit:
+    required: false
+    default: "0"
+    type: string
 runner_type: python-script

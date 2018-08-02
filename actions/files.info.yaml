@@ -17,6 +17,13 @@ parameters:
     required: false
     default: "100"
     type: string
+  cursor:
+    required: false
+    type: string
+  limit:
+    required: false
+    default: "0"
+    type: string
   page:
     required: false
     default: "1"
