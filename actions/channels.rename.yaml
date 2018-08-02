@@ -7,6 +7,10 @@ parameters:
     default: channels.rename
     immutable: true
     type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
   token:
     required: false
     type: string
