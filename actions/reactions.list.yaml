@@ -14,8 +14,15 @@ parameters:
     required: false
     default: "100"
     type: string
+  cursor:
+    required: false
+    type: string
   full:
     required: false
+    type: string
+  limit:
+    required: false
+    default: "0"
     type: string
   page:
     required: false
