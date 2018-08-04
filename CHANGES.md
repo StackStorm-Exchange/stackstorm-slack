@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.11.0
+
+- All actions now uses preferred HTTP method mentioned in official API reference.
+
 # 0.10.4
 
 - Sync with the latest Slack API.
