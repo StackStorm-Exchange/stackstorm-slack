@@ -70,6 +70,16 @@ for method in api_methods.stripped_strings:
             method_dict[method]['params'][arg.text]['required'] = required
             method_dict[method]['params'][arg.text]['default'] = default
 
+        # parse Preferred HTTP method
+        method_facts_table = method_soup.find(
+            'h2',
+            attrs={"id": "facts"}).findNext('table')
+        preferred_method = method_facts_table.find(
+            'th',
+            text='Preferred HTTP method:').findNext('td').text
+        preferred_method = preferred_method.rstrip()
+        method_dict[method]['http_method'] = preferred_method
+
 for method in method_dict:
 
     actions_dir = os.path.normpath(os.path.join(
@@ -87,6 +97,10 @@ for method in method_dict:
         'type': 'string',
         'immutable': True,
         'default': method}
+    output_dict['parameters']['http_method'] = {
+        'type': 'string',
+        'default': method_dict[method]['http_method'],
+        'required': True}
 
     for param in method_dict[method]['params']:
         if param == 'token':
