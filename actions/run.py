@@ -30,7 +30,31 @@ class SlackAction(Action):
             if params[key] is None:
                 del params[key]
 
-        data = urllib.urlencode(params)
+        def encode_dict(in_obj):
+            def encode_list(in_list):
+                out_list = []
+                for el in in_list:
+                    out_list.append(encode_obj(el))
+                return out_list
+
+            def encode_dict(in_dict):
+                out_dict = {}
+                for k, v in in_dict.iteritems():
+                    out_dict[k] = encode_obj(v)
+                return out_dict
+
+            if isinstance(in_obj, unicode):
+                return in_obj.encode('utf-8')
+            elif isinstance(in_obj, list):
+                return encode_list(in_obj)
+            elif isinstance(in_obj, tuple):
+                return tuple(encode_list(in_obj))
+            elif isinstance(in_obj, dict):
+                return encode_dict(in_obj)
+
+            return in_obj
+        
+        data = urllib.urlencode(encode_dict(params))
 
         if http_method == 'POST':
             response = requests.post(url=url,
