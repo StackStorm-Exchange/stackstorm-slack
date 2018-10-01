@@ -34,13 +34,13 @@ class SlackAction(Action):
             def encode_list(in_list):
                 out_list = []
                 for el in in_list:
-                    out_list.append(encode_obj(el))
+                    out_list.append(encode_dict(el))
                 return out_list
 
             def encode_dict(in_dict):
                 out_dict = {}
                 for k, v in in_dict.iteritems():
-                    out_dict[k] = encode_obj(v)
+                    out_dict[k] = encode_dict(v)
                 return out_dict
 
             if isinstance(in_obj, unicode):
