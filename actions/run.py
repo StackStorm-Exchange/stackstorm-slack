@@ -30,17 +30,18 @@ class SlackAction(Action):
             if params[key] is None:
                 del params[key]
 
-        def encode_dict(in_obj):
+        def encode_obj(in_obj):
+
             def encode_list(in_list):
                 out_list = []
                 for el in in_list:
-                    out_list.append(encode_dict(el))
+                    out_list.append(encode_obj(el))
                 return out_list
 
             def encode_dict(in_dict):
                 out_dict = {}
                 for k, v in in_dict.iteritems():
-                    out_dict[k] = encode_dict(v)
+                    out_dict[k] = encode_obj(v)
                 return out_dict
 
             if isinstance(in_obj, unicode):
@@ -54,7 +55,7 @@ class SlackAction(Action):
 
             return in_obj
         
-        data = urllib.urlencode(encode_dict(params))
+        data = urllib.urlencode(encode_obj(params))
 
         if http_method == 'POST':
             response = requests.post(url=url,
