@@ -54,7 +54,7 @@ class SlackAction(Action):
                 return encode_dict(in_obj)
 
             return in_obj
-        
+
         data = urllib.urlencode(encode_obj(params))
 
         if http_method == 'POST':
