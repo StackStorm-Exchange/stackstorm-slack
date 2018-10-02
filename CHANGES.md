@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.12.0
+
+- Handling of cyrillic and special symbols in `run.py` through adding utf-8 encoding.
+
 # 0.11.0
 
 - All actions now uses preferred HTTP method mentioned in official API reference.
