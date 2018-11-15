@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.12.1
+
+- Fix `text` parameter to be optional in `chat.postMessage` action.
+
 # 0.12.0
 
 - Handling of cyrillic and special symbols in `run.py` through adding utf-8 encoding.

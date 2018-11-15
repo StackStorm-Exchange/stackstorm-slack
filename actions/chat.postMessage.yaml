@@ -18,7 +18,7 @@ parameters:
     required: true
     type: string
   text:
-    required: true
+    required: false
     type: string
   as_user:
     required: false

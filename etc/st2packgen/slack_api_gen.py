@@ -114,6 +114,11 @@ for method in method_dict:
                     method_dict[method]['params'][param]['default'])
         output_dict['parameters'][param]['type'] = 'string'
 
+    # special care: text is not a mandatory parameter in chat.postMessage
+    # https://github.com/slackhq/slack-api-docs/issues/41
+    if method == 'chat.postMessage':
+        output_dict['parameters']['text']['required'] = False
+
     print yaml.safe_dump(
         output_dict, default_flow_style=False, width=float('inf'))
     fh = open(file_name, 'w')
