@@ -147,7 +147,8 @@ class SlackSensor(PollingSensor):
             return
         if not self._allow_bot_messages and 'subtype' in data:
             return
-        if self._allow_bot_messages and 'subtype' in data and data['subtype'] not in EVENT_SUBTYPE_WHITELIST:
+        if (self._allow_bot_messages and 'subtype' in data
+                and data['subtype'] not in EVENT_SUBTYPE_WHITELIST):
             return
 
         # Check if the message was written by a bot without as_user attribute
