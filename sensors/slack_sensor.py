@@ -29,6 +29,8 @@ class SlackSensor(PollingSensor):
         self._token = self._config['sensor']['token']
         self._strip_formatting = self._config['sensor'].get('strip_formatting',
                                                             False)
+        self._include_attachments = self._config['sensor'].get('include_attachments',
+                                                               False)
         self._handlers = {
             'message': self._handle_message_ignore_errors,
         }
@@ -183,6 +185,10 @@ class SlackSensor(PollingSensor):
             'timestamp_raw': data['ts'],
             'text': text
         }
+
+        # Checks if the user enabled attachments and checks if attachments were sent in the message
+        if self._include_attachments and 'attachments' in data:
+            payload['attachments'] = data['attachments']
 
         self._sensor_service.dispatch(trigger=trigger, payload=payload)
 

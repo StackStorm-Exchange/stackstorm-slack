@@ -40,6 +40,11 @@
         description: "Slack automatically parses URLs, images, channels, and usernames by default. This option returns raw data. Default false"
         default: false
         required: false
+      include_attachments:
+        type: "boolean"
+        description: "Include attachments sent in the message, Default to false in order to provide backwards compatibility"
+        default: false
+        required: false
   action_token:
     description: "Slack Action token."
     type: "string"
