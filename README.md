@@ -22,6 +22,8 @@ to `/opt/stackstorm/configs/slack.yaml` and edit as required.
 * ``sensor.strip_formatting`` - By default, Slack automatically parses URLs, images,
   channels, and usernames. This option removes formatting and only returns the raw
   data from the client (URL only today)
+* ``sensor.allow_bot_messages`` - Allow the sensor to be triggered by bot messages without the as_user attribute. 
+  Defaults to false in order to provide backwards compatibility 
 
 **Note** : When modifying the configuration in `/opt/stackstorm/configs/` please
            remember to tell StackStorm to load these new values by running
