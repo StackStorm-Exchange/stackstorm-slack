@@ -40,9 +40,9 @@
         description: "Slack automatically parses URLs, images, channels, and usernames by default. This option returns raw data. Default false"
         default: false
         required: false
-      include_attachments:
+      allow_bot_messages:
         type: "boolean"
-        description: "Include attachments sent in the message, Default to false in order to provide backwards compatibility"
+        description: "Allow the sensor to be triggered by bot messages without the as_user attribute. Default false"
         default: false
         required: false
   action_token:

@@ -17,6 +17,10 @@ EVENT_TYPE_WHITELIST = [
     'message'
 ]
 
+EVENT_SUBTYPE_WHITELIST = [
+    'bot_message'
+]
+
 
 class SlackSensor(PollingSensor):
     DATASTORE_KEY_NAME = 'last_message_timestamp'
@@ -29,8 +33,8 @@ class SlackSensor(PollingSensor):
         self._token = self._config['sensor']['token']
         self._strip_formatting = self._config['sensor'].get('strip_formatting',
                                                             False)
-        self._include_attachments = self._config['sensor'].get('include_attachments',
-                                                               False)
+        self._allow_bot_messages = self._config['sensor'].get('allow_bot_messages',
+                                                              False)
         self._handlers = {
             'message': self._handle_message_ignore_errors,
         }
@@ -138,12 +142,22 @@ class SlackSensor(PollingSensor):
         trigger = 'slack.message'
         event_type = data['type']
 
-        if event_type not in EVENT_TYPE_WHITELIST or 'subtype' in data:
-            # Skip unsupported event
+        # Skip unsupported events
+        if event_type not in EVENT_TYPE_WHITELIST:
+            return
+        if not self._allow_bot_messages and 'subtype' in data:
+            return
+        if self._allow_bot_messages and 'subtype' in data and \
+                data['subtype'] not in EVENT_SUBTYPE_WHITELIST:
             return
 
-        # Note: We resolve user and channel information to provide more context
-        user_info = self._get_user_info(user_id=data['user'])
+        # Check if the message was written by a bot without as_user attribute
+        if self._allow_bot_messages and 'user' not in data and 'username' in data:
+            user_info = {'name': data['username'], 'profile': {}}
+        else:
+            # Note: We resolve user and channel information to provide more context
+            user_info = self._get_user_info(user_id=data['user'])
+
         channel_info = None
         channel_id = data.get('channel', '')
         # Grabbing info based on the type of channel the message is in.
@@ -164,7 +178,8 @@ class SlackSensor(PollingSensor):
 
         payload = {
             'user': {
-                'id': user_info['id'],
+                'id': user_info.get('id',
+                                    'Unknown'),
                 'name': user_info['name'],
                 'first_name': user_info['profile'].get('first_name',
                                                        'Unknown'),
@@ -172,8 +187,8 @@ class SlackSensor(PollingSensor):
                                                       'Unknown'),
                 'real_name': user_info['profile'].get('real_name',
                                                       'Unknown'),
-                'is_admin': user_info['is_admin'],
-                'is_owner': user_info['is_owner']
+                'is_admin': user_info.get('is_admin', False),
+                'is_owner': user_info.get('is_owner', False)
             },
             'channel': {
                 'id': channel_info['id'],
@@ -187,7 +202,7 @@ class SlackSensor(PollingSensor):
         }
 
         # Checks if the user enabled attachments and checks if attachments were sent in the message
-        if self._include_attachments and 'attachments' in data:
+        if 'attachments' in data:
             payload['attachments'] = data['attachments']
 
         self._sensor_service.dispatch(trigger=trigger, payload=payload)
