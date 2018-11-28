@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.12.2
+
+- Added the option `allow_bot_messages` in the `slack_sensor` sensor.
+
 # 0.12.1
 
 - Fix `text` parameter to be optional in `chat.postMessage` action.
