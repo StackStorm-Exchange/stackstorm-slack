@@ -168,7 +168,7 @@ class SlackSensor(PollingSensor):
         else:
             # Note: We resolve user and channel information to provide more context
             user_info = self._get_user_info(user_id=data['user'])
-            
+
         channel_info = None
         channel_id = data.get('channel', '')
         # Grabbing info based on the type of channel the message is in.
