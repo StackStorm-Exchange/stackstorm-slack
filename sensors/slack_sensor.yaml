@@ -20,3 +20,5 @@
             type: "integer"
           timestamp_raw:
             type: "string"
+          attachments:
+            type: "object"

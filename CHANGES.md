@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.12.3
+
+- Added `attachments` as part of the `slack_sensor` sensor payload.
+
 # 0.12.2
 
 - Added the option `allow_bot_messages` in the `slack_sensor` sensor.
