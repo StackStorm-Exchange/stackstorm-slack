@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.12.4
+
+- Added `is_bot` attribute to the user payload in `slack_sensor` sensor.
+
 # 0.12.3
 
 - Added `attachments` as part of the `slack_sensor` sensor payload.
