@@ -1,4 +1,4 @@
-requests>=2.5.0,<2.6
+requests>=2.5.0,<3.0
 websocket-client==0.44.0
 beautifulsoup4==4.6.0
 lxml==3.8.0

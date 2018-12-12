@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.12.5
+
+- Bump allowed `requests()` version, remove httplib
+
 # 0.12.4
 
 - Added `is_bot` attribute to the user payload in `slack_sensor` sensor.
