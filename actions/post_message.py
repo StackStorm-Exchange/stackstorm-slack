@@ -1,5 +1,4 @@
 import json
-import httplib
 
 try:
     from six.moves.urllib.parse import urlencode
@@ -46,7 +45,7 @@ class PostMessageAction(Action):
         response = requests.post(url=webhook_url,
                                  headers=headers, data=data)
 
-        if response.status_code == httplib.OK:
+        if response.status_code == requests.codes.ok:  # pylint: disable=no-member
             self.logger.info('Message successfully posted')
         else:
             failure_reason = ('Failed to post message: %s (status code: %s)' %
