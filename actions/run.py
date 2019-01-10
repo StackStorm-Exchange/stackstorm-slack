@@ -1,7 +1,9 @@
 import requests
-import urllib
-import urlparse
 import six
+
+from six.moves.urllib.parse import urlencode
+from six.moves.urllib import parse as urlparse  # pylint: disable=import-error
+urljoin = urlparse.urljoin
 
 from st2common.runners.base_action import Action
 
@@ -18,7 +20,7 @@ class SlackAction(Action):
 
     def _do_request(self, params):
         end_point = params['end_point']
-        url = urlparse.urljoin(BASE_URL, end_point)
+        url = urljoin(BASE_URL, end_point)
         del params['end_point']
 
         http_method = params['http_method']
@@ -56,7 +58,7 @@ class SlackAction(Action):
 
             return in_obj
 
-        data = urllib.urlencode(encode_obj(params))
+        data = urlencode(encode_obj(params))
 
         if http_method == 'POST':
             response = requests.post(url=url,

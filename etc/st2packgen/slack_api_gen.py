@@ -1,11 +1,12 @@
 import os
 import yaml
 import re
-import urllib2
 from bs4 import BeautifulSoup
 
 # Use OrderedDict to keep params order listed in API web page
 from collections import OrderedDict
+
+from six.moves.urllib.request import urlopen
 
 
 # pyyaml representer method for OrderedDict
@@ -33,7 +34,7 @@ yaml.SafeDumper.add_representer(
 method_dict = {}
 base_url = 'https://api.slack.com/methods'
 
-api_doc_main = urllib2.urlopen('%s/channels.invite' % base_url)
+api_doc_main = urlopen('%s/channels.invite' % base_url)
 
 soup = BeautifulSoup(api_doc_main, 'html5lib')
 
@@ -43,7 +44,7 @@ for method in api_methods.stripped_strings:
     if method != 'View another method...':
         method_dict[method] = {'params': OrderedDict()}
         method_url = "%s/%s" % (base_url, method)
-        method_page = urllib2.urlopen(method_url)
+        method_page = urlopen(method_url)
         method_soup = BeautifulSoup(method_page, 'html5lib')
         method_description = method_soup.find('section', attrs={
             "class": "tab_pane selected clearfix large_bottom_padding"}) \

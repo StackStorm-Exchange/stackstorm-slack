@@ -1,6 +1,5 @@
-import urllib
-
 import requests
+from six.moves.urllib.parse import urlencode
 
 from st2common.runners.base_action import Action
 
@@ -30,7 +29,7 @@ class SendInviteAction(Action):
         if first_name is not None:
             body['first_name'] = first_name.encode('utf-8')
 
-        data = urllib.urlencode(body)
+        data = urlencode(body)
         response = requests.get(url=url,
                                 headers=headers, params=data)
         results = response.json()

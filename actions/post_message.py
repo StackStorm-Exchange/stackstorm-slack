@@ -1,10 +1,6 @@
 import json
 
-try:
-    from six.moves.urllib.parse import urlencode
-except ImportError:
-    from urllib import urlencode
-
+from six.moves.urllib.parse import urlencode
 import requests
 
 from st2common.runners.base_action import Action
