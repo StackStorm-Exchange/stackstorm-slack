@@ -1,6 +1,7 @@
 import requests
 import urllib
 import urlparse
+import six
 
 from st2common.runners.base_action import Action
 
@@ -44,7 +45,7 @@ class SlackAction(Action):
                     out_dict[k] = encode_obj(v)
                 return out_dict
 
-            if isinstance(in_obj, unicode):
+            if isinstance(in_obj, six.text_type):
                 return in_obj.encode('utf-8')
             elif isinstance(in_obj, list):
                 return encode_list(in_obj)
