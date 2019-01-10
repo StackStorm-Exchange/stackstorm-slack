@@ -4,6 +4,8 @@
 Lookup user by attibutes
 '''
 
+import six
+
 from fnmatch import fnmatch
 from run import SlackAction
 
@@ -25,7 +27,7 @@ class FilterBy(SlackAction):  # pylint: disable=too-few-public-methods
         for user in res['members']:
             match = True
             for key, val in attrs.items():
-                if isinstance(val, basestring):
+                if isinstance(val, six.string_types):
                     if not fnmatch(user.get(key, ''), val):
                         match = False
                 elif user.get(key) != val:
