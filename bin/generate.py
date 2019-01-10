@@ -143,7 +143,7 @@ def main():  # pylint: disable=too-many-locals
     ]
 
     for method in methods:
-        print method
+        print(method)
         page = requests.get("https://api.slack.com/methods/" + method)
 
         soup = BeautifulSoup(page.text, "lxml")

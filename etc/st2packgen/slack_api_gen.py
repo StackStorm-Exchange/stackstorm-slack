@@ -119,8 +119,8 @@ for method in method_dict:
     if method == 'chat.postMessage':
         output_dict['parameters']['text']['required'] = False
 
-    print yaml.safe_dump(
-        output_dict, default_flow_style=False, width=float('inf'))
+    print(yaml.safe_dump(
+        output_dict, default_flow_style=False, width=float('inf')))
     fh = open(file_name, 'w')
     fh.write(yaml.safe_dump(
         output_dict, default_flow_style=False, width=float('inf')))
