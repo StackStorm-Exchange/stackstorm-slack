@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.12.6
+
+- fix `attachments` parameter type in sensor.
+
 # 0.12.5
 
 - Bump allowed `requests()` version, remove httplib
