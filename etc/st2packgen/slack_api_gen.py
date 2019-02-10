@@ -117,7 +117,7 @@ for method in method_dict:
 
     # special care: text is not a mandatory parameter in chat.postMessage
     # https://github.com/slackhq/slack-api-docs/issues/41
-    if method == 'chat.postMessage':
+    if method == 'chat.postMessage' or 'chat.update':
         output_dict['parameters']['text']['required'] = False
 
     print(yaml.safe_dump(

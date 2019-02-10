@@ -1,5 +1,10 @@
 # Change Log
 
+# 0.12.6
+
+- Fix `text` parameter in `chat.update` to be `required: false`, same as `chat.postMessage`. `text` only required when `attachments` is `None` 
+- Update icon to new rebranded Slack icon 
+
 # 0.12.5
 
 - Bump allowed `requests()` version, remove httplib
