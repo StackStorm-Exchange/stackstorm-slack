@@ -1,5 +1,11 @@
 # Change Log
 
+# 0.12.7
+
+- fix `attachments` parameter type in sensor.
+- update `jinja` dependency to 2.10.1+
+- use upstream `slackclient` package
+
 # 0.12.6
 
 - Fix `text` parameter in `chat.update` to be `required: false`, same as `chat.postMessage`. `text` only required when `attachments` is `None` 
