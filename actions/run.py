@@ -1,3 +1,4 @@
+from st2common.runners.base_action import Action
 import requests
 import six
 
@@ -5,7 +6,6 @@ from six.moves.urllib.parse import urlencode
 from six.moves.urllib import parse as urlparse  # pylint: disable=import-error
 urljoin = urlparse.urljoin
 
-from st2common.runners.base_action import Action
 
 BASE_URL = 'https://slack.com/api/'
 
