@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/conversations.history"
+description: Fetches a conversation's history of messages and events.
 enabled: true
 entry_point: run.py
 name: conversations.history

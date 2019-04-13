@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/dnd.endDnd"
+description: Ends the current user's Do Not Disturb session immediately.
 enabled: true
 entry_point: run.py
 name: dnd.endDnd

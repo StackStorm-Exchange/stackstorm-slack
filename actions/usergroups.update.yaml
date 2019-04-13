@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/usergroups.update"
+description: Update an existing User Group
 enabled: true
 entry_point: run.py
 name: usergroups.update

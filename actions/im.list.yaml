@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/im.list"
+description: Lists direct message channels for the calling user.
 enabled: true
 entry_point: run.py
 name: im.list

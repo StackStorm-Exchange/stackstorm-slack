@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/dnd.endSnooze"
+description: Ends the current user's snooze mode immediately.
 enabled: true
 entry_point: run.py
 name: dnd.endSnooze

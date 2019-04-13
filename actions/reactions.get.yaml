@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/reactions.get"
+description: Gets reactions for an item.
 enabled: true
 entry_point: run.py
 name: reactions.get

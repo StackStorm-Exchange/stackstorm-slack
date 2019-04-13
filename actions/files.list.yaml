@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/files.list"
+description: Lists & filters team files.
 enabled: true
 entry_point: run.py
 name: files.list

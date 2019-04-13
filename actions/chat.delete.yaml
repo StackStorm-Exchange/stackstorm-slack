@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/chat.delete"
+description: Deletes a message.
 enabled: true
 entry_point: run.py
 name: chat.delete

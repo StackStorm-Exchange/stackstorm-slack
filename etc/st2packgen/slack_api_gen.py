@@ -34,8 +34,8 @@ yaml.SafeDumper.add_representer(
 method_dict = {}
 base_url = 'https://api.slack.com/methods'
 
-# api_spec_url = 'https://api.slack.com/specs/openapi/v2/slack_web.json'
-# api_spec = json.loads(urlopen(api_spec_url).read())
+api_spec_url = 'https://api.slack.com/specs/openapi/v2/slack_web.json'
+api_spec = json.loads(urlopen(api_spec_url).read())
 
 api_doc_main = urlopen('%s/channels.invite' % base_url)
 
@@ -133,47 +133,45 @@ for method in method_dict:
     if method == 'chat.postMessage' or method == 'chat.update':
         output_dict['parameters']['text']['required'] = False
 
-    # # update action description and parameter types from OpenAPI spec
-    # http_method = output_dict['parameters']['http_method']['default'].lower()
-    # path = '/%s' % method
-    # method_api_spec = api_spec['paths'].get(path, {}).get(http_method)
-    # if method_api_spec is not None:
-    #     try:
-    #         output_dict['description'] = method_api_spec['description']
-    #     except KeyError:
-    #         pass
+    # update action description and parameter types from OpenAPI spec
+    http_method = output_dict['parameters']['http_method']['default'].lower()
+    path = '/%s' % method
+    method_api_spec = api_spec['paths'].get(path, {}).get(http_method)
+    if method_api_spec is not None:
+        try:
+            output_dict['description'] = method_api_spec['description']
+        except KeyError:
+            pass
 
-    #     for param_name, param_value in output_dict['parameters'].items():
-    #         param_spec = next(
-    #             (p for p in method_api_spec['parameters'] if p['name'] == param_name), None)
-    #         if param_spec is not None:
-    #             try:
-    #                 param_value['type'] = param_spec.get('type')
-    #             except KeyError:
-    #                 pass
+        # for param_name, param_value in output_dict['parameters'].items():
+        #     param_spec = next(
+        #         (p for p in method_api_spec['parameters'] if p['name'] == param_name), None)
+        #     if param_spec is not None:
+        #         try:
+        #             param_value['type'] = param_spec.get('type')
+        #         except KeyError:
+        #             pass
 
-    #             if param_value.get('default') is not None:
-    #                 t = param_value['type']
-    #                 if t == 'integer':
-    #                     try:
-    #                         param_value['default'] = int(param_value['default'])
-    #                     except ValueError as e:
-    #                         print '%s: %s: %s' % (method, param_name, e)
-    #                         del param_value['default']
-    #                 elif t == 'boolean':
-    #                     try:
-    #                         param_value['default'] = bool(strtobool(param_value['default']))
-    #                     except ValueError as e:
-    #                         print '%s: %s: %s' % (method, param_name, e)
-    #                         del param_value['default']
-    #                 elif t == 'number':
-    #                     try:
-    #                         param_value['default'] = float(param_value['default'])
-    #                     except ValueError as e:
-    #                         print '%s: %s: %s' % (method, param_name, e)
-    #                         del param_value['default']
-
-    print yaml.safe_dump(output_dict, default_flow_style=False, width=float('inf'))
+        #         if param_value.get('default') is not None:
+        #             t = param_value['type']
+        #             if t == 'integer':
+        #                 try:
+        #                     param_value['default'] = int(param_value['default'])
+        #                 except ValueError as e:
+        #                     print '%s: %s: %s' % (method, param_name, e)
+        #                     del param_value['default']
+        #             elif t == 'boolean':
+        #                 try:
+        #                     param_value['default'] = bool(strtobool(param_value['default']))
+        #                 except ValueError as e:
+        #                     print '%s: %s: %s' % (method, param_name, e)
+        #                     del param_value['default']
+        #             elif t == 'number':
+        #                 try:
+        #                     param_value['default'] = float(param_value['default'])
+        #                 except ValueError as e:
+        #                     print '%s: %s: %s' % (method, param_name, e)
+        #                     del param_value['default']
 
     fh = open(file_name, 'w')
     fh.write(yaml.safe_dump(output_dict, default_flow_style=False, width=float('inf')))

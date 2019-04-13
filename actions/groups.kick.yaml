@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/groups.kick"
+description: Removes a user from a private channel.
 enabled: true
 entry_point: run.py
 name: groups.kick

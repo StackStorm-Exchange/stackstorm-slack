@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/im.history"
+description: Fetches history of messages and events from direct message channel.
 enabled: true
 entry_point: run.py
 name: im.history

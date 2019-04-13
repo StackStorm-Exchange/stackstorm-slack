@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/mpim.open"
+description: This method opens a multiparty direct message.
 enabled: true
 entry_point: run.py
 name: mpim.open

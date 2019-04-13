@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/dnd.info"
+description: Retrieves a user's current Do Not Disturb status.
 enabled: true
 entry_point: run.py
 name: dnd.info

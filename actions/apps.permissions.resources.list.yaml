@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/apps.permissions.resources.list"
+description: Returns list of resource grants this app has on a team.
 enabled: true
 entry_point: run.py
 name: apps.permissions.resources.list

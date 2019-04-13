@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/conversations.members"
+description: Retrieve members of a conversation.
 enabled: true
 entry_point: run.py
 name: conversations.members

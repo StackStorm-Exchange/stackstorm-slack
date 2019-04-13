@@ -1,4 +1,4 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/users.conversations"
+description: List conversations the calling user may access.
 enabled: true
 entry_point: run.py
 name: users.conversations
