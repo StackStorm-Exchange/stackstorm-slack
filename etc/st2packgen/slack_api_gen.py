@@ -46,10 +46,7 @@ for method in api_methods.stripped_strings:
         method_url = "%s/%s" % (base_url, method)
         method_page = urlopen(method_url)
         method_soup = BeautifulSoup(method_page, 'html5lib')
-        method_description = method_soup.find('section', attrs={
-            "class": "tab_pane selected clearfix large_bottom_padding"}) \
-            .find_all('p')[0].text
-        method_description = re.sub('\n|\r', ' ', method_description)
+        method_description = ("This action is auto-generated. See %s") % method_url
         method_dict[method]['description'] = method_description
         method_args_table = method_soup.find('table', attrs={
             "class": "arguments full_width"}).tbody.find_all('tr')
