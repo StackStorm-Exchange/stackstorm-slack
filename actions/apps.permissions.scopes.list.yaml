@@ -1,4 +1,4 @@
-description: "Returns list of scopes this app has on a team."
+description: "This action is auto-generated. See https://api.slack.com/methods/apps.permissions.scopes.list"
 enabled: true
 entry_point: run.py
 name: apps.permissions.scopes.list

@@ -1,4 +1,4 @@
-description: "Reverses conversation archival."
+description: "This action is auto-generated. See https://api.slack.com/methods/conversations.unarchive"
 enabled: true
 entry_point: run.py
 name: conversations.unarchive

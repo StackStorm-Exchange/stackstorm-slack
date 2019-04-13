@@ -1,4 +1,4 @@
-description: "Adds a reaction to an item."
+description: "This action is auto-generated. See https://api.slack.com/methods/reactions.add"
 enabled: true
 entry_point: run.py
 name: reactions.add

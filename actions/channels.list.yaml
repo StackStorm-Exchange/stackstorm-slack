@@ -1,4 +1,4 @@
-description: "Lists all channels in a Slack team."
+description: "This action is auto-generated. See https://api.slack.com/methods/channels.list"
 enabled: true
 entry_point: run.py
 name: channels.list

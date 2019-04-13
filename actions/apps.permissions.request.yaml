@@ -1,4 +1,4 @@
-description: "Allows an app to request additional scopes"
+description: "This action is auto-generated. See https://api.slack.com/methods/apps.permissions.request"
 enabled: true
 entry_point: run.py
 name: apps.permissions.request

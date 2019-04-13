@@ -1,4 +1,4 @@
-description: "Marked a user as active. Deprecated and non-functional."
+description: "This action is auto-generated. See https://api.slack.com/methods/users.setActive"
 enabled: true
 entry_point: run.py
 name: users.setActive

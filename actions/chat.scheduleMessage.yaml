@@ -1,10 +1,10 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/chat.postEphemeral"
+description: "This action is auto-generated. See https://api.slack.com/methods/chat.scheduleMessage"
 enabled: true
 entry_point: run.py
-name: chat.postEphemeral
+name: chat.scheduleMessage
 parameters:
   end_point:
-    default: chat.postEphemeral
+    default: chat.scheduleMessage
     immutable: true
     type: string
   http_method:
@@ -17,10 +17,10 @@ parameters:
   channel:
     required: true
     type: string
-  text:
+  post_at:
     required: true
     type: string
-  user:
+  text:
     required: true
     type: string
   as_user:
@@ -38,7 +38,16 @@ parameters:
   parse:
     required: false
     type: string
+  reply_broadcast:
+    required: false
+    type: string
   thread_ts:
+    required: false
+    type: string
+  unfurl_links:
+    required: false
+    type: string
+  unfurl_media:
     required: false
     type: string
 runner_type: python-script

@@ -1,10 +1,10 @@
-description: "This action is auto-generated. See https://api.slack.com/methods/conversations.create"
+description: "This action is auto-generated. See https://api.slack.com/methods/chat.deleteScheduledMessage"
 enabled: true
 entry_point: run.py
-name: conversations.create
+name: chat.deleteScheduledMessage
 parameters:
   end_point:
-    default: conversations.create
+    default: chat.deleteScheduledMessage
     immutable: true
     type: string
   http_method:
@@ -14,13 +14,13 @@ parameters:
   token:
     required: false
     type: string
-  name:
+  channel:
     required: true
     type: string
-  is_private:
-    required: false
+  scheduled_message_id:
+    required: true
     type: string
-  user_ids:
+  as_user:
     required: false
     type: string
 runner_type: python-script

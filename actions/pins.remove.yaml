@@ -1,4 +1,4 @@
-description: "Un-pins an item from a channel."
+description: "This action is auto-generated. See https://api.slack.com/methods/pins.remove"
 enabled: true
 entry_point: run.py
 name: pins.remove

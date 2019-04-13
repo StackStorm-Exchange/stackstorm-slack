@@ -1,4 +1,4 @@
-description: "Fetches history of messages and events from a multiparty direct message."
+description: "This action is auto-generated. See https://api.slack.com/methods/mpim.history"
 enabled: true
 entry_point: run.py
 name: mpim.history

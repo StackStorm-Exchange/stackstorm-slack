@@ -1,4 +1,4 @@
-description: "For Enterprise Grid workspaces, map local user IDs to global user IDs"
+description: "This action is auto-generated. See https://api.slack.com/methods/migration.exchange"
 enabled: true
 entry_point: run.py
 name: migration.exchange

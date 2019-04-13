@@ -1,4 +1,4 @@
-description: "Gets user presence information."
+description: "This action is auto-generated. See https://api.slack.com/methods/users.getPresence"
 enabled: true
 entry_point: run.py
 name: users.getPresence

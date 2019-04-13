@@ -1,4 +1,4 @@
-description: "Sets the topic for a channel."
+description: "This action is auto-generated. See https://api.slack.com/methods/channels.setTopic"
 enabled: true
 entry_point: run.py
 name: channels.setTopic

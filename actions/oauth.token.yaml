@@ -1,4 +1,4 @@
-description: "Exchanges a temporary OAuth verifier code for a workspace token."
+description: "This action is auto-generated. See https://api.slack.com/methods/oauth.token"
 enabled: true
 entry_point: run.py
 name: oauth.token

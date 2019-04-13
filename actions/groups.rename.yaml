@@ -1,4 +1,4 @@
-description: "Renames a private channel."
+description: "This action is auto-generated. See https://api.slack.com/methods/groups.rename"
 enabled: true
 entry_point: run.py
 name: groups.rename

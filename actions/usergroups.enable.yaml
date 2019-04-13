@@ -1,4 +1,4 @@
-description: "Enable a User Group"
+description: "This action is auto-generated. See https://api.slack.com/methods/usergroups.enable"
 enabled: true
 entry_point: run.py
 name: usergroups.enable

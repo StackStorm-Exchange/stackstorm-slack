@@ -1,4 +1,4 @@
-description: "Provide custom unfurl behavior for user-posted URLs"
+description: "This action is auto-generated. See https://api.slack.com/methods/chat.unfurl"
 enabled: true
 entry_point: run.py
 name: chat.unfurl

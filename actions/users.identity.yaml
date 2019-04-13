@@ -1,4 +1,4 @@
-description: "Get a user's identity."
+description: "This action is auto-generated. See https://api.slack.com/methods/users.identity"
 enabled: true
 entry_point: run.py
 name: users.identity

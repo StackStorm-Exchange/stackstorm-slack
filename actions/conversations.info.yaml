@@ -1,4 +1,4 @@
-description: "Retrieve information about a conversation."
+description: "This action is auto-generated. See https://api.slack.com/methods/conversations.info"
 enabled: true
 entry_point: run.py
 name: conversations.info
@@ -19,5 +19,9 @@ parameters:
     type: string
   include_locale:
     required: false
+    type: string
+  include_num_members:
+    required: false
+    default: "false"
     type: string
 runner_type: python-script

@@ -1,4 +1,4 @@
-description: "Enables an app to trigger a permissions modal to grant an app access to a user access scope."
+description: "This action is auto-generated. See https://api.slack.com/methods/apps.permissions.users.request"
 enabled: true
 entry_point: run.py
 name: apps.permissions.users.request

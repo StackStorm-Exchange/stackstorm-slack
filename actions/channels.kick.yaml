@@ -1,4 +1,4 @@
-description: "Removes a user from a channel."
+description: "This action is auto-generated. See https://api.slack.com/methods/channels.kick"
 enabled: true
 entry_point: run.py
 name: channels.kick

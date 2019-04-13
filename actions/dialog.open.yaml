@@ -1,4 +1,4 @@
-description: "Open a dialog with a user"
+description: "This action is auto-generated. See https://api.slack.com/methods/dialog.open"
 enabled: true
 entry_point: run.py
 name: dialog.open

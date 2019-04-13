@@ -1,4 +1,4 @@
-description: "Gets information about the current team."
+description: "This action is auto-generated. See https://api.slack.com/methods/team.info"
 enabled: true
 entry_point: run.py
 name: team.info

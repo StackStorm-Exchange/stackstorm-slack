@@ -1,4 +1,4 @@
-description: "Retrieves the Do Not Disturb status for users on a team."
+description: "This action is auto-generated. See https://api.slack.com/methods/dnd.teamInfo"
 enabled: true
 entry_point: run.py
 name: dnd.teamInfo

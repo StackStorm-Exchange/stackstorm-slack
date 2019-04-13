@@ -1,4 +1,4 @@
-description: "Starts a Real Time Messaging session."
+description: "This action is auto-generated. See https://api.slack.com/methods/rtm.start"
 enabled: true
 entry_point: run.py
 name: rtm.start

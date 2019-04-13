@@ -1,4 +1,4 @@
-description: "Lists all users in a Slack team."
+description: "This action is auto-generated. See https://api.slack.com/methods/users.list"
 enabled: true
 entry_point: run.py
 name: users.list
@@ -23,9 +23,5 @@ parameters:
   limit:
     required: false
     default: "0"
-    type: string
-  presence:
-    required: false
-    default: "false"
     type: string
 runner_type: python-script

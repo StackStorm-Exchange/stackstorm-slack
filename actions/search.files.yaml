@@ -1,4 +1,4 @@
-description: "Searches for files matching a query."
+description: "This action is auto-generated. See https://api.slack.com/methods/search.files"
 enabled: true
 entry_point: run.py
 name: search.files

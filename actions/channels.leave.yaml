@@ -1,4 +1,4 @@
-description: "Leaves a channel."
+description: "This action is auto-generated. See https://api.slack.com/methods/channels.leave"
 enabled: true
 entry_point: run.py
 name: channels.leave

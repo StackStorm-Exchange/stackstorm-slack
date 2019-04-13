@@ -1,4 +1,4 @@
-description: "Updates a message."
+description: "This action is auto-generated. See https://api.slack.com/methods/chat.update"
 enabled: true
 entry_point: run.py
 name: chat.update
@@ -27,6 +27,9 @@ parameters:
     required: false
     type: string
   attachments:
+    required: false
+    type: string
+  blocks:
     required: false
     type: string
   link_names:

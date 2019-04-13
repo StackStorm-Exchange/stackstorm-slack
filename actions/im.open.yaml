@@ -1,4 +1,4 @@
-description: "Opens a direct message channel."
+description: "This action is auto-generated. See https://api.slack.com/methods/im.open"
 enabled: true
 entry_point: run.py
 name: im.open

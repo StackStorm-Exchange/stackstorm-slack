@@ -1,4 +1,4 @@
-description: "Lists private channels that the calling user has access to."
+description: "This action is auto-generated. See https://api.slack.com/methods/groups.list"
 enabled: true
 entry_point: run.py
 name: groups.list

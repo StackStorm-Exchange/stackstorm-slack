@@ -1,4 +1,4 @@
-description: "Close a direct message channel."
+description: "This action is auto-generated. See https://api.slack.com/methods/im.close"
 enabled: true
 entry_point: run.py
 name: im.close

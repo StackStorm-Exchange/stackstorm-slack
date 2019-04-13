@@ -1,4 +1,4 @@
-description: "Sends a message to a channel."
+description: "This action is auto-generated. See https://api.slack.com/methods/chat.postMessage"
 enabled: true
 entry_point: run.py
 name: chat.postMessage
@@ -24,6 +24,9 @@ parameters:
     required: false
     type: string
   attachments:
+    required: false
+    type: string
+  blocks:
     required: false
     type: string
   icon_emoji:
