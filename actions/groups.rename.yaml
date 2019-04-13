@@ -13,14 +13,18 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Private channel to rename
     type: string
   name:
     required: true
+    description: New name for private channel.
     type: string
   validate:
     required: false
+    description: Whether to return errors on invalid channel name instead of modifying it to meet the specified criteria.
     type: string
 runner_type: python-script

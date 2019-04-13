@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   user:
     required: true
+    description: User to get presence info on. Defaults to the authed user.
     type: string
 runner_type: python-script

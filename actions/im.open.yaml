@@ -13,14 +13,18 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   user:
     required: true
+    description: User to open a direct message channel with.
     type: string
   include_locale:
     required: false
+    description: Set this to true to receive the locale for this im. Defaults to false
     type: string
   return_im:
     required: false
+    description: Boolean, indicates you want the full IM channel definition in the response.
     type: string
 runner_type: python-script

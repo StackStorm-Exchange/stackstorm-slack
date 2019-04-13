@@ -13,14 +13,18 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   include_count:
     required: false
+    description: Include the number of users in each User Group.
     type: string
   include_disabled:
     required: false
+    description: Include disabled User Groups.
     type: string
   include_users:
     required: false
+    description: Include the list of users for each User Group.
     type: string
 runner_type: python-script

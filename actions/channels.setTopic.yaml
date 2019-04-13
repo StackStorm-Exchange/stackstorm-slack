@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Channel to set the topic of
     type: string
   topic:
     required: true
+    description: The new topic
     type: string
 runner_type: python-script

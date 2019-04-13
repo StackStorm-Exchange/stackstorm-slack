@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   presence:
     required: true
+    description: Either auto or away
     type: string
 runner_type: python-script

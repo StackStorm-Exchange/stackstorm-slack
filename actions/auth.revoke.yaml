@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   test:
     required: false
+    description: Setting this parameter to 1 triggers a testing mode where the specified token will not actually be revoked.
     type: string
 runner_type: python-script

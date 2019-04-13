@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   bot:
     required: false
+    description: Bot user to get info on
     type: string
 runner_type: python-script

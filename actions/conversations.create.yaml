@@ -13,14 +13,18 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   name:
     required: true
+    description: Name of the public or private channel to create
     type: string
   is_private:
     required: false
+    description: Create a private channel instead of a public one
     type: string
   user_ids:
     required: false
+    description: Required for workspace apps. A list of between 1 and 30 human users that will be added to the newly-created conversation. This argument has no effect when used by classic Slack apps.
     type: string
 runner_type: python-script

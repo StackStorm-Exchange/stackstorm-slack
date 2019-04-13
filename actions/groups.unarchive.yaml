@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Private channel to unarchive
     type: string
 runner_type: python-script

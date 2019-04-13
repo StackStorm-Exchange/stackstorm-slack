@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: The ID of the conversation or channel containing the message
     type: string
   message_ts:
     required: true
+    description: A message's ts value, uniquely identifying it within a channel
     type: string
 runner_type: python-script

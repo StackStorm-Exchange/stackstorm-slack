@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   reminder:
     required: true
+    description: The ID of the reminder
     type: string
 runner_type: python-script

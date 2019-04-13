@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   usergroup:
     required: true
+    description: The encoded ID of the User Group to enable.
     type: string
   include_count:
     required: false
+    description: Include the number of users in the User Group.
     type: string
 runner_type: python-script

@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   scopes:
     required: true
+    description: A comma separated list of scopes to request for
     type: string
   trigger_id:
     required: true
+    description: Token used to trigger the permissions API
     type: string
 runner_type: python-script

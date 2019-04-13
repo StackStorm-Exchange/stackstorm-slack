@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   num_minutes:
     required: true
+    description: Number of minutes, from now, to snooze until.
     type: string
 runner_type: python-script

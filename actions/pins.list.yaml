@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Channel to get pinned items for.
     type: string
 runner_type: python-script

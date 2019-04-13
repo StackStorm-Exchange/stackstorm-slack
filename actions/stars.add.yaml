@@ -13,17 +13,22 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: false
+    description: Channel to add star to, or channel where the message to add star to was posted (used with timestamp).
     type: string
   file:
     required: false
+    description: File to add star to.
     type: string
   file_comment:
     required: false
+    description: File comment to add star to.
     type: string
   timestamp:
     required: false
+    description: Timestamp of the message to add star to.
     type: string
 runner_type: python-script

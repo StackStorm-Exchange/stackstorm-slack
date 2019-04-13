@@ -13,29 +13,38 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channels:
     required: false
+    description: Comma-separated list of channel names or IDs where the file will be shared.
     type: string
   content:
     required: false
+    description: File contents via a POST variable. If omitting this parameter, you must provide a file.
     type: string
   file:
     required: false
+    description: File contents via multipart/form-data. If omitting this parameter, you must submit content.
     type: string
   filename:
     required: false
+    description: Filename of file.
     type: string
   filetype:
     required: false
+    description: A file type identifier.
     type: string
   initial_comment:
     required: false
+    description: The message text introducing the file in specified channels.
     type: string
   thread_ts:
     required: false
+    description: Provide another message's ts value to upload this file as a reply. Never use a reply's ts value; use its parent instead.
     type: string
   title:
     required: false
+    description: Title of file.
     type: string
 runner_type: python-script

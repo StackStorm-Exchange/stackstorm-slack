@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   usergroup:
     required: true
+    description: The encoded ID of the User Group to update.
     type: string
   include_disabled:
     required: false
+    description: Allow results that involve disabled User Groups.
     type: string
 runner_type: python-script

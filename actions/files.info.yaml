@@ -13,23 +13,29 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   file:
     required: true
+    description: Specify a file by providing its ID.
     type: string
   count:
     required: false
     default: "100"
+    description: Number of items to return per page.
     type: string
   cursor:
     required: false
+    description: 'Parameter for pagination. File comments are paginated for a single file. Set cursor equal to the next_cursor attribute returned by the previous request''s response_metadata. This parameter is optional, but pagination is mandatory: the default value simply fetches the first "page" of the collection of comments. See pagination for more details.'
     type: string
   limit:
     required: false
     default: "0"
+    description: The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached.
     type: string
   page:
     required: false
     default: "1"
+    description: Page number of results to return.
     type: string
 runner_type: python-script

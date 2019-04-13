@@ -13,17 +13,22 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Channel where the item is pinned to.
     type: string
   file:
     required: false
+    description: File to un-pin.
     type: string
   file_comment:
     required: false
+    description: File comment to un-pin.
     type: string
   timestamp:
     required: false
+    description: Timestamp of the message to un-pin.
     type: string
 runner_type: python-script

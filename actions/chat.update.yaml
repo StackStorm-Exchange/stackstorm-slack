@@ -13,29 +13,38 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Channel containing the message to be updated.
     type: string
   text:
     required: false
+    description: New text for the message, using the default formatting rules. It's not required when presenting attachments.
     type: string
   ts:
     required: true
+    description: Timestamp of the message to be updated.
     type: string
   as_user:
     required: false
+    description: Pass true to update the message as the authed user. Bot users in this context are considered authed users.
     type: string
   attachments:
     required: false
+    description: A JSON-based array of structured attachments, presented as a URL-encoded string. This field is required when not presenting text.
     type: string
   blocks:
     required: false
+    description: A JSON-based array of structured blocks, presented as a URL-encoded string.
     type: string
   link_names:
     required: false
+    description: Find and link channel names and usernames. Defaults to none. See below.
     type: string
   parse:
     required: false
+    description: Change how messages are treated. Defaults to client, unlike chat.postMessage. See below.
     type: string
 runner_type: python-script

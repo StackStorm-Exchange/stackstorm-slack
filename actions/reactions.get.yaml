@@ -13,20 +13,26 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: false
+    description: Channel where the message to get reactions for was posted.
     type: string
   file:
     required: false
+    description: File to get reactions for.
     type: string
   file_comment:
     required: false
+    description: File comment to get reactions for.
     type: string
   full:
     required: false
+    description: If true always return the complete reaction list.
     type: string
   timestamp:
     required: false
+    description: Timestamp of the message to get reactions for.
     type: string
 runner_type: python-script

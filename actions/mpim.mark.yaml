@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: multiparty direct message channel to set reading cursor in.
     type: string
   ts:
     required: true
+    description: Timestamp of the most recently seen message.
     type: string
 runner_type: python-script

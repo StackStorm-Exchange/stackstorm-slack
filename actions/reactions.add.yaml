@@ -13,20 +13,26 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   name:
     required: true
+    description: Reaction (emoji) name.
     type: string
   channel:
     required: false
+    description: Channel where the message to add reaction to was posted.
     type: string
   file:
     required: false
+    description: File to add reaction to. Now that file threads work the way you'd expect, this argument is deprecated. Specify the timestamp and channel of the message associated with a file instead.
     type: string
   file_comment:
     required: false
+    description: File comment to add reaction to. Now that file threads work the way you'd expect, this argument is deprecated. Specify the timestamp and channel of the message associated with a file instead.
     type: string
   timestamp:
     required: false
+    description: Timestamp of the message to add reaction to.
     type: string
 runner_type: python-script

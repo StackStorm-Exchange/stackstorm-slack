@@ -13,17 +13,21 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   before:
     required: false
     default: "now"
+    description: End of time range of logs to include in results (inclusive).
     type: string
   count:
     required: false
     default: "100"
+    description: Number of items to return per page.
     type: string
   page:
     required: false
     default: "1"
+    description: Page number of results to return.
     type: string
 runner_type: python-script

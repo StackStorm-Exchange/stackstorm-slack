@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: The ID of the public or private channel to invite user(s) to.
     type: string
   users:
     required: true
+    description: A comma separated list of user IDs. Up to 30 users may be listed.
     type: string
 runner_type: python-script

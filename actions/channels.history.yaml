@@ -13,28 +13,35 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Channel to fetch history for.
     type: string
   count:
     required: false
     default: "100"
+    description: Number of messages to return, between 1 and 1000.
     type: string
   inclusive:
     required: false
     default: "0"
+    description: Include messages with latest or oldest timestamp in results.
     type: string
   latest:
     required: false
     default: "now"
+    description: End of time range of messages to include in results.
     type: string
   oldest:
     required: false
     default: "0"
+    description: Start of time range of messages to include in results.
     type: string
   unreads:
     required: false
     default: "0"
+    description: Include unread_count_display in the output?
     type: string
 runner_type: python-script

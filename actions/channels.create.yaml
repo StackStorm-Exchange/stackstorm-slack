@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   name:
     required: true
+    description: Name of channel to create
     type: string
   validate:
     required: false
+    description: Whether to return errors on invalid channel name instead of modifying it to meet the specified criteria.
     type: string
 runner_type: python-script

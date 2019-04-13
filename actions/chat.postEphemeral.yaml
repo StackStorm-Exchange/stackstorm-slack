@@ -13,32 +13,42 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name.
     type: string
   text:
     required: true
+    description: Text of the message to send. See below for an explanation of formatting. This field is usually required, unless you're providing only attachments instead.
     type: string
   user:
     required: true
+    description: id of the user who will receive the ephemeral message. The user should be in the channel specified by the channel argument.
     type: string
   as_user:
     required: false
+    description: Pass true to post the message as the authed user. Defaults to true if the chat:write:bot scope is not included. Otherwise, defaults to false.
     type: string
   attachments:
     required: false
+    description: A JSON-based array of structured attachments, presented as a URL-encoded string.
     type: string
   blocks:
     required: false
+    description: A JSON-based array of structured blocks, presented as a URL-encoded string.
     type: string
   link_names:
     required: false
+    description: Find and link channel names and usernames.
     type: string
   parse:
     required: false
+    description: Change how messages are treated. Defaults to none. See below.
     type: string
   thread_ts:
     required: false
+    description: Provide another message's ts value to post this message in a thread. Avoid using a reply's ts value; use its parent's value instead. Ephemeral messages in threads are only shown if there is already an active thread.
     type: string
 runner_type: python-script

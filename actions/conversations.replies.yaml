@@ -13,30 +13,38 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Conversation ID to fetch thread from.
     type: string
   ts:
     required: true
+    description: Unique identifier of a thread's parent message.
     type: string
   cursor:
     required: false
+    description: Paginate through collections of data by setting the cursor parameter to a next_cursor attribute returned by a previous request's response_metadata. Default value fetches the first "page" of the collection. See pagination for more detail.
     type: string
   inclusive:
     required: false
     default: "0"
+    description: Include messages with latest or oldest timestamp in results only when either timestamp is specified.
     type: string
   latest:
     required: false
     default: "now"
+    description: End of time range of messages to include in results.
     type: string
   limit:
     required: false
     default: "10"
+    description: The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached.
     type: string
   oldest:
     required: false
     default: "0"
+    description: Start of time range of messages to include in results.
     type: string
 runner_type: python-script

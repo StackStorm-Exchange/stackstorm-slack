@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Private channel to set the purpose of
     type: string
   purpose:
     required: true
+    description: The new purpose
     type: string
 runner_type: python-script

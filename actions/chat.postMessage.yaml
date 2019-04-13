@@ -13,51 +13,67 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Channel, private group, or IM channel to send message to. Can be an encoded ID, or a name. See below for more details.
     type: string
   text:
     required: false
+    description: Text of the message to send. See below for an explanation of formatting. This field is usually required, unless you're providing only attachments instead. Provide no more than 40,000 characters or risk truncation.
     type: string
   as_user:
     required: false
+    description: Pass true to post the message as the authed user, instead of as a bot. Defaults to false. See authorship below.
     type: string
   attachments:
     required: false
+    description: A JSON-based array of structured attachments, presented as a URL-encoded string.
     type: string
   blocks:
     required: false
+    description: A JSON-based array of structured blocks, presented as a URL-encoded string.
     type: string
   icon_emoji:
     required: false
+    description: Emoji to use as the icon for this message. Overrides icon_url. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below.
     type: string
   icon_url:
     required: false
+    description: URL to an image to use as the icon for this message. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below.
     type: string
   link_names:
     required: false
+    description: Find and link channel names and usernames.
     type: string
   mrkdwn:
     required: false
     default: "true"
+    description: Disable Slack markup parsing by setting to false. Enabled by default.
     type: string
   parse:
     required: false
+    description: Change how messages are treated. Defaults to none. See below.
     type: string
   reply_broadcast:
     required: false
+    description: Used in conjunction with thread_ts and indicates whether reply should be made visible to everyone in the channel or conversation. Defaults to false.
     type: string
   thread_ts:
     required: false
+    description: Provide another message's ts value to make this message a reply. Avoid using a reply's ts value; use its parent instead.
     type: string
   unfurl_links:
     required: false
+    description: Pass true to enable unfurling of primarily text-based content.
     type: string
   unfurl_media:
     required: false
+    description: Pass false to disable unfurling of media content.
     type: string
   username:
     required: false
+    description: Set your bot's user name. Must be used in conjunction with as_user set to false, otherwise ignored. See authorship below.
     type: string
 runner_type: python-script

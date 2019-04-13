@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   file:
     required: true
+    description: File to delete a comment from.
     type: string
   id:
     required: true
+    description: The comment to delete.
     type: string
 runner_type: python-script

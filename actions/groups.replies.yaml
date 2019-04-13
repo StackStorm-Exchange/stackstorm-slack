@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Private channel to fetch thread from
     type: string
   thread_ts:
     required: true
+    description: Unique identifier of a thread's parent message
     type: string
 runner_type: python-script

@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Channel to remove user from.
     type: string
   user:
     required: true
+    description: User to remove from channel.
     type: string
 runner_type: python-script

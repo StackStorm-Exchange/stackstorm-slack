@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   visibility:
     required: false
+    description: Filter by visibility.
     type: string
 runner_type: python-script

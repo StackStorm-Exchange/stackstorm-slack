@@ -13,27 +13,34 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   query:
     required: true
+    description: Search query.
     type: string
   count:
     required: false
     default: "20"
+    description: Number of items to return per page.
     type: string
   highlight:
     required: false
+    description: Pass a value of true to enable query highlight markers (see below).
     type: string
   page:
     required: false
     default: "1"
+    description: Page number of results to return.
     type: string
   sort:
     required: false
     default: "score"
+    description: Return matches sorted by either score or timestamp.
     type: string
   sort_dir:
     required: false
     default: "desc"
+    description: Change sort direction to ascending (asc) or descending (desc).
     type: string
 runner_type: python-script

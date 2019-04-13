@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   user:
     required: false
+    description: A user to retrieve the billable information for. Defaults to all users.
     type: string
 runner_type: python-script

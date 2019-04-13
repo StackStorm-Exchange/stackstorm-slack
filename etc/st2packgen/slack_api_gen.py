@@ -76,8 +76,8 @@ for method in api_methods.stripped_strings:
         method_dict[method]['params'][arg]['required'] = required
         method_dict[method]['params'][arg]['default'] = default
 
-        # description = row.find_all('td')[3].text.strip()
-        # method_dict[method]['params'][arg]['description'] = description
+        description = row.find_all('td')[3].text.strip()
+        method_dict[method]['params'][arg]['description'] = description
 
     # parse Preferred HTTP method
     method_facts_table = method_soup.find('h2', attrs={"id": "facts"}).findNext('table')
@@ -123,8 +123,8 @@ for method in method_dict:
             output_dict['parameters'][param]['default'] = \
                 doublequoted_string(method_dict[method]['params'][param]['default'])
 
-        # output_dict['parameters'][param]['description'] = \
-        #     method_dict[method]['params'][param]['description']
+        output_dict['parameters'][param]['description'] = \
+            method_dict[method]['params'][param]['description']
 
         output_dict['parameters'][param]['type'] = 'string'
 

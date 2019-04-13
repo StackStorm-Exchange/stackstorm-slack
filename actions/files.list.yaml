@@ -13,31 +13,39 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: false
+    description: Filter files appearing in a specific channel, indicated by its ID.
     type: string
   count:
     required: false
     default: "100"
+    description: Number of items to return per page.
     type: string
   page:
     required: false
     default: "1"
+    description: Page number of results to return.
     type: string
   ts_from:
     required: false
     default: "0"
+    description: Filter files created after this timestamp (inclusive).
     type: string
   ts_to:
     required: false
     default: "now"
+    description: Filter files created before this timestamp (inclusive).
     type: string
   types:
     required: false
     default: "all"
+    description: Filter files by type (see below). You can pass multiple values in the types argument, like types=spaces,snippets.The default value is all, which does not filter the list.
     type: string
   user:
     required: false
+    description: Filter files created by a single user.
     type: string
 runner_type: python-script

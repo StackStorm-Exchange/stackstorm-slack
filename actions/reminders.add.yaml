@@ -13,14 +13,18 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   text:
     required: true
+    description: The content of the reminder
     type: string
   time:
     required: true
+    description: 'When this reminder should happen: the Unix timestamp (up to five years from now), the number of seconds until the reminder (if within 24 hours), or a natural language description (Ex. "in 15 minutes," or "every Thursday")'
     type: string
   user:
     required: false
+    description: The user who will receive the reminder. If no user is specified, the reminder will go to user who created it.
     type: string
 runner_type: python-script

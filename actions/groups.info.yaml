@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Private channel to get info on
     type: string
   include_locale:
     required: false
+    description: Set this to true to receive the locale for this group. Defaults to false
     type: string
 runner_type: python-script

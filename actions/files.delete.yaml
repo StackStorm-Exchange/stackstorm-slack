@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   file:
     required: true
+    description: ID of file to delete.
     type: string
 runner_type: python-script

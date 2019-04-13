@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   email:
     required: true
+    description: An email address belonging to a user in the workspace
     type: string
 runner_type: python-script

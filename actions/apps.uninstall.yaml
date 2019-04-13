@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   client_id:
     required: true
+    description: Issued when you created your application.
     type: string
   client_secret:
     required: true
+    description: Issued when you created your application.
     type: string
 runner_type: python-script

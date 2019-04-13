@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Channel to send message to. Can be a public channel, private group or IM channel. Can be an encoded ID, or a name.
     type: string
   text:
     required: true
+    description: Text of the message to send.
     type: string
 runner_type: python-script

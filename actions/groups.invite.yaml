@@ -13,11 +13,14 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   channel:
     required: true
+    description: Private channel to invite user to.
     type: string
   user:
     required: true
+    description: User to invite.
     type: string
 runner_type: python-script

@@ -13,20 +13,25 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   cursor:
     required: false
+    description: 'Parameter for pagination. Set cursor equal to the next_cursor attribute returned by the previous request''s response_metadata. This parameter is optional, but pagination is mandatory: the default value simply fetches the first "page" of the collection. See pagination for more details.'
     type: string
   exclude_archived:
     required: false
     default: "0"
+    description: Don't return archived private channels.
     type: string
   exclude_members:
     required: false
     default: "false"
+    description: Exclude the members from each group
     type: string
   limit:
     required: false
     default: "0"
+    description: The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached.
     type: string
 runner_type: python-script

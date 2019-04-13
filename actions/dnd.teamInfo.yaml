@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   users:
     required: false
+    description: Comma-separated list of users to fetch Do Not Disturb status for
     type: string
 runner_type: python-script

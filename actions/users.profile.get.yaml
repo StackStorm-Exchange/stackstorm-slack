@@ -13,12 +13,15 @@ parameters:
     type: string
   token:
     required: false
+    description: Authentication token bearing required scopes.
     type: string
   include_labels:
     required: false
     default: "false"
+    description: Include labels for each ID in custom profile fields
     type: string
   user:
     required: false
+    description: User to retrieve profile info for
     type: string
 runner_type: python-script
