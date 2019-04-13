@@ -1,10 +1,11 @@
 import os
-import yaml
-import re
-from bs4 import BeautifulSoup
 
 # Use OrderedDict to keep params order listed in API web page
 from collections import OrderedDict
+
+import re
+import yaml
+from bs4 import BeautifulSoup
 
 from six.moves.urllib.request import urlopen
 
