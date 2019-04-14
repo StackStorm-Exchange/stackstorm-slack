@@ -26,11 +26,11 @@ parameters:
   ts:
     required: true
     description: Timestamp of the message to be updated.
-    type: string
+    type: number
   as_user:
     required: false
     description: Pass true to update the message as the authed user. Bot users in this context are considered authed users.
-    type: string
+    type: boolean
   attachments:
     required: false
     description: A JSON-based array of structured attachments, presented as a URL-encoded string. This field is required when not presenting text.
@@ -42,7 +42,7 @@ parameters:
   link_names:
     required: false
     description: Find and link channel names and usernames. Defaults to none. See below.
-    type: string
+    type: boolean
   parse:
     required: false
     description: Change how messages are treated. Defaults to client, unlike chat.postMessage. See below.

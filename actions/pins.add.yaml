@@ -30,5 +30,5 @@ parameters:
   timestamp:
     required: false
     description: Timestamp of the message to pin.
-    type: string
+    type: number
 runner_type: python-script

@@ -22,5 +22,5 @@ parameters:
   include_count:
     required: false
     description: Include the number of users in the User Group.
-    type: string
+    type: boolean
 runner_type: python-script

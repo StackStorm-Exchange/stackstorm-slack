@@ -22,5 +22,5 @@ parameters:
   limit:
     required: false
     description: The maximum number of items to return.
-    type: string
+    type: integer
 runner_type: python-script

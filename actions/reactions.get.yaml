@@ -30,9 +30,9 @@ parameters:
   full:
     required: false
     description: If true always return the complete reaction list.
-    type: string
+    type: boolean
   timestamp:
     required: false
     description: Timestamp of the message to get reactions for.
-    type: string
+    type: number
 runner_type: python-script

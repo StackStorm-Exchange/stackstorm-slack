@@ -25,22 +25,21 @@ parameters:
     type: string
   inclusive:
     required: false
-    default: "0"
+    default: false
     description: Include messages with latest or oldest timestamp in results only when either timestamp is specified.
-    type: string
+    type: boolean
   latest:
     required: false
-    default: "now"
     description: End of time range of messages to include in results.
-    type: string
+    type: number
   limit:
     required: false
-    default: "100"
+    default: 100
     description: The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached.
-    type: string
+    type: integer
   oldest:
     required: false
-    default: "0"
+    default: 0.0
     description: Start of time range of messages to include in results.
-    type: string
+    type: number
 runner_type: python-script

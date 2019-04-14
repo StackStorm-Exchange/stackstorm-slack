@@ -17,12 +17,12 @@ parameters:
     type: string
   batch_presence_aware:
     required: false
-    default: "false"
+    default: false
     description: Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence.
-    type: string
+    type: boolean
   presence_sub:
     required: false
-    default: "true"
+    default: true
     description: Only deliver presence events when requested by subscription. See presence subscriptions.
-    type: string
+    type: boolean
 runner_type: python-script

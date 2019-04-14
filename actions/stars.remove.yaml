@@ -30,5 +30,5 @@ parameters:
   timestamp:
     required: false
     description: Timestamp of the message to remove star from.
-    type: string
+    type: number
 runner_type: python-script

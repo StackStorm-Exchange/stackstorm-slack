@@ -22,13 +22,13 @@ parameters:
   crop_w:
     required: false
     description: Width/height of crop box (always square)
-    type: string
+    type: integer
   crop_x:
     required: false
     description: X coordinate of top-left corner of crop box
-    type: string
+    type: integer
   crop_y:
     required: false
     description: Y coordinate of top-left corner of crop box
-    type: string
+    type: integer
 runner_type: python-script

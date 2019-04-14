@@ -22,5 +22,5 @@ parameters:
   ts:
     required: true
     description: Timestamp of the most recently seen message.
-    type: string
+    type: number
 runner_type: python-script

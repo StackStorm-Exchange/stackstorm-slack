@@ -21,14 +21,14 @@ parameters:
     type: string
   exclude_archived:
     required: false
-    default: "0"
+    default: false
     description: Don't return archived private channels.
-    type: string
+    type: boolean
   exclude_members:
     required: false
-    default: "false"
+    default: false
     description: Exclude the members from each group
-    type: string
+    type: boolean
   limit:
     required: false
     default: "0"

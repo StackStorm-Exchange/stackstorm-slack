@@ -22,5 +22,5 @@ parameters:
   limit:
     required: false
     description: The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached.
-    type: string
+    type: integer
 runner_type: python-script

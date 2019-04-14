@@ -21,14 +21,14 @@ parameters:
     type: string
   exclude_archived:
     required: false
-    default: "false"
+    default: false
     description: Set to true to exclude archived channels from the list
-    type: string
+    type: boolean
   limit:
     required: false
-    default: "100"
+    default: 100
     description: The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the list hasn't been reached. Must be an integer no larger than 1000.
-    type: string
+    type: integer
   types:
     required: false
     default: "public_channel"

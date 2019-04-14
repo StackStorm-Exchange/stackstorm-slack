@@ -22,5 +22,5 @@ parameters:
   thread_ts:
     required: true
     description: Unique identifier of a thread's parent message.
-    type: string
+    type: number
 runner_type: python-script

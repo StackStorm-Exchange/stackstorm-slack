@@ -26,5 +26,5 @@ parameters:
   validate:
     required: false
     description: Whether to return errors on invalid channel name instead of modifying it to meet the specified criteria.
-    type: string
+    type: boolean
 runner_type: python-script

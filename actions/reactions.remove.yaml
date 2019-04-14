@@ -34,5 +34,5 @@ parameters:
   timestamp:
     required: false
     description: Timestamp of the message to remove reaction from.
-    type: string
+    type: number
 runner_type: python-script

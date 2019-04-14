@@ -21,7 +21,6 @@ parameters:
     type: string
   to_old:
     required: false
-    default: ""
     description: Specify true to convert W global user IDs to workspace-specific U IDs. Defaults to false.
-    type: string
+    type: boolean
 runner_type: python-script

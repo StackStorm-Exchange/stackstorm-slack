@@ -18,5 +18,5 @@ parameters:
   test:
     required: false
     description: Setting this parameter to 1 triggers a testing mode where the specified token will not actually be revoked.
-    type: string
+    type: boolean
 runner_type: python-script

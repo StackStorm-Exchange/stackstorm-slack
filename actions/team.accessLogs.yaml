@@ -17,9 +17,8 @@ parameters:
     type: string
   before:
     required: false
-    default: "now"
     description: End of time range of logs to include in results (inclusive).
-    type: string
+    type: integer
   count:
     required: false
     default: "100"

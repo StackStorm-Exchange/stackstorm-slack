@@ -33,9 +33,9 @@ parameters:
     type: string
   user_auth_required:
     required: false
-    default: "0"
+    default: false
     description: Set to true or 1 to indicate the user must install your Slack app to trigger unfurls for this domain
-    type: string
+    type: boolean
   user_auth_url:
     required: false
     description: Send users to this custom URL where they will complete authentication in your app to fully trigger unfurling. Value should be properly URL-encoded.

@@ -143,35 +143,35 @@ for method in method_dict:
         except KeyError:
             pass
 
-        # for param_name, param_value in output_dict['parameters'].items():
-        #     param_spec = next(
-        #         (p for p in method_api_spec['parameters'] if p['name'] == param_name), None)
-        #     if param_spec is not None:
-        #         try:
-        #             param_value['type'] = param_spec.get('type')
-        #         except KeyError:
-        #             pass
+        for param_name, param_value in output_dict['parameters'].items():
+            param_spec = next(
+                (p for p in method_api_spec['parameters'] if p['name'] == param_name), None)
+            if param_spec is not None:
+                try:
+                    param_value['type'] = param_spec.get('type')
+                except KeyError:
+                    pass
 
-        #         if param_value.get('default') is not None:
-        #             t = param_value['type']
-        #             if t == 'integer':
-        #                 try:
-        #                     param_value['default'] = int(param_value['default'])
-        #                 except ValueError as e:
-        #                     print '%s: %s: %s' % (method, param_name, e)
-        #                     del param_value['default']
-        #             elif t == 'boolean':
-        #                 try:
-        #                     param_value['default'] = bool(strtobool(param_value['default']))
-        #                 except ValueError as e:
-        #                     print '%s: %s: %s' % (method, param_name, e)
-        #                     del param_value['default']
-        #             elif t == 'number':
-        #                 try:
-        #                     param_value['default'] = float(param_value['default'])
-        #                 except ValueError as e:
-        #                     print '%s: %s: %s' % (method, param_name, e)
-        #                     del param_value['default']
+                if param_value.get('default') is not None:
+                    t = param_value['type']
+                    if t == 'integer':
+                        try:
+                            param_value['default'] = int(param_value['default'])
+                        except ValueError as e:
+                            print '%s: %s: %s' % (method, param_name, e)
+                            del param_value['default']
+                    elif t == 'boolean':
+                        try:
+                            param_value['default'] = bool(strtobool(param_value['default']))
+                        except ValueError as e:
+                            print '%s: %s: %s' % (method, param_name, e)
+                            del param_value['default']
+                    elif t == 'number':
+                        try:
+                            param_value['default'] = float(param_value['default'])
+                        except ValueError as e:
+                            print '%s: %s: %s' % (method, param_name, e)
+                            del param_value['default']
 
     fh = open(file_name, 'w')
     fh.write(yaml.safe_dump(output_dict, default_flow_style=False, width=float('inf')))

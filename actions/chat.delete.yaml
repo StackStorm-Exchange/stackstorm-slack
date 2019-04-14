@@ -22,9 +22,9 @@ parameters:
   ts:
     required: true
     description: Timestamp of the message to be deleted.
-    type: string
+    type: number
   as_user:
     required: false
     description: Pass true to delete the message as the authed user with chat:write:user scope. Bot users in this context are considered authed users. If unused or false, the message will be deleted with chat:write:bot scope.
-    type: string
+    type: boolean
 runner_type: python-script

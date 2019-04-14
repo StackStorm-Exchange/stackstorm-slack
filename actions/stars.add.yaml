@@ -30,5 +30,5 @@ parameters:
   timestamp:
     required: false
     description: Timestamp of the message to add star to.
-    type: string
+    type: number
 runner_type: python-script

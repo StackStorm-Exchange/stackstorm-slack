@@ -22,7 +22,7 @@ parameters:
   is_private:
     required: false
     description: Create a private channel instead of a public one
-    type: string
+    type: boolean
   user_ids:
     required: false
     description: Required for workspace apps. A list of between 1 and 30 human users that will be added to the newly-created conversation. This argument has no effect when used by classic Slack apps.

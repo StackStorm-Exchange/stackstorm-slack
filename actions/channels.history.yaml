@@ -21,27 +21,26 @@ parameters:
     type: string
   count:
     required: false
-    default: "100"
+    default: 100
     description: Number of messages to return, between 1 and 1000.
-    type: string
+    type: integer
   inclusive:
     required: false
-    default: "0"
+    default: false
     description: Include messages with latest or oldest timestamp in results.
-    type: string
+    type: boolean
   latest:
     required: false
-    default: "now"
     description: End of time range of messages to include in results.
-    type: string
+    type: number
   oldest:
     required: false
-    default: "0"
+    default: 0.0
     description: Start of time range of messages to include in results.
-    type: string
+    type: number
   unreads:
     required: false
-    default: "0"
+    default: false
     description: Include unread_count_display in the output?
-    type: string
+    type: boolean
 runner_type: python-script

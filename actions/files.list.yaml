@@ -31,14 +31,13 @@ parameters:
     type: string
   ts_from:
     required: false
-    default: "0"
+    default: 0.0
     description: Filter files created after this timestamp (inclusive).
-    type: string
+    type: number
   ts_to:
     required: false
-    default: "now"
     description: Filter files created before this timestamp (inclusive).
-    type: string
+    type: number
   types:
     required: false
     default: "all"

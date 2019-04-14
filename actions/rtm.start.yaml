@@ -17,33 +17,33 @@ parameters:
     type: string
   batch_presence_aware:
     required: false
-    default: "false"
+    default: false
     description: Batch presence deliveries via subscription. Enabling changes the shape of presence_change events. See batch presence.
-    type: string
+    type: boolean
   include_locale:
     required: false
     description: Set this to true to receive the locale for users and channels. Defaults to false
-    type: string
+    type: boolean
   mpim_aware:
     required: false
     description: Returns MPIMs to the client in the API response.
-    type: string
+    type: boolean
   no_latest:
     required: false
-    default: "0"
+    default: false
     description: Exclude latest timestamps for channels, groups, mpims, and ims. Automatically sets no_unreads to 1
-    type: string
+    type: boolean
   no_unreads:
     required: false
     description: Skip unread counts for each channel (improves performance).
-    type: string
+    type: boolean
   presence_sub:
     required: false
-    default: "true"
+    default: true
     description: Only deliver presence events when requested by subscription. See presence subscriptions.
-    type: string
+    type: boolean
   simple_latest:
     required: false
     description: Return timestamp only for latest message object of each channel (improves performance).
-    type: string
+    type: boolean
 runner_type: python-script

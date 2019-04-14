@@ -27,7 +27,7 @@ parameters:
   full:
     required: false
     description: If true always return the complete reaction list.
-    type: string
+    type: boolean
   limit:
     required: false
     default: "0"

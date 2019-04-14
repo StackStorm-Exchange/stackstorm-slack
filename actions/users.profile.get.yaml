@@ -17,9 +17,9 @@ parameters:
     type: string
   include_labels:
     required: false
-    default: "false"
+    default: false
     description: Include labels for each ID in custom profile fields
-    type: string
+    type: boolean
   user:
     required: false
     description: User to retrieve profile info for

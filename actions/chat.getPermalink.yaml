@@ -22,5 +22,5 @@ parameters:
   message_ts:
     required: true
     description: A message's ts value, uniquely identifying it within a channel
-    type: string
+    type: number
 runner_type: python-script

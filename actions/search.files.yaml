@@ -27,7 +27,7 @@ parameters:
   highlight:
     required: false
     description: Pass a value of true to enable query highlight markers (see below).
-    type: string
+    type: boolean
   page:
     required: false
     default: "1"

@@ -22,10 +22,10 @@ parameters:
   include_locale:
     required: false
     description: Set this to true to receive the locale for users. Defaults to false
-    type: string
+    type: boolean
   limit:
     required: false
-    default: "0"
+    default: 0
     description: The maximum number of items to return. Fewer than the requested number of items may be returned, even if the end of the users list hasn't been reached.
-    type: string
+    type: integer
 runner_type: python-script

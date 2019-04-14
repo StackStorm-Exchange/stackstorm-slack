@@ -30,7 +30,7 @@ parameters:
   as_user:
     required: false
     description: Pass true to post the message as the authed user. Defaults to true if the chat:write:bot scope is not included. Otherwise, defaults to false.
-    type: string
+    type: boolean
   attachments:
     required: false
     description: A JSON-based array of structured attachments, presented as a URL-encoded string.
@@ -42,7 +42,7 @@ parameters:
   link_names:
     required: false
     description: Find and link channel names and usernames.
-    type: string
+    type: boolean
   parse:
     required: false
     description: Change how messages are treated. Defaults to none. See below.
