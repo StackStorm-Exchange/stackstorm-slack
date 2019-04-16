@@ -158,19 +158,19 @@ for method in method_dict:
                         try:
                             param_value['default'] = int(param_value['default'])
                         except ValueError as e:
-                            print '%s: %s: %s' % (method, param_name, e)
+                            print('%s: %s: %s' % (method, param_name, e))
                             del param_value['default']
                     elif t == 'boolean':
                         try:
                             param_value['default'] = bool(strtobool(param_value['default']))
                         except ValueError as e:
-                            print '%s: %s: %s' % (method, param_name, e)
+                            print('%s: %s: %s' % (method, param_name, e))
                             del param_value['default']
                     elif t == 'number':
                         try:
                             param_value['default'] = float(param_value['default'])
                         except ValueError as e:
-                            print '%s: %s: %s' % (method, param_name, e)
+                            print('%s: %s: %s' % (method, param_name, e))
                             del param_value['default']
 
     fh = open(file_name, 'w')
