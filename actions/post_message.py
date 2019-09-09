@@ -13,11 +13,16 @@ __all__ = [
 class PostMessageAction(Action):
     def run(self, message, username=None, icon_emoji=None, channel=None,
             disable_formatting=False, webhook_url=None):
-        config = self.config['post_message_action']
+        config = self.config.get('post_message_action', {})
         username = username if username else config['username']
         icon_emoji = icon_emoji if icon_emoji else config.get('icon_emoji', None)
         channel = channel if channel else config.get('channel', None)
         webhook_url = webhook_url if webhook_url else config.get('webhook_url', None)
+
+        if not webhook_url:
+            raise ValueError('"webhook_url" needs to be either provided via '
+                             'action parameter or specified as part of '
+                             'post_message_action.webhook_url config option"')
 
         headers = {}
         headers['Content-Type'] = 'application/x-www-form-urlencoded'
