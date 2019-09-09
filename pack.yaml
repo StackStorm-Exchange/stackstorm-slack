@@ -7,7 +7,7 @@ keywords:
   - chat
   - messaging
   - instant messaging
-version: 0.12.7
+version: 0.12.8
 python_versions:
   - "2"
   - "3"

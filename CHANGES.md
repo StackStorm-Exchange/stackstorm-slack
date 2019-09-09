@@ -1,5 +1,10 @@
 # Change Log
 
+# 0.12.8
+
+- Don't require ``post_message_action`` config option to be set when ``webhook_url`` parameter is
+  provided when calling ``slack.post_message`` action.
+
 # 0.12.7
 
 - fix `attachments` parameter type in sensor.
