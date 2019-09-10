@@ -96,6 +96,7 @@ jobs:
 
     environment:
       VIRTUALENV_DIR: "~/virtualenv"
+      FORCE_REBUILD_INDEX: "1"
 
     steps:
       - checkout
