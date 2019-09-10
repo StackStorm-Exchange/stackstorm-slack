@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Download dependencies
           command: |
-            git clone -b master git://github.com/stackstorm-exchange/ci.git ~/ci
+            git clone -b include_pack_tags git://github.com/stackstorm-exchange/ci.git ~/ci
             ~/ci/.circle/dependencies
       - run:
           name: Run tests (Python 2.7)
@@ -120,9 +120,6 @@ workflows:
       - deploy:
           requires:
             - build_and_test_python27
-          filters:
-            branches:
-              only: master
   build_test_weekly:
     jobs:
       - build_and_test_python27
