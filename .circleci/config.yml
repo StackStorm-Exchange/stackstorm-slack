@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Download dependencies
           command: |
-            git clone -b include_pack_tags git://github.com/stackstorm-exchange/ci.git ~/ci
+            git clone -b fix_index_bug git://github.com/stackstorm-exchange/ci.git ~/ci
             ~/ci/.circle/dependencies
       - run:
           name: Run tests (Python 2.7)
