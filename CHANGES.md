@@ -1,6 +1,6 @@
 # Change Log
 
-# 0.12.9
+# 0.13.0
 
 - Various improvements to the ``slack.post_message`` action:
   - Make ``icon_emoji`` config option and parameter option. If it's not specified, it will now
