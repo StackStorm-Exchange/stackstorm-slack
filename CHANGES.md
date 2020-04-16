@@ -1,5 +1,14 @@
 # Change Log
 
+# 0.13.0
+
+- Various improvements to the ``slack.post_message`` action:
+  - Make ``icon_emoji`` config option and parameter option. If it's not specified, it will now
+    use server-side default.
+  - Add new ``icon_url`` parameter to the action.
+  - Make ``post_message_action.webhook_url`` config optional. This value can either be specified in
+   the config or overriden on per action invocation basis.
+
 # 0.12.8
 
 - Don't require ``post_message_action`` config option to be set when ``webhook_url`` parameter is

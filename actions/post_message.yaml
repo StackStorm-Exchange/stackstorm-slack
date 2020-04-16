@@ -19,7 +19,11 @@
       required: false
     icon_emoji:
       type: "string"
-      description: "Bot icon"
+      description: "Bot icon emoji"
+      required: false
+    icon_url:
+      type: "string"
+      description: "Bot icon URL"
       required: false
     disable_formatting:
       type: "boolean"
