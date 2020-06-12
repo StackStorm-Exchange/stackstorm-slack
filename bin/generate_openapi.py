@@ -3,7 +3,6 @@
 
 # StdLib
 import os
-import re
 import json
 
 # External
@@ -13,10 +12,7 @@ import requests
 import six
 from prance import ResolvingParser
 
-OPENAPI_JSON_URL = 'https://raw.githubusercontent.com/slackapi/slack-api-specs/master/web-api/slack_web_openapi_v2.json'
-
-METHOD_OVERRIDES = {
-}
+OPENAPI_JSON_URL = 'https://raw.githubusercontent.com/slackapi/slack-api-specs/master/web-api/slack_web_openapi_v2.json'  # noqa: E501
 
 SLACK_SESSION = requests.Session()
 
