@@ -13,8 +13,10 @@ parameters:
     type: string
   error:
     required: false
+    description: "Error response to return"
     type: string
   foo:
     required: false
+    description: "example property to return"
     type: string
 runner_type: python-script

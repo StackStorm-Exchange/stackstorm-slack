@@ -11,16 +11,20 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
+  include_count:
     required: false
+    description: "Include the number of users in the User Group."
+    type: boolean
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `usergroups:write`"
     type: string
   usergroup:
     required: true
+    description: "The encoded ID of the User Group to update."
     type: string
   users:
     required: true
-    type: string
-  include_count:
-    required: false
+    description: "A comma separated string of encoded user IDs that represent the entire list of users for the User Group."
     type: string
 runner_type: python-script

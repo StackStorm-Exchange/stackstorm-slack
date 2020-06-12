@@ -1,0 +1,34 @@
+description: "Create an Enterprise team."
+enabled: true
+entry_point: run.py
+name: admin.teams.create
+parameters:
+  end_point:
+    default: admin.teams.create
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  team_description:
+    required: false
+    description: "Description for the team."
+    type: string
+  team_discoverability:
+    required: false
+    description: "Who can join the team. A team\u0027s discoverability can be `open`, `closed`, `invite_only`, or `unlisted`."
+    type: string
+  team_domain:
+    required: true
+    description: "Team domain (for example, slacksoftballteam)."
+    type: string
+  team_name:
+    required: true
+    description: "Team name (for example, Slack Softball Team)."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `admin.teams:write`"
+    type: string
+runner_type: python-script

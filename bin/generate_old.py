@@ -15,6 +15,11 @@ from bs4 import BeautifulSoup
 from jinja2 import Environment, FileSystemLoader
 import requests
 
+DEFAULT_ENTRY_POINT = 'run.py'
+METHOD_ENTRY_POINT_OVERRIDES = {
+    'files.upload': 'files_upload.py',
+}
+
 
 def main():  # pylint: disable=too-many-locals
     '''
@@ -149,13 +154,15 @@ def main():  # pylint: disable=too-many-locals
         soup = BeautifulSoup(page.text, "lxml")
         msec = soup.find("section", attrs={"data-tab": "docs"})
         description = msec.find("p").text
-        table = msec.find("table", "arguments full_width")
+        table = msec.find("table", "method_arguments full_width")
         rows = table.find_all("tr")
         parameters = []
         for row in rows:
             cols = row.find_all("td")
             if cols:
                 name = cols[0].text
+
+                print(cols)
 
                 default = ""
                 matches = re.match(r'.*default=(.+)$', cols[2].text, re.M | re.I)

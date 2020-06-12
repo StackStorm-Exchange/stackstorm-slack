@@ -11,10 +11,12 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
   presence:
     required: true
+    description: "Either `auto` or `away`"
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `users:write`"
     type: string
 runner_type: python-script

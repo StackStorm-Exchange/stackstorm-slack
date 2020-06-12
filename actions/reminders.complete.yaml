@@ -11,10 +11,12 @@ parameters:
     default: POST
     required: true
     type: string
+  reminder:
+    required: false
+    description: "The ID of the reminder to be marked as complete"
+    type: string
   token:
     required: false
-    type: string
-  reminder:
-    required: true
+    description: "Authentication token. Requires scope: `reminders:write`"
     type: string
 runner_type: python-script

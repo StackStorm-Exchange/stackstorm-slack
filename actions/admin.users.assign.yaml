@@ -1,0 +1,41 @@
+description: "Add an Enterprise user to a workspace."
+enabled: true
+entry_point: run.py
+name: admin.users.assign
+parameters:
+  end_point:
+    default: admin.users.assign
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  channel_ids:
+    required: false
+    default: ""
+    description: "Comma separated values of channel IDs to add user in the new workspace."
+    type: string
+  is_restricted:
+    required: false
+    default: ""
+    description: "True if user should be added to the workspace as a guest."
+    type: boolean
+  is_ultra_restricted:
+    required: false
+    default: ""
+    description: "True if user should be added to the workspace as a single-channel guest."
+    type: boolean
+  team_id:
+    required: true
+    description: "The ID (`T1234`) of the workspace."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `admin.users:write`"
+    type: string
+  user_id:
+    required: true
+    description: "The ID of the user to add to the workspace."
+    type: string
+runner_type: python-script

@@ -11,28 +11,40 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
-  channel:
-    required: true
-    type: string
-  text:
-    required: false
-    type: string
-  ts:
-    required: true
-    type: string
   as_user:
     required: false
+    description: "Pass true to update the message as the authed user. [Bot users](/bot-users) in this context are considered authed users."
     type: string
   attachments:
     required: false
+    description: "A JSON-based array of structured attachments, presented as a URL-encoded string. This field is required when not presenting `text`."
+    type: string
+  blocks:
+    required: false
+    description: "A JSON-based array of structured blocks, presented as a URL-encoded string."
+    type: string
+  channel:
+    required: true
+    description: "Channel containing the message to be updated."
     type: string
   link_names:
     required: false
+    description: "Find and link channel names and usernames. Defaults to `none`. See [below](#formatting)."
     type: string
   parse:
     required: false
+    description: "Change how messages are treated. Defaults to `client`, unlike `chat.postMessage`. Accepts either `none` or `full`. See [below](#formatting)."
+    type: string
+  text:
+    required: false
+    description: "New text for the message, using the [default formatting rules](/docs/formatting). It\u0027s not required when presenting `attachments`."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `chat:write`"
+    type: string
+  ts:
+    required: true
+    description: "Timestamp of the message to be updated."
     type: string
 runner_type: python-script

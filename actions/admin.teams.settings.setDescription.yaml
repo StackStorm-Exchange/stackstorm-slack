@@ -1,0 +1,26 @@
+description: "Set the description of a given workspace."
+enabled: true
+entry_point: run.py
+name: admin.teams.settings.setDescription
+parameters:
+  end_point:
+    default: admin.teams.settings.setDescription
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  description:
+    required: true
+    description: "The new description for the workspace."
+    type: string
+  team_id:
+    required: true
+    description: "ID for the workspace to set the description for."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `admin.teams:write`"
+    type: string
+runner_type: python-script

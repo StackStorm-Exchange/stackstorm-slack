@@ -12,6 +12,7 @@ parameters:
     required: true
     type: string
   token:
-    required: false
+    required: true
+    description: "Authentication token. Requires scope: `none`"
     type: string
 runner_type: python-script

@@ -11,19 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
-    required: true
-    type: string
-  file:
     required: false
-    type: string
-  file_comment:
-    required: false
+    description: "Channel to pin the item in."
     type: string
   timestamp:
     required: false
+    description: "Timestamp of the message to pin."
+    type: number
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `pins:write`"
     type: string
 runner_type: python-script

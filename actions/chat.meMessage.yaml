@@ -11,13 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
-    required: true
+    required: false
+    description: "Channel to send message to. Can be a public channel, private group or IM channel. Can be an encoded ID, or a name."
     type: string
   text:
-    required: true
+    required: false
+    description: "Text of the message to send."
+    type: string
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `chat:write:user`"
     type: string
 runner_type: python-script

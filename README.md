@@ -214,3 +214,11 @@ root@c603fc2f139a:/opt/stackstorm/packs.dev/slack# st2 action get slack.chat.pos
 
 Notice how there are 15 parameters. The extra one is "end_point", which is used by run.py
 to construct the end point URL.
+
+
+### Developer Reference
+
+#### How to auto-generate actions
+
+If you're a pack developer working on this pack and want to auto-generate / update
+the actions here, please see [bin/README.md](bin/README.md)

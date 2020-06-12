@@ -1,0 +1,42 @@
+description: "Adds a file from a remote service"
+enabled: true
+entry_point: run.py
+name: files.remote.add
+parameters:
+  end_point:
+    default: files.remote.add
+    immutable: true
+    type: string
+  http_method:
+    default: GET
+    required: true
+    type: string
+  external_id:
+    required: false
+    description: "Creator defined GUID for the file."
+    type: string
+  external_url:
+    required: false
+    description: "URL of the remote file."
+    type: string
+  filetype:
+    required: false
+    description: "type of file"
+    type: string
+  indexable_file_contents:
+    required: false
+    description: "A text file (txt, pdf, doc, etc.) containing textual search terms that are used to improve discovery of the remote file."
+    type: string
+  preview_image:
+    required: false
+    description: "Preview of the document via `multipart/form-data`."
+    type: string
+  title:
+    required: false
+    description: "Title of the file being shared."
+    type: string
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `remote_files:write`"
+    type: string
+runner_type: python-script

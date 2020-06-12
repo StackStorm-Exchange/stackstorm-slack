@@ -11,10 +11,12 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
     required: true
+    description: "Direct message channel to close."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `im:write`"
     type: string
 runner_type: python-script

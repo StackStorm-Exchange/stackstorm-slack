@@ -13,8 +13,10 @@ parameters:
     type: string
   token:
     required: false
+    description: "Authentication token. Requires scope: `mpim:write`"
     type: string
   users:
-    required: true
+    required: false
+    description: "Comma separated lists of users.  The ordering of the users is preserved whenever a MPIM group is returned."
     type: string
 runner_type: python-script

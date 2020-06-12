@@ -11,16 +11,20 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
-    required: false
-    type: string
   include_count:
     required: false
-    type: string
+    description: "Include the number of users in each User Group."
+    type: boolean
   include_disabled:
     required: false
-    type: string
+    description: "Include disabled User Groups."
+    type: boolean
   include_users:
     required: false
+    description: "Include the list of users for each User Group."
+    type: boolean
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `usergroups:read`"
     type: string
 runner_type: python-script

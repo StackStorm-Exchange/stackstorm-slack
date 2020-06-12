@@ -11,22 +11,20 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
+  channel:
+    required: true
+    description: "Channel where the message to add reaction to was posted."
     type: string
   name:
     required: true
-    type: string
-  channel:
-    required: false
-    type: string
-  file:
-    required: false
-    type: string
-  file_comment:
-    required: false
+    description: "Reaction (emoji) name."
     type: string
   timestamp:
-    required: false
+    required: true
+    description: "Timestamp of the message to add reaction to."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `reactions:write`"
     type: string
 runner_type: python-script

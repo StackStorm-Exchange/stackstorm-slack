@@ -11,22 +11,28 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
     required: false
+    description: "Channel where the message to get reactions for was posted."
     type: string
   file:
     required: false
+    description: "File to get reactions for."
     type: string
   file_comment:
     required: false
+    description: "File comment to get reactions for."
     type: string
   full:
     required: false
-    type: string
+    description: "If true always return the complete reaction list."
+    type: boolean
   timestamp:
     required: false
+    description: "Timestamp of the message to get reactions for."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `reactions:read`"
     type: string
 runner_type: python-script

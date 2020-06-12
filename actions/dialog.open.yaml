@@ -11,13 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
   dialog:
     required: true
+    description: "The dialog definition. This must be a JSON-encoded string."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `none`"
     type: string
   trigger_id:
     required: true
+    description: "Exchange a trigger to post to the user."
     type: string
 runner_type: python-script

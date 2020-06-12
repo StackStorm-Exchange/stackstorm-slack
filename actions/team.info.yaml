@@ -11,7 +11,12 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
+  team:
     required: false
+    description: "Team to get info on, if omitted, will return information about the current team. Will only return team that the authenticated token is allowed to see through external shared channels"
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `team:read`"
     type: string
 runner_type: python-script

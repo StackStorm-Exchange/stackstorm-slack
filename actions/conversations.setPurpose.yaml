@@ -11,13 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
-    required: true
+    required: false
+    description: "Conversation to set the purpose of"
     type: string
   purpose:
-    required: true
+    required: false
+    description: "A new, specialer purpose"
+    type: string
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `conversations:write`"
     type: string
 runner_type: python-script

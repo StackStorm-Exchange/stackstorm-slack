@@ -11,13 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
+  channel:
+    required: false
+    description: "Channel to set reading cursor in."
+    type: string
   token:
     required: false
-    type: string
-  channel:
-    required: true
+    description: "Authentication token. Requires scope: `channels:write`"
     type: string
   ts:
-    required: true
-    type: string
+    required: false
+    description: "Timestamp of the most recently seen message."
+    type: number
 runner_type: python-script

@@ -11,13 +11,16 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
+  include_disabled:
     required: false
+    description: "Allow results that involve disabled User Groups."
+    type: boolean
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `usergroups:read`"
     type: string
   usergroup:
     required: true
-    type: string
-  include_disabled:
-    required: false
+    description: "The encoded ID of the User Group to update."
     type: string
 runner_type: python-script

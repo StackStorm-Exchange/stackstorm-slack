@@ -1,0 +1,26 @@
+description: "Push a view onto the stack of a root view."
+enabled: true
+entry_point: run.py
+name: views.push
+parameters:
+  end_point:
+    default: views.push
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `none`"
+    type: string
+  trigger_id:
+    required: true
+    description: "Exchange a trigger to post to the user."
+    type: string
+  view:
+    required: true
+    description: "A [view payload](/reference/surfaces/views). This must be a JSON-encoded string."
+    type: string
+runner_type: python-script

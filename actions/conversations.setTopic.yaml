@@ -11,13 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
+  channel:
+    required: false
+    description: "Conversation to set the topic of"
+    type: string
   token:
     required: false
-    type: string
-  channel:
-    required: true
+    description: "Authentication token. Requires scope: `conversations:write`"
     type: string
   topic:
-    required: true
+    required: false
+    description: "The new topic string. Does not support formatting or linkification."
     type: string
 runner_type: python-script

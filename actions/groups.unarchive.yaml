@@ -11,10 +11,12 @@ parameters:
     default: POST
     required: true
     type: string
+  channel:
+    required: false
+    description: "Private channel to unarchive"
+    type: string
   token:
     required: false
-    type: string
-  channel:
-    required: true
+    description: "Authentication token. Requires scope: `groups:write`"
     type: string
 runner_type: python-script

@@ -1,0 +1,54 @@
+description: "Invite a user to a workspace."
+enabled: true
+entry_point: run.py
+name: admin.users.invite
+parameters:
+  end_point:
+    default: admin.users.invite
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  channel_ids:
+    required: true
+    description: "A comma-separated list of `channel_id`s for this user to join. At least one channel is required."
+    type: string
+  custom_message:
+    required: false
+    description: "An optional message to send to the user in the invite email."
+    type: string
+  email:
+    required: true
+    description: "The email address of the person to invite."
+    type: string
+  guest_expiration_ts:
+    required: false
+    description: "Timestamp when guest account should be disabled. Only include this timestamp if you are inviting a guest user and you want their account to expire on a certain date."
+    type: string
+  is_restricted:
+    required: false
+    description: "Is this user a multi-channel guest user? (default: false)"
+    type: boolean
+  is_ultra_restricted:
+    required: false
+    description: "Is this user a single channel guest user? (default: false)"
+    type: boolean
+  real_name:
+    required: false
+    description: "Full name of the user."
+    type: string
+  resend:
+    required: false
+    description: "Allow this invite to be resent in the future if a user has not signed up yet. (default: false)"
+    type: boolean
+  team_id:
+    required: true
+    description: "The ID (`T1234`) of the workspace."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `admin.users:write`"
+    type: string
+runner_type: python-script

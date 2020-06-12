@@ -11,13 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
   file:
-    required: true
+    required: false
+    description: "File to delete a comment from."
     type: string
   id:
-    required: true
+    required: false
+    description: "The comment to delete."
+    type: string
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `files:write:user`"
     type: string
 runner_type: python-script

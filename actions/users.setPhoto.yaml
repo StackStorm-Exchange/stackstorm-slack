@@ -11,19 +11,24 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
-  image:
-    required: true
-    type: string
   crop_w:
     required: false
-    type: string
+    description: "Width/height of crop box (always square)"
+    type: integer
   crop_x:
     required: false
-    type: string
+    description: "X coordinate of top-left corner of crop box"
+    type: integer
   crop_y:
     required: false
+    description: "Y coordinate of top-left corner of crop box"
+    type: integer
+  image:
+    required: false
+    description: "File contents via `multipart/form-data`."
+    type: string
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `users.profile:write`"
     type: string
 runner_type: python-script

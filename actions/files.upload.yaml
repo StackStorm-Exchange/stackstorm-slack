@@ -11,31 +11,40 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channels:
     required: false
+    description: "Comma-separated list of channel names or IDs where the file will be shared."
     type: string
   content:
     required: false
+    description: "File contents via a POST variable. If omitting this parameter, you must provide a `file`."
     type: string
   file:
     required: false
+    description: "File contents via `multipart/form-data`. If omitting this parameter, you must submit `content`."
     type: string
   filename:
     required: false
+    description: "Filename of file."
     type: string
   filetype:
     required: false
+    description: "A [file type](/types/file#file_types) identifier."
     type: string
   initial_comment:
     required: false
+    description: "The message text introducing the file in specified `channels`."
     type: string
   thread_ts:
     required: false
-    type: string
+    description: "Provide another message\u0027s `ts` value to upload this file as a reply. Never use a reply\u0027s `ts` value; use its parent instead."
+    type: number
   title:
     required: false
+    description: "Title of file."
+    type: string
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `files:write:user`"
     type: string
 runner_type: python-script

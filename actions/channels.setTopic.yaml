@@ -11,13 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
     required: true
+    description: "Channel to set the topic of"
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `channels:write`"
     type: string
   topic:
     required: true
+    description: "The new topic"
     type: string
 runner_type: python-script

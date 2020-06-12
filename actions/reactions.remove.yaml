@@ -11,22 +11,28 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
-  name:
-    required: true
-    type: string
   channel:
     required: false
+    description: "Channel where the message to remove reaction from was posted."
     type: string
   file:
     required: false
+    description: "File to remove reaction from."
     type: string
   file_comment:
     required: false
+    description: "File comment to remove reaction from."
+    type: string
+  name:
+    required: true
+    description: "Reaction (emoji) name."
     type: string
   timestamp:
     required: false
+    description: "Timestamp of the message to remove reaction from."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `reactions:write`"
     type: string
 runner_type: python-script

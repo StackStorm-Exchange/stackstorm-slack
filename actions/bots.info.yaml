@@ -11,10 +11,12 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
-    required: false
-    type: string
   bot:
     required: false
+    description: "Bot user to get info on"
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `users:read`"
     type: string
 runner_type: python-script

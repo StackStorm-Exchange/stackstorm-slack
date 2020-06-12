@@ -11,11 +11,9 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
     required: false
+    description: "Filter files appearing in a specific channel, indicated by its ID."
     type: string
   count:
     required: false
@@ -25,19 +23,31 @@ parameters:
     required: false
     default: "1"
     type: string
+  show_files_hidden_by_limit:
+    required: false
+    description: "Show truncated file info for files hidden due to being too old, and the team who owns the file being over the file limit."
+    type: boolean
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `files:read`"
+    type: string
   ts_from:
     required: false
-    default: "0"
-    type: string
+    default: 0
+    description: "Filter files created after this timestamp (inclusive)."
+    type: number
   ts_to:
     required: false
     default: "now"
-    type: string
+    description: "Filter files created before this timestamp (inclusive)."
+    type: number
   types:
     required: false
     default: "all"
+    description: "Filter files by type ([see below](#file_types)). You can pass multiple values in the types argument, like `types=spaces,snippets`.The default value is `all`, which does not filter the list."
     type: string
   user:
     required: false
+    description: "Filter files created by a single user."
     type: string
 runner_type: python-script

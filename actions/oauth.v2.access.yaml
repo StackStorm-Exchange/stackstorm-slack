@@ -1,0 +1,30 @@
+description: "Exchanges a temporary OAuth verifier code for an access token."
+enabled: true
+entry_point: run.py
+name: oauth.v2.access
+parameters:
+  end_point:
+    default: oauth.v2.access
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  client_id:
+    required: false
+    description: "Issued when you created your application."
+    type: string
+  client_secret:
+    required: false
+    description: "Issued when you created your application."
+    type: string
+  code:
+    required: true
+    description: "The `code` param returned via the OAuth callback."
+    type: string
+  redirect_uri:
+    required: false
+    description: "This must match the originally submitted URI (if one was sent)."
+    type: string
+runner_type: python-script

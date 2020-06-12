@@ -11,13 +11,16 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
     required: true
+    description: "The ID of the conversation or channel containing the message"
     type: string
   message_ts:
     required: true
+    description: "A message\u0027s `ts` value, uniquely identifying it within a channel"
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `none`"
     type: string
 runner_type: python-script

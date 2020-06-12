@@ -11,14 +11,17 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
-    required: false
-    type: string
   include_labels:
     required: false
-    default: "false"
+    default: false
+    description: "Include labels for each ID in custom profile fields"
+    type: boolean
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `users.profile:read`"
     type: string
   user:
     required: false
+    description: "User to retrieve profile info for"
     type: string
 runner_type: python-script
