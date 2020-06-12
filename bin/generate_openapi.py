@@ -19,6 +19,14 @@ SLACK_SESSION = requests.Session()
 METHOD_OVERRIDES = {
     'files.upload': {
         'entry_point': 'files_upload.py',
+        'parameters': {
+            'file_path': {
+                'name': 'file_path',
+                'type': 'string',
+                'required': False,
+                'description': 'Path to the file on the local filesystem that will be opened, read and uploaded to Slack. If omitting this parameter, you must submit either `file` or `content`.',  # noqa: E501
+            }
+        }
     }
 }
 
@@ -81,21 +89,21 @@ def get_spec_from_http_reference(method):
 
 
 def get_params_from_openapi_operation(openapi_operation, params_http_ref):
-    parameters = []
-    for p in sorted(openapi_operation['parameters'], key=lambda i: i['name']):
+    parameters = {}
+    for p in openapi_operation['parameters']:
         name = p['name']
         default = p.get('default')
         # if the OpenAPI spec doesn't have a default set (currently it does not)
         # try to grab the default from the HTTP reference documentation online
         if not default and name in params_http_ref:
             default = params_http_ref[name]['default']
-        parameters.append({
+        parameters[name] = {
             'name': name,
             'type': p['type'],
             'description': p.get('description'),
             'default': default,
             'required': p.get('required', False)
-        })
+        }
     return parameters
 
 
@@ -134,7 +142,24 @@ def main():
             # replace any overrides in the context
             if method in METHOD_OVERRIDES:
                 for override_key, override_value in six.iteritems(METHOD_OVERRIDES[method]):
-                    context[override_key] = override_value
+                    if override_key == 'parameters':
+                        for param_name, param_overrides in six.iteritems(override_value):
+                            # check if the parameter already exists
+                            if param_name in params:
+                                # if the parameter exists, update the key/value pairs
+                                for param_key, param_value in six.iteritems(param_overrides):
+                                    params[param_name][param_key] = param_value
+                            else:
+                                # if the parameter doesn't exist, add it
+                                params[param_name] = param_overrides
+
+                    else:
+                        context[override_key] = override_value
+
+            # sort parameters by name, including any of the ones that might have been
+            # adding during override processing
+            context['parameters'] = sorted(context['parameters'].values(),
+                                           key=lambda p: p['name'])
 
             # render our final jinja template
             rendered = template.render(**context)

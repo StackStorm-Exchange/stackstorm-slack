@@ -216,9 +216,29 @@ Notice how there are 15 parameters. The extra one is "end_point", which is used 
 to construct the end point URL.
 
 
-### Developer Reference
+### Uploading files with slack.files.upload
 
-#### How to auto-generate actions
+The action `slack.files.upload` is able to upload files to slack, such as pictures. 
+This action works a bit different than other actions in that the `file_path` parameter
+accepts a path to a file on the local filesystem. This path *must* be
+accessible from the the `st2actionrunner` executing the action.
+The `st2actionrunner` will open up the file path, read the contents and then upload
+this data to Slack as part of the action run.
+
+Example:
+
+```shell
+st2 run slack.files.upload file_path=/opt/data/mycoolimage.png filename=mycoolimage.png
+```
+
+If this is not desirabile and you would rather read the file or pass the data
+yourself, this can be accomplished using the `file` or `content` parameters which both
+accept raw data that will be uploaded.
+
+
+## Developer Reference
+
+### How to auto-generate actions
 
 If you're a pack developer working on this pack and want to auto-generate / update
 the actions here, please see [bin/README.md](bin/README.md)
