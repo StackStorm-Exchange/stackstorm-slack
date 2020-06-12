@@ -1,6 +1,6 @@
 description: "Uploads or creates a file."
 enabled: true
-entry_point: run.py
+entry_point: files_upload.py
 name: files.upload
 parameters:
   end_point:

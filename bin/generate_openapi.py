@@ -16,6 +16,12 @@ OPENAPI_JSON_URL = 'https://raw.githubusercontent.com/slackapi/slack-api-specs/m
 
 SLACK_SESSION = requests.Session()
 
+METHOD_OVERRIDES = {
+    'files.upload': {
+        'entry_point': 'files_upload.py',
+    }
+}
+
 
 def get_openapi_spec():
     parser = ResolvingParser(OPENAPI_JSON_URL)
@@ -118,10 +124,20 @@ def main():
                       .format(method, http_method, http_ref_spec['http_method']))
                 http_method = http_ref_spec['http_method']
 
-            rendered = template.render(description=op['description'],
-                                       http_method=http_method,
-                                       method=method,
-                                       parameters=params)
+            context = {
+                'description': op['description'],
+                'http_method': http_method,
+                'method': method,
+                'entry_point': 'run.py',
+                'parameters': params,
+            }
+            # replace any overrides in the context
+            if method in METHOD_OVERRIDES:
+                for override_key, override_value in six.iteritems(METHOD_OVERRIDES[method]):
+                    context[override_key] = override_value
+
+            # render our final jinja template
+            rendered = template.render(**context)
 
             with open('{}.yaml'.format(os.path.join(pack_actions_path, method)), "w") as _f:
                 _f.write(rendered + "\n")

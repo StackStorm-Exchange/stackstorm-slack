@@ -18,7 +18,7 @@ class SlackAction(Action):
 
         return self._do_request(kwargs)
 
-    def _do_request(self, params):
+    def _do_request(self, params, files=None):
         end_point = params['end_point']
         url = urljoin(BASE_URL, end_point)
         del params['end_point']
@@ -62,7 +62,7 @@ class SlackAction(Action):
 
         if http_method == 'POST':
             response = requests.post(url=url,
-                                     headers=headers, data=data)
+                                     headers=headers, data=data, files=files)
         elif http_method == 'GET':
             response = requests.get(url=url,
                                     headers=headers, params=data)
