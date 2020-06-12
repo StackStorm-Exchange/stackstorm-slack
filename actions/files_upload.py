@@ -11,9 +11,9 @@ class FilesUploadAction(SlackAction):
                 raise RuntimeError('Passing in "file" and "file_path" at the same time is'
                                    ' not supported. If you would like to have this action'
                                    ' read the file from the filesystem and upload it for you'
-                                   ' then use the "file_path" paramter. Otherwise, if you'
+                                   ' then use the "file_path" parameter. Otherwise, if you'
                                    ' would like to read the file yourself and pass in the data'
-                                   ' then use the "file" paramter set to the content.')
+                                   ' then use the "file" parameter set to the content.')
             # the name 'file' is hard coded because that's the name of the parameter
             # that the Slack API is expecting
             files = {'file': open(kwargs['file_path'], 'rb')}

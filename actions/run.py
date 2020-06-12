@@ -62,15 +62,17 @@ class SlackAction(Action):
 
         if http_method == 'POST':
             if files:
-                # specifically do NOT Content-Type in headers here because the content type
+                # we do NOT want Content-Type set in headers here because the content type
                 # set above (application/x-www-form-urlencoded) will NOT work to
-                # upload files, instead we need requests to create a unique
+                # upload files. Instead we need requests to create a unique
                 # Content-Type: multipart/formdata; boundary-----XYZ123
-                # if we specify headers here with a Content-Type then file uploads
+                # This Content-Type and boundary string is unique will be generated
+                # automatically for us if we do no specify a Content-Type.
+                # If we specify headers here with a Content-Type then file uploads
                 # will not work and return mysterious errors
                 headers.pop('Content-Type', None)
 
-                # we're passing data as the params dict instead of
+                # We're passing data as the params dict instead of
                 # the URL encoded string 'data' from above, this is critical too
                 # so that all of the additional parameters will be included as
                 # multipart/formdata pieces. If you pass in the URL encoded data string
