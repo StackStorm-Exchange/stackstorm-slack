@@ -20,11 +20,24 @@ METHOD_OVERRIDES = {
     'files.upload': {
         'entry_point': 'files_upload.py',
         'parameters': {
+            # overriding content and file to modify their descriptions
+            'content': {
+                'name': 'content',
+                'type': 'string',
+                'required': False,
+                'description': 'File contents via a POST variable. If omitting this parameter, you must provide either `file` or `content`.',  # noqa: E501
+            },
+            'file': {
+                'name': 'file',
+                'type': 'string',
+                'required': False,
+                'description': 'File contents via `multipart/form-data`. If omitting this parameter, you must provide either `file` or `content`.',  # noqa: E501
+            },
             'file_path': {
                 'name': 'file_path',
                 'type': 'string',
                 'required': False,
-                'description': 'Path to the file on the local filesystem that will be opened, read and uploaded to Slack. If omitting this parameter, you must submit either `file` or `content`.',  # noqa: E501
+                'description': 'Path to the file on the local filesystem that will be opened, read and uploaded to Slack. If omitting this parameter, you must provide either `file` or `content`.',  # noqa: E501
             }
         }
     }

@@ -20,4 +20,4 @@ class FilesUploadAction(SlackAction):
             kwargs.pop('file', None)
             kwargs.pop('file_path')
 
-        self._do_request(kwargs, files)
+        super(FilesUploadAction, self).run(files=files, **kwargs)

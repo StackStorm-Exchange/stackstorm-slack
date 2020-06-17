@@ -12,10 +12,8 @@ BASE_URL = 'https://slack.com/api/'
 
 class SlackAction(Action):
 
-    def run(self, **kwargs):
-        return self._do_request(kwargs)
-
-    def _do_request(self, params, files=None):
+    def run(self, files=None, **kwargs):
+        params = kwargs
         if params.get('token', None) is None:
             params['token'] = self.config['action_token']
 
@@ -67,12 +65,12 @@ class SlackAction(Action):
                 # upload files. Instead we need requests to create a unique
                 # Content-Type: multipart/formdata; boundary-----XYZ123
                 # This Content-Type and boundary string is unique will be generated
-                # automatically for us if we do no specify a Content-Type.
+                # automatically for us if we do not specify a Content-Type.
                 # If we specify headers here with a Content-Type then file uploads
                 # will not work and return mysterious errors
                 headers.pop('Content-Type', None)
 
-                # We're passing data as the params dict instead of
+                # We're passing the params dict into the data parameter instead of
                 # the URL encoded string 'data' from above, this is critical too
                 # so that all of the additional parameters will be included as
                 # multipart/formdata pieces. If you pass in the URL encoded data string

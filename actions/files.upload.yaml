@@ -17,16 +17,16 @@ parameters:
     type: string
   content:
     required: false
-    description: "File contents via a POST variable. If omitting this parameter, you must provide a `file`."
+    description: "File contents via a POST variable. If omitting this parameter, you must provide either `file` or `content`."
     type: string
   file:
     required: false
-    description: "File contents via `multipart/form-data`. If omitting this parameter, you must submit `content`."
+    description: "File contents via `multipart/form-data`. If omitting this parameter, you must provide either `file` or `content`."
     type: string
   file_path:
     required: false
     default: ""
-    description: "Path to the file on the local filesystem that will be opened, read and uploaded to Slack. If omitting this parameter, you must submit either `file` or `content`."
+    description: "Path to the file on the local filesystem that will be opened, read and uploaded to Slack. If omitting this parameter, you must provide either `file` or `content`."
     type: string
   filename:
     required: false
