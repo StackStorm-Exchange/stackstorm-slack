@@ -11,19 +11,24 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
     required: false
+    description: "Channel to remove star from, or channel where the message to remove star from was posted (used with `timestamp`)."
     type: string
   file:
     required: false
+    description: "File to remove star from."
     type: string
   file_comment:
     required: false
+    description: "File comment to remove star from."
     type: string
   timestamp:
     required: false
+    description: "Timestamp of the message to remove star from."
+    type: number
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `stars:write`"
     type: string
 runner_type: python-script

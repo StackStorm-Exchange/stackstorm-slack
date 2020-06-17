@@ -1,0 +1,26 @@
+description: "Set an existing guest user, admin user, or owner to be a regular user."
+enabled: true
+entry_point: run.py
+name: admin.users.setRegular
+parameters:
+  end_point:
+    default: admin.users.setRegular
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  team_id:
+    required: true
+    description: "The ID (`T1234`) of the workspace."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `admin.users:write`"
+    type: string
+  user_id:
+    required: true
+    description: "The ID of the user to designate as a regular user."
+    type: string
+runner_type: python-script

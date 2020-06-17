@@ -11,30 +11,37 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
-    required: true
+    required: false
+    description: "Private channel to fetch history for."
     type: string
   count:
     required: false
-    default: "100"
-    type: string
+    default: 100
+    description: "Number of messages to return, between 1 and 1000."
+    type: integer
   inclusive:
     required: false
-    default: "0"
-    type: string
+    default: 0
+    description: "Include messages with latest or oldest timestamp in results."
+    type: boolean
   latest:
     required: false
     default: "now"
-    type: string
+    description: "End of time range of messages to include in results."
+    type: number
   oldest:
     required: false
-    default: "0"
+    default: 0
+    description: "Start of time range of messages to include in results."
+    type: number
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `groups:history`"
     type: string
   unreads:
     required: false
-    default: "0"
-    type: string
+    default: 0
+    description: "Include `unread_count_display` in the output?"
+    type: boolean
 runner_type: python-script

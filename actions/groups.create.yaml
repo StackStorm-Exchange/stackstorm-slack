@@ -11,13 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
+  name:
+    required: false
+    description: "Name of private channel to create"
+    type: string
   token:
     required: false
-    type: string
-  name:
-    required: true
+    description: "Authentication token. Requires scope: `groups:write`"
     type: string
   validate:
     required: false
-    type: string
+    description: "Whether to return errors on invalid channel name instead of modifying it to meet the specified criteria."
+    type: boolean
 runner_type: python-script

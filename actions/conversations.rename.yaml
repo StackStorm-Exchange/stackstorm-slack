@@ -11,13 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
-    required: true
+    required: false
+    description: "ID of conversation to rename"
     type: string
   name:
-    required: true
+    required: false
+    description: "New name for conversation."
+    type: string
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `conversations:write`"
     type: string
 runner_type: python-script

@@ -1,0 +1,38 @@
+description: "Returns a list of scheduled messages."
+enabled: true
+entry_point: run.py
+name: chat.scheduledMessages.list
+parameters:
+  end_point:
+    default: chat.scheduledMessages.list
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  channel:
+    required: false
+    description: "The channel of the scheduled messages"
+    type: string
+  cursor:
+    required: false
+    description: "For pagination purposes, this is the `cursor` value returned from a previous call to `chat.scheduledmessages.list` indicating where you want to start this call from."
+    type: string
+  latest:
+    required: false
+    description: "A UNIX timestamp of the latest value in the time range"
+    type: number
+  limit:
+    required: false
+    description: "Maximum number of original entries to return."
+    type: integer
+  oldest:
+    required: false
+    description: "A UNIX timestamp of the oldest value in the time range"
+    type: number
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `none`"
+    type: string
+runner_type: python-script

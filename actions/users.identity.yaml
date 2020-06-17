@@ -13,5 +13,6 @@ parameters:
     type: string
   token:
     required: false
+    description: "Authentication token. Requires scope: `identity.basic`"
     type: string
 runner_type: python-script

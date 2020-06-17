@@ -1,0 +1,31 @@
+description: "List users on a workspace"
+enabled: true
+entry_point: run.py
+name: admin.users.list
+parameters:
+  end_point:
+    default: admin.users.list
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  cursor:
+    required: false
+    description: "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page."
+    type: string
+  limit:
+    required: false
+    default: 100
+    description: "Limit for how many users to be retrieved per page"
+    type: integer
+  team_id:
+    required: true
+    description: "The ID (`T1234`) of the workspace."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `admin.users:read`"
+    type: string
+runner_type: python-script

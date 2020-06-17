@@ -1,0 +1,26 @@
+description: "Add an emoji."
+enabled: true
+entry_point: run.py
+name: admin.emoji.add
+parameters:
+  end_point:
+    default: admin.emoji.add
+    immutable: true
+    type: string
+  http_method:
+    default: GET
+    required: true
+    type: string
+  name:
+    required: true
+    description: "The name of the emoji to be removed. Colons (`:myemoji:`) around the value are not required, although they may be included."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `admin.teams:write`"
+    type: string
+  url:
+    required: true
+    description: "The URL of a file to use as an image for the emoji. Square images under 128KB and with transparent backgrounds work best."
+    type: string
+runner_type: python-script

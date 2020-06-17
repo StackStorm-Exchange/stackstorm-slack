@@ -11,14 +11,17 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
-    required: false
-    type: string
-  users:
-    required: true
-    type: string
   to_old:
     required: false
     default: ""
+    description: "Specify `true` to convert `W` global user IDs to workspace-specific `U` IDs. Defaults to `false`."
+    type: boolean
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `tokens.basic`"
+    type: string
+  users:
+    required: true
+    description: "A comma-separated list of user ids, up to 400 per request"
     type: string
 runner_type: python-script

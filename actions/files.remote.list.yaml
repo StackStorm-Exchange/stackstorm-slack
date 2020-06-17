@@ -1,0 +1,40 @@
+description: "Retrieve information about a remote file added to Slack"
+enabled: true
+entry_point: run.py
+name: files.remote.list
+parameters:
+  end_point:
+    default: files.remote.list
+    immutable: true
+    type: string
+  http_method:
+    default: GET
+    required: true
+    type: string
+  channel:
+    required: false
+    description: "Filter files appearing in a specific channel, indicated by its ID."
+    type: string
+  cursor:
+    required: false
+    description: "Paginate through collections of data by setting the `cursor` parameter to a `next_cursor` attribute returned by a previous request\u0027s `response_metadata`. Default value fetches the first \"page\" of the collection. See [pagination](/docs/pagination) for more detail."
+    type: string
+  limit:
+    required: false
+    description: "The maximum number of items to return."
+    type: integer
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `remote_files:read`"
+    type: string
+  ts_from:
+    required: false
+    default: 0
+    description: "Filter files created after this timestamp (inclusive)."
+    type: number
+  ts_to:
+    required: false
+    default: "now"
+    description: "Filter files created before this timestamp (inclusive)."
+    type: number
+runner_type: python-script

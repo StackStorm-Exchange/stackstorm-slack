@@ -1,0 +1,33 @@
+description: "List approved apps for an org or workspace."
+enabled: true
+entry_point: run.py
+name: admin.apps.approved.list
+parameters:
+  end_point:
+    default: admin.apps.approved.list
+    immutable: true
+    type: string
+  http_method:
+    default: GET
+    required: true
+    type: string
+  cursor:
+    required: false
+    description: "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page"
+    type: string
+  enterprise_id:
+    required: false
+    type: string
+  limit:
+    required: false
+    default: 100
+    description: "The maximum number of items to return. Must be between 1 - 1000 both inclusive."
+    type: integer
+  team_id:
+    required: false
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `admin.apps:read`"
+    type: string
+runner_type: python-script

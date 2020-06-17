@@ -1,0 +1,27 @@
+description: "List all teams on an Enterprise organization"
+enabled: true
+entry_point: run.py
+name: admin.teams.list
+parameters:
+  end_point:
+    default: admin.teams.list
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  cursor:
+    required: false
+    description: "Set `cursor` to `next_cursor` returned by the previous call to list items in the next page."
+    type: string
+  limit:
+    required: false
+    default: 100
+    description: "The maximum number of items to return. Must be between 1 - 100 both inclusive."
+    type: integer
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `admin.teams:read`"
+    type: string
+runner_type: python-script

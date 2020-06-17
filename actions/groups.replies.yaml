@@ -11,13 +11,16 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
-    required: true
+    required: false
+    description: "Private channel to fetch thread from"
     type: string
   thread_ts:
-    required: true
+    required: false
+    description: "Unique identifier of a thread\u0027s parent message"
+    type: number
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `groups:history`"
     type: string
 runner_type: python-script

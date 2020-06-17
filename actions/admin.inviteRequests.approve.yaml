@@ -1,0 +1,26 @@
+description: "Approve a workspace invite request."
+enabled: true
+entry_point: run.py
+name: admin.inviteRequests.approve
+parameters:
+  end_point:
+    default: admin.inviteRequests.approve
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  invite_request_id:
+    required: true
+    description: "ID of the request to invite."
+    type: string
+  team_id:
+    required: false
+    description: "ID for the workspace where the invite request was made."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `admin.invites:write`"
+    type: string
+runner_type: python-script

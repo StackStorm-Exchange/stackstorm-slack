@@ -1,0 +1,7 @@
+beautifulsoup4
+lxml
+openapi-spec-validator
+jinja2
+prance
+requests
+six

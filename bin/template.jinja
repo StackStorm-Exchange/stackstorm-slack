@@ -7,12 +7,23 @@ parameters:
     default: {{ method }}
     immutable: true
     type: string
-  {%- for name, default, required in parameters %}
-  {{ name }}:
-    required: {{ required }}
-    {%- if default %}
-    default: "{{ default }}"
-    {%- endif %}
+  http_method:
+    default: {{ http_method | upper }}
+    required: true
     type: string
+  {%- for param in parameters %}
+  {{ param['name'] }}:
+    required: {{ param['required'] | tojson }}
+    {%- if param['default'] is not none %}
+    {%- if param['type'] == 'string' %}
+    default: "{{ param['default'] }}"
+    {%- else %}
+    default: {{ param['default'] | tojson }}
+    {%- endif %}
+    {%- endif %}
+    {%- if param['description'] is not none %}
+    description: {{ param['description'] | tojson }}
+    {%- endif %}
+    type: {{ param['type'] }}
   {%- endfor %}
 runner_type: python-script

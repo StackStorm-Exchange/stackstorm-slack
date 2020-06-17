@@ -1,5 +1,13 @@
 # Change Log
 
+# 1.0.0
+
+- Updated all actions to latest API spec as of 2020-06-11.
+- Converted action auto-generator to using both the OpenAPI spec and the HTTP reference.
+- Removed old action auto-generator so we can develop on a common tool.
+
+  Contributed by Nick Maludy (@nmaludy)
+
 # 0.13.0
 
 - Various improvements to the ``slack.post_message`` action:

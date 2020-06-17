@@ -11,13 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
+  channel:
+    required: false
+    description: "Channel to invite user to."
+    type: string
   token:
     required: false
-    type: string
-  channel:
-    required: true
+    description: "Authentication token. Requires scope: `channels:write`"
     type: string
   user:
-    required: true
+    required: false
+    description: "User to invite to channel."
     type: string
 runner_type: python-script

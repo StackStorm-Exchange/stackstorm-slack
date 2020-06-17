@@ -11,10 +11,12 @@ parameters:
     default: POST
     required: true
     type: string
+  file:
+    required: false
+    description: "File to share"
+    type: string
   token:
     required: false
-    type: string
-  file:
-    required: true
+    description: "Authentication token. Requires scope: `files:write:user`"
     type: string
 runner_type: python-script

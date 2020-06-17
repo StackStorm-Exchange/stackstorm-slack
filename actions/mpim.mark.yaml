@@ -11,13 +11,16 @@ parameters:
     default: POST
     required: true
     type: string
+  channel:
+    required: false
+    description: "multiparty direct message channel to set reading cursor in."
+    type: string
   token:
     required: false
-    type: string
-  channel:
-    required: true
+    description: "Authentication token. Requires scope: `mpim:write`"
     type: string
   ts:
-    required: true
-    type: string
+    required: false
+    description: "Timestamp of the most recently seen message."
+    type: number
 runner_type: python-script

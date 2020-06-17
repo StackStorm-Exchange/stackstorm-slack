@@ -11,13 +11,16 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
-    required: false
-    type: string
   channel:
-    required: true
+    required: false
+    description: "Private channel to get info on"
     type: string
   include_locale:
     required: false
+    description: "Set this to `true` to receive the locale for this group. Defaults to `false`"
+    type: boolean
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `groups:read`"
     type: string
 runner_type: python-script

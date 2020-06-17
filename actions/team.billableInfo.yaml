@@ -12,9 +12,11 @@ parameters:
     required: true
     type: string
   token:
-    required: false
+    required: true
+    description: "Authentication token. Requires scope: `admin`"
     type: string
   user:
     required: false
+    description: "A user to retrieve the billable information for. Defaults to all users."
     type: string
 runner_type: python-script

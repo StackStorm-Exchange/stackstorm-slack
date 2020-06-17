@@ -11,22 +11,28 @@ parameters:
     default: POST
     required: true
     type: string
-  token:
-    required: false
-    type: string
-  name:
-    required: true
-    type: string
   channels:
     required: false
+    description: "A comma separated string of encoded channel IDs for which the User Group uses as a default."
     type: string
   description:
     required: false
+    description: "A short description of the User Group."
     type: string
   handle:
     required: false
+    description: "A mention handle. Must be unique among channels, users and User Groups."
     type: string
   include_count:
     required: false
+    description: "Include the number of users in each User Group."
+    type: boolean
+  name:
+    required: true
+    description: "A name for the User Group. Must be unique among User Groups."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `usergroups:write`"
     type: string
 runner_type: python-script

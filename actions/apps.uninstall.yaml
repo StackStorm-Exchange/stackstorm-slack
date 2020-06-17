@@ -1,0 +1,26 @@
+description: "Uninstalls your app from a workspace."
+enabled: true
+entry_point: run.py
+name: apps.uninstall
+parameters:
+  end_point:
+    default: apps.uninstall
+    immutable: true
+    type: string
+  http_method:
+    default: GET
+    required: true
+    type: string
+  client_id:
+    required: false
+    description: "Issued when you created your application."
+    type: string
+  client_secret:
+    required: false
+    description: "Issued when you created your application."
+    type: string
+  token:
+    required: false
+    description: "Authentication token. Requires scope: `none`"
+    type: string
+runner_type: python-script

@@ -11,15 +11,18 @@ parameters:
     default: GET
     required: true
     type: string
-  token:
-    required: false
-    type: string
   batch_presence_aware:
     required: false
-    default: "false"
-    type: string
+    default: ""
+    description: "Batch presence deliveries via subscription. Enabling changes the shape of `presence_change` events. See [batch presence](/docs/presence-and-status#batching)."
+    type: boolean
   presence_sub:
     required: false
-    default: "true"
+    default: 1
+    description: "Only deliver presence events when requested by subscription. See [presence subscriptions](/docs/presence-and-status#subscriptions)."
+    type: boolean
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `rtm:stream`"
     type: string
 runner_type: python-script

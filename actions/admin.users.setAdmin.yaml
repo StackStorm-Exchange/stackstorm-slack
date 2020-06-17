@@ -1,0 +1,26 @@
+description: "Set an existing guest, regular user, or owner to be an admin user."
+enabled: true
+entry_point: run.py
+name: admin.users.setAdmin
+parameters:
+  end_point:
+    default: admin.users.setAdmin
+    immutable: true
+    type: string
+  http_method:
+    default: POST
+    required: true
+    type: string
+  team_id:
+    required: true
+    description: "The ID (`T1234`) of the workspace."
+    type: string
+  token:
+    required: true
+    description: "Authentication token. Requires scope: `admin.users:write`"
+    type: string
+  user_id:
+    required: true
+    description: "The ID of the user to designate as an admin."
+    type: string
+runner_type: python-script
