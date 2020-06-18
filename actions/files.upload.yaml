@@ -1,6 +1,6 @@
 description: "Uploads or creates a file."
 enabled: true
-entry_point: run.py
+entry_point: files_upload.py
 name: files.upload
 parameters:
   end_point:
@@ -17,11 +17,16 @@ parameters:
     type: string
   content:
     required: false
-    description: "File contents via a POST variable. If omitting this parameter, you must provide a `file`."
+    description: "File contents via a POST variable. If omitting this parameter, you must provide either `file` or `file_path`."
     type: string
   file:
     required: false
-    description: "File contents via `multipart/form-data`. If omitting this parameter, you must submit `content`."
+    description: "File contents via `multipart/form-data`. If omitting this parameter, you must provide either `file_path` or `content`."
+    type: string
+  file_path:
+    required: false
+    default: ""
+    description: "Path to the file on the local filesystem that will be opened, read and uploaded to Slack. If omitting this parameter, you must provide either `file` or `content`."
     type: string
   filename:
     required: false

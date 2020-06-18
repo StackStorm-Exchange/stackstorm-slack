@@ -12,13 +12,11 @@ BASE_URL = 'https://slack.com/api/'
 
 class SlackAction(Action):
 
-    def run(self, **kwargs):
-        if kwargs.get('token', None) is None:
-            kwargs['token'] = self.config['action_token']
+    def run(self, files=None, **kwargs):
+        params = kwargs
+        if params.get('token', None) is None:
+            params['token'] = self.config['action_token']
 
-        return self._do_request(kwargs)
-
-    def _do_request(self, params):
         end_point = params['end_point']
         url = urljoin(BASE_URL, end_point)
         del params['end_point']
@@ -61,8 +59,29 @@ class SlackAction(Action):
         data = urlencode(encode_obj(params))
 
         if http_method == 'POST':
-            response = requests.post(url=url,
-                                     headers=headers, data=data)
+            if files:
+                # we do NOT want Content-Type set in headers here because the content type
+                # set above (application/x-www-form-urlencoded) will NOT work to
+                # upload files. Instead we need requests to create a unique
+                # Content-Type: multipart/formdata; boundary-----XYZ123
+                # This Content-Type and boundary string is unique will be generated
+                # automatically for us if we do not specify a Content-Type.
+                # If we specify headers here with a Content-Type then file uploads
+                # will not work and return mysterious errors
+                headers.pop('Content-Type', None)
+
+                # We're passing the params dict into the data parameter instead of
+                # the URL encoded string 'data' from above, this is critical too
+                # so that all of the additional parameters will be included as
+                # multipart/formdata pieces. If you pass in the URL encoded data string
+                # from above, this will put that single string in one form part of
+                # the request and cause the request to fail. Instead what we want is
+                # requests to create one multipart/formdata content section for each
+                # parameters. By passing data=params (the dictionary) requests will
+                # do what we want
+                response = requests.post(url=url, headers=headers, data=params, files=files)
+            else:
+                response = requests.post(url=url, headers=headers, data=data)
         elif http_method == 'GET':
             response = requests.get(url=url,
                                     headers=headers, params=data)
