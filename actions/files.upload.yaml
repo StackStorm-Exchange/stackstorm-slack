@@ -17,11 +17,11 @@ parameters:
     type: string
   content:
     required: false
-    description: "File contents via a POST variable. If omitting this parameter, you must provide either `file` or `content`."
+    description: "File contents via a POST variable. If omitting this parameter, you must provide either `file` or `file_path`."
     type: string
   file:
     required: false
-    description: "File contents via `multipart/form-data`. If omitting this parameter, you must provide either `file` or `content`."
+    description: "File contents via `multipart/form-data`. If omitting this parameter, you must provide either `file_path` or `content`."
     type: string
   file_path:
     required: false

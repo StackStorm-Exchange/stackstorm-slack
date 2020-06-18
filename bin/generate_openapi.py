@@ -25,13 +25,13 @@ METHOD_OVERRIDES = {
                 'name': 'content',
                 'type': 'string',
                 'required': False,
-                'description': 'File contents via a POST variable. If omitting this parameter, you must provide either `file` or `content`.',  # noqa: E501
+                'description': 'File contents via a POST variable. If omitting this parameter, you must provide either `file` or `file_path`.',  # noqa: E501
             },
             'file': {
                 'name': 'file',
                 'type': 'string',
                 'required': False,
-                'description': 'File contents via `multipart/form-data`. If omitting this parameter, you must provide either `file` or `content`.',  # noqa: E501
+                'description': 'File contents via `multipart/form-data`. If omitting this parameter, you must provide either `file_path` or `content`.',  # noqa: E501
             },
             'file_path': {
                 'name': 'file_path',
