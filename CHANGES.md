@@ -1,5 +1,14 @@
 # Change Log
 
+# 1.1.0
+
+- Added the ability for `slack.files.upload` to upload a file from the filesystem
+  using the new `file_path` parameter. See the README for more details.
+- Fixed bugs in `slack.files.upload` where the upload wasn't sending data via the API
+  in the correct format, causing the uplaods to fail.
+
+  Contributed by Nick Maludy (@nmaludy)
+
 # 1.0.0
 
 - Updated all actions to latest API spec as of 2020-06-11.
