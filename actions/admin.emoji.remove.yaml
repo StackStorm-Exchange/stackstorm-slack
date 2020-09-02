@@ -16,7 +16,7 @@ parameters:
     description: "The name of the emoji to be removed. Colons (`:myemoji:`) around the value are not required, although they may be included."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `admin.teams:write`"
     type: string
 runner_type: python-script

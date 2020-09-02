@@ -16,7 +16,7 @@ parameters:
     description: "Channel to unarchive"
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `channels:write`"
     type: string
 runner_type: python-script

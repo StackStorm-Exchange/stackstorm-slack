@@ -16,7 +16,7 @@ parameters:
     description: "MPIM to close."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `mpim:write`"
     type: string
 runner_type: python-script

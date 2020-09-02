@@ -28,7 +28,7 @@ parameters:
     description: "Team name (for example, Slack Softball Team)."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `admin.teams:write`"
     type: string
 runner_type: python-script

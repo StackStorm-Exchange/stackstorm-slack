@@ -20,7 +20,7 @@ parameters:
     description: "The maximum number of items to return."
     type: integer
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `none`"
     type: string
 runner_type: python-script

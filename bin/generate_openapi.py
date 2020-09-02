@@ -43,6 +43,13 @@ METHOD_OVERRIDES = {
     }
 }
 
+# Overriden by METHOD_OVERRIDES (more specific prefered over less specific)
+GLOBAL_PARAM_OVERRIDES = {
+    'token': {
+        'required': False
+    }
+}
+
 
 def get_openapi_spec():
     parser = ResolvingParser(OPENAPI_JSON_URL)
@@ -152,6 +159,19 @@ def main():
                 'entry_point': 'run.py',
                 'parameters': params,
             }
+
+            # Positioning global param overrides before method params ensures that a
+            # specific method override is prefered over a less specific global override
+
+            # replace any global param overrides
+            for p_override_key, p_override_value in six.iteritems(GLOBAL_PARAM_OVERRIDES):
+                # check if the override param is in params
+                if p_override_key in params:
+                    # Loop through the keys:values that need to be overridden
+                    for k, v in six.iteritems(p_override_value):
+                        # override the current value
+                        params[p_override_key][k] = v
+
             # replace any overrides in the context
             if method in METHOD_OVERRIDES:
                 for override_key, override_value in six.iteritems(METHOD_OVERRIDES[method]):

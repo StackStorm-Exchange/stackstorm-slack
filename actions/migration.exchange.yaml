@@ -17,7 +17,7 @@ parameters:
     description: "Specify `true` to convert `W` global user IDs to workspace-specific `U` IDs. Defaults to `false`."
     type: boolean
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `tokens.basic`"
     type: string
   users:

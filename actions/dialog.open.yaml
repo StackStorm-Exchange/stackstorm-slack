@@ -16,7 +16,7 @@ parameters:
     description: "The dialog definition. This must be a JSON-encoded string."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `none`"
     type: string
   trigger_id:

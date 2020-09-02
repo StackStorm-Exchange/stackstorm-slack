@@ -61,7 +61,7 @@ parameters:
     description: "Provide another message\u0027s `ts` value to make this message a reply. Avoid using a reply\u0027s `ts` value; use its parent instead."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `chat:write`"
     type: string
   unfurl_links:

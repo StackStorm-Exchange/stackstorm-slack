@@ -28,7 +28,7 @@ parameters:
     description: "Timestamp of the message to add star to."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `stars:write`"
     type: string
 runner_type: python-script

@@ -16,7 +16,7 @@ parameters:
     description: "Setting this parameter to `1` triggers a _testing mode_ where the specified token will not actually be revoked."
     type: boolean
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `none`"
     type: string
 runner_type: python-script

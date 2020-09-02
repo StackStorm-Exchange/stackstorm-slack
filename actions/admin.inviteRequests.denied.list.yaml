@@ -25,7 +25,7 @@ parameters:
     description: "ID for the workspace where the invite requests were made."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `admin.invites:read`"
     type: string
 runner_type: python-script

@@ -32,7 +32,7 @@ parameters:
     description: "A name for the User Group. Must be unique among User Groups."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `usergroups:write`"
     type: string
   usergroup:

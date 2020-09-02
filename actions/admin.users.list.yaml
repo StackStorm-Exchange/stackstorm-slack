@@ -25,7 +25,7 @@ parameters:
     description: "The ID (`T1234`) of the workspace."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `admin.users:read`"
     type: string
 runner_type: python-script

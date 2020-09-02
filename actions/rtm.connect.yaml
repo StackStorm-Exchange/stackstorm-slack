@@ -22,7 +22,7 @@ parameters:
     description: "Only deliver presence events when requested by subscription. See [presence subscriptions](/docs/presence-and-status#subscriptions)."
     type: boolean
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `rtm:stream`"
     type: string
 runner_type: python-script

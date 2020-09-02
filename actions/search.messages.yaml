@@ -39,7 +39,7 @@ parameters:
     description: "Change sort direction to ascending (`asc`) or descending (`desc`)."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `search:read`"
     type: string
 runner_type: python-script

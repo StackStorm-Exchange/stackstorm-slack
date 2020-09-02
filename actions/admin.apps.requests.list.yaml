@@ -24,7 +24,7 @@ parameters:
     required: false
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `admin.apps:read`"
     type: string
 runner_type: python-script

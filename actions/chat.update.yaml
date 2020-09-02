@@ -40,7 +40,7 @@ parameters:
     description: "New text for the message, using the [default formatting rules](/docs/formatting). It\u0027s not required when presenting `attachments`."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `chat:write`"
     type: string
   ts:

@@ -24,7 +24,7 @@ parameters:
     description: "Include the list of users for each User Group."
     type: boolean
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `usergroups:read`"
     type: string
 runner_type: python-script

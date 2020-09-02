@@ -1,5 +1,15 @@
 # Change Log
 
+# 1.1.1
+
+### Fixes
+- Extended override logic in `./bin/generate_openapi.py` to allow for global param overrides. token[required] is now forced to `false` #60
+- Fix python 2.7/3.6 compatibility for ./actions/run.py #63 #58 #59
+
+### Additions
+- CODEOWNER file
+- Basic unit testing and structure for expanded unit testing
+
 # 1.1.0
 
 - Added the ability for `slack.files.upload` to upload a file from the filesystem
@@ -39,8 +49,8 @@
 
 # 0.12.6
 
-- Fix `text` parameter in `chat.update` to be `required: false`, same as `chat.postMessage`. `text` only required when `attachments` is `None` 
-- Update icon to new rebranded Slack icon 
+- Fix `text` parameter in `chat.update` to be `required: false`, same as `chat.postMessage`. `text` only required when `attachments` is `None`
+- Update icon to new rebranded Slack icon
 
 # 0.12.5
 

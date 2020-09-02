@@ -16,7 +16,7 @@ parameters:
     description: "Direct message channel to set reading cursor in."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `im:write`"
     type: string
   ts:

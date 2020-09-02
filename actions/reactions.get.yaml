@@ -32,7 +32,7 @@ parameters:
     description: "Timestamp of the message to get reactions for."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `reactions:read`"
     type: string
 runner_type: python-script

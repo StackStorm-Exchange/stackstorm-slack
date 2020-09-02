@@ -16,7 +16,7 @@ parameters:
     description: "Either `auto` or `away`"
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `users:write`"
     type: string
 runner_type: python-script

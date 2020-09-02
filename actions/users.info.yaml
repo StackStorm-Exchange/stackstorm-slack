@@ -16,7 +16,7 @@ parameters:
     description: "Set this to `true` to receive the locale for this user. Defaults to `false`"
     type: boolean
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `users:read`"
     type: string
   user:

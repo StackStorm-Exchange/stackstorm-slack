@@ -16,7 +16,7 @@ parameters:
     description: "Only expire mobile sessions (default: false)"
     type: boolean
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `admin.users:write`"
     type: string
   user_id:
