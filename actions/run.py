@@ -27,7 +27,7 @@ class SlackAction(Action):
         headers = {}
         headers['Content-Type'] = 'application/x-www-form-urlencoded'
 
-        for key in params.keys():
+        for key in list(params.keys()):
             if params[key] is None:
                 del params[key]
 
@@ -41,7 +41,7 @@ class SlackAction(Action):
 
             def encode_dict(in_dict):
                 out_dict = {}
-                for k, v in in_dict.iteritems():
+                for k, v in six.iteritems(in_dict):
                     out_dict[k] = encode_obj(v)
                 return out_dict
 

@@ -29,7 +29,7 @@ parameters:
     description: "The workspace to which the channel belongs. Omit this argument if the channel is a cross-workspace shared channel."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `admin.conversations:write`"
     type: string
 runner_type: python-script

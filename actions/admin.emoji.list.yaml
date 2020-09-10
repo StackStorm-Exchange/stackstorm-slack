@@ -21,7 +21,7 @@ parameters:
     description: "The maximum number of items to return. Must be between 1 - 1000 both inclusive."
     type: integer
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `admin.teams:read`"
     type: string
 runner_type: python-script

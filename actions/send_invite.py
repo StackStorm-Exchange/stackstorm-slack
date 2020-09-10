@@ -1,3 +1,5 @@
+# used by users.admin.invite
+
 import requests
 from six.moves.urllib.parse import urlencode
 

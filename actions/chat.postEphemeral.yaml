@@ -52,7 +52,7 @@ parameters:
     description: "Provide another message\u0027s `ts` value to post this message in a thread. Avoid using a reply\u0027s `ts` value; use its parent\u0027s value instead. Ephemeral messages in threads are only shown if there is already an active thread."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `chat:write`"
     type: string
   user:

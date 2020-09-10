@@ -16,7 +16,7 @@ parameters:
     description: "Private channel to remove user from."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `groups:write`"
     type: string
   user:

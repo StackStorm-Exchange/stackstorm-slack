@@ -24,7 +24,7 @@ parameters:
     description: "`scheduled_message_id` returned from call to chat.scheduleMessage"
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `chat:write`"
     type: string
 runner_type: python-script

@@ -20,7 +20,7 @@ parameters:
     description: "ID for the workspace to set the icon for."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `admin.teams:write`"
     type: string
 runner_type: python-script

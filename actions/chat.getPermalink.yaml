@@ -20,7 +20,7 @@ parameters:
     description: "A message\u0027s `ts` value, uniquely identifying it within a channel"
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `none`"
     type: string
 runner_type: python-script

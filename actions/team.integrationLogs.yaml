@@ -32,7 +32,7 @@ parameters:
     description: "Filter logs to this service. Defaults to all logs."
     type: integer
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `admin`"
     type: string
   user:

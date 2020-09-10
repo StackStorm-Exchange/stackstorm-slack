@@ -16,7 +16,7 @@ parameters:
     description: "Include the number of users in the User Group."
     type: boolean
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `usergroups:write`"
     type: string
   usergroup:

@@ -16,7 +16,7 @@ parameters:
     description: "Channel to set the topic of"
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `channels:write`"
     type: string
   topic:

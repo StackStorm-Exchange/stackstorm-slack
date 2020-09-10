@@ -33,7 +33,7 @@ parameters:
     default: 1
     type: integer
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `reactions:read`"
     type: string
   user:

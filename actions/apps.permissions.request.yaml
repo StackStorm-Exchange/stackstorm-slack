@@ -16,7 +16,7 @@ parameters:
     description: "A comma separated list of scopes to request for"
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `none`"
     type: string
   trigger_id:

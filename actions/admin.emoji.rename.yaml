@@ -20,7 +20,7 @@ parameters:
     description: "The new name of the emoji."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `admin.teams:write`"
     type: string
 runner_type: python-script

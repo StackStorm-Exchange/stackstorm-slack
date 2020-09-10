@@ -32,7 +32,7 @@ parameters:
     description: "Timestamp of the message to remove reaction from."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `reactions:write`"
     type: string
 runner_type: python-script

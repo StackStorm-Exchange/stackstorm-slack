@@ -16,7 +16,7 @@ parameters:
     description: "Number of minutes, from now, to snooze until."
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `dnd:write`"
     type: string
 runner_type: python-script

@@ -16,7 +16,7 @@ parameters:
     description: "Channel ID of the message"
     type: string
   token:
-    required: true
+    required: false
     description: "Authentication token. Requires scope: `links:write`"
     type: string
   ts:
