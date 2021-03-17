@@ -1,5 +1,10 @@
 # Change Log
 
+# 2.0.2
+
+* Make the `http_method` parameter to `files.upload` not required, and make it
+  an enum parameter since only POST and GET are supported anyway.
+
 # 2.0.1
 
 * Remove default value from `slack.files.upload` `file_path` parameter
