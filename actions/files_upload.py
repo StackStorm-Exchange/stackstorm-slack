@@ -6,7 +6,7 @@ class FilesUploadAction(SlackAction):
     def run(self, **kwargs):
         # https://requests.readthedocs.io/en/master/user/quickstart/#post-a-multipart-encoded-file
         files = None
-        if 'file_path' in kwargs:
+        if 'file_path' in kwargs and kwargs['file_path']:
             if 'file' in kwargs and kwargs['file']:
                 raise RuntimeError('Passing in "file" and "file_path" at the same time is'
                                    ' not supported. If you would like to have this action'

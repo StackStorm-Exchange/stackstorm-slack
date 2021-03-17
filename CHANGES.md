@@ -1,5 +1,9 @@
 # Change Log
 
+# 2.0.1
+
+* Remove default value from `slack.files.upload` `file_path` parameter
+
 # 2.0.0
 
 * Drop Python 2.7 support
