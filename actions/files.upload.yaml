@@ -8,9 +8,17 @@ parameters:
     immutable: true
     type: string
   http_method:
-    default: POST
-    required: true
+    # See SlackAction.run() in run.py - no other HTTP methods are supported,
+    # so why force users to specify this when they don't have to? Specifying an
+    # enum at least gives them a dropdown of the allowed options, and not
+    # requiring this parameter and defaulting to the preferred HTTP method is
+    # faster and easier for users.
+    default: POST    # From https://api.slack.com/methods/files.upload:
+    required: false  # Preferred HTTP method: POST
     type: string
+    enum:
+      - POST
+      - GET
   channels:
     required: false
     description: "Comma-separated list of channel names or IDs where the file will be shared."
