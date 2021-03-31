@@ -26,6 +26,8 @@ class SlackAction(Action):
 
         headers = {}
         headers['Content-Type'] = 'application/x-www-form-urlencoded'
+        headers['Authorization'] = 'Bearer %s' % (params['token'])
+        del params['token']
 
         for key in list(params.keys()):
             if params[key] is None:
