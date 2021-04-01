@@ -1,5 +1,10 @@
 # Change Log
 
+# 2.0.3
+
+* Add support for Slack apps created post Feb. 24, 2021 that no longer support
+  tokens being passed in the url
+
 # 2.0.2
 
 * Make the `http_method` parameter to `files.upload` not required, and make it
