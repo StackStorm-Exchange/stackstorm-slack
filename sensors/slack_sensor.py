@@ -231,7 +231,7 @@ class SlackSensor(PollingSensor):
 
     def _get_channel_info(self, channel_id):
         if channel_id not in self._channel_info_cache:
-            result = self._api_call('channels.info', channel=channel_id)
+            result = self._api_call('conversations.info', channel=channel_id)
 
             if 'channel' not in result:
                 # Channel doesn't exist or other error
@@ -244,7 +244,7 @@ class SlackSensor(PollingSensor):
 
     def _get_group_info(self, group_id):
         if group_id not in self._group_info_cache:
-            result = self._api_call('groups.info', channel=group_id)
+            result = self._api_call('conversations.info', channel=group_id)
             self._logger.warn('GROUP DATA: %s' % result)
             if 'group' not in result:
                 # Group doesn't exist or other error
@@ -256,6 +256,4 @@ class SlackSensor(PollingSensor):
         return self._group_info_cache[group_id]
 
     def _api_call(self, method, **kwargs):
-        result = self._client.api_call(method, **kwargs)
-        result = json.loads(result)
-        return result
+        return self._client.api_call(method, **kwargs)
