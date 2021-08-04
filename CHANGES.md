@@ -1,5 +1,12 @@
 # Change Log
 
+# 2.0.4
+
+* Add support for `conversations.info` slack method  as `groups.info` and
+  `channels.info` were deprecated.
+* Fix a bug in `SlackSensor._api_call`. There is no need to `json.loads` the
+  result as slackclient 1.3.1 already parses the json.
+
 # 2.0.3
 
 * Add support for Slack apps created post Feb. 24, 2021 that no longer support
