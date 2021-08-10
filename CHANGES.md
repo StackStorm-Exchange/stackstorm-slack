@@ -1,5 +1,9 @@
 # Change Log
 
+# 2.0.5
+
+* Add `blocks` from slack message to sensor `payload`
+
 # 2.0.4
 
 * Add support for `conversations.info` slack method  as `groups.info` and
