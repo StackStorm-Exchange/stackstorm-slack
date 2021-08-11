@@ -205,6 +205,10 @@ class SlackSensor(PollingSensor):
         if 'attachments' in data:
             payload['attachments'] = data['attachments']
 
+        # Checks if the message contains any blocks and adds it to the payload
+        if 'blocks' in data:
+            payload['blocks'] = data['blocks']
+
         self._sensor_service.dispatch(trigger=trigger, payload=payload)
 
     def _handle_message_ignore_errors(self, data):
