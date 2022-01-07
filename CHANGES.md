@@ -1,5 +1,9 @@
 # Change Log
 
+# 2.1.0
+
+* Upgrade lxml dependency from 3.8.0 to 4.6.5
+
 # 2.0.5
 
 * Add `blocks` from slack message to sensor `payload`
