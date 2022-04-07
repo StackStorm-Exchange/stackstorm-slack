@@ -102,6 +102,7 @@ Example trigger payload:
 The following two actions are provided by the Slack pack.
 
 * ``post_message`` - Post a message to the specified channel using an incoming webhook.
+* ``post_attachment`` - Post an attachment to the specified channel using an incoming webhook.
 * ``users.admin.invite`` - Send an invitation to join a Slack Org.
 * ``users_filter_by`` - List users in a Slack team matching certain creterias.
 
