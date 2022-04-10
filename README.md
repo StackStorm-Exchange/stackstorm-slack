@@ -5,7 +5,8 @@ Pack which allows integration with [Slack](https://slack.com/) service.
 ## Configuration
 
 Copy the example configuration in [`slack.yaml.example`](./slack.yaml.example)
-to `/opt/stackstorm/configs/slack.yaml` and edit as required.
+to `/opt/stackstorm/configs/slack.yaml` and edit as required. 
+Note: Actions ``post_message`` and ``post_attachment`` use the same ``post_message_action`` configuration.
 
 * ``post_message_action.webhook_url`` - Webhook URL.
 * ``post_message_action.channel`` - Channel to send the message to (e.g.
