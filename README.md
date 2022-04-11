@@ -100,7 +100,7 @@ Example trigger payload:
 
 ## Actions
 
-The following two actions are provided by the Slack pack.
+The following actions are provided by the Slack pack.
 
 * ``post_message`` - Post a message to the specified channel using an incoming webhook.
 * ``post_attachment`` - Post an attachment to the specified channel using an incoming webhook.

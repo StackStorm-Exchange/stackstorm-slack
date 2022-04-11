@@ -3,6 +3,7 @@
 # 2.2.0
 
 * Added action `post_attachment`
+* Added missing `icon_url` to config schema
 
 # 2.1.0
 

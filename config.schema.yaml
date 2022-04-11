@@ -24,6 +24,10 @@
         type: "string"
         description: "Default icon of user under which messages will be posted"
         required: false
+      icon_url:
+        type: "string"
+        description: "Default icon url of user under which messages will be posted"
+        required: false
   sensor:
     description: "Sensor specific settings."
     type: "object"

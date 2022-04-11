@@ -5,6 +5,7 @@ post_message_action:
   channel: "#mychannel"
   username: "my-bot"
   icon_emoji: ":panda_face:"
+  icon_url: "https://myiconurl.com"
 
 # Used for Slack sensor
 sensor:

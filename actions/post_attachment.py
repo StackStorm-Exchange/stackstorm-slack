@@ -10,12 +10,13 @@ __all__ = [
 ]
 
 
-class PostMessageAction(Action):
+class PostAttachmentAction(Action):
     def run(self, attachment, username=None, icon_emoji=None, icon_url=None, channel=None,
             disable_formatting=False, webhook_url=None):
         config = self.config.get('post_message_action', {})
         username = username if username else config['username']
         icon_emoji = icon_emoji if icon_emoji else config.get('icon_emoji', None)
+        icon_url = icon_url if icon_url else config.get('icon_url', None)
         channel = channel if channel else config.get('channel', None)
         webhook_url = webhook_url if webhook_url else config.get('webhook_url', None)
 
