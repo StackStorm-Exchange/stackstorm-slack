@@ -1,5 +1,10 @@
 # Change Log
 
+# 2.2.0
+
+* Added action `post_attachment`
+* Added missing `icon_url` to config schema
+
 # 2.1.0
 
 * Upgrade lxml dependency from 3.8.0 to 4.6.5

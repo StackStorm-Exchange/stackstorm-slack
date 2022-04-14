@@ -7,7 +7,7 @@ keywords:
   - chat
   - messaging
   - instant messaging
-version: 2.1.0
+version: 2.2.0
 python_versions:
   - "3"
 author : StackStorm, Inc.

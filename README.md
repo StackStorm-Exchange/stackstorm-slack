@@ -5,7 +5,8 @@ Pack which allows integration with [Slack](https://slack.com/) service.
 ## Configuration
 
 Copy the example configuration in [`slack.yaml.example`](./slack.yaml.example)
-to `/opt/stackstorm/configs/slack.yaml` and edit as required.
+to `/opt/stackstorm/configs/slack.yaml` and edit as required. 
+Note: Actions ``post_message`` and ``post_attachment`` use the same ``post_message_action`` configuration.
 
 * ``post_message_action.webhook_url`` - Webhook URL.
 * ``post_message_action.channel`` - Channel to send the message to (e.g.
@@ -14,6 +15,10 @@ to `/opt/stackstorm/configs/slack.yaml` and edit as required.
 * ``post_message_action.username`` - Default name of the user under which the
   messages will be posted. This setting can be overridden on per action basis.
 * ``post_message_action.icon_emoji`` - Default icon of the user under which the
+  messages will be posted. This setting can be overridden on per action basis.
+  If not provided, default value which is selected when configuring a webhook
+  is used.
+* ``post_message_action.icon_url`` - Default icon url of the user under which the
   messages will be posted. This setting can be overridden on per action basis.
   If not provided, default value which is selected when configuring a webhook
   is used.
@@ -99,9 +104,10 @@ Example trigger payload:
 
 ## Actions
 
-The following two actions are provided by the Slack pack.
+The following actions are provided by the Slack pack.
 
 * ``post_message`` - Post a message to the specified channel using an incoming webhook.
+* ``post_attachment`` - Post an attachment to the specified channel using an incoming webhook.
 * ``users.admin.invite`` - Send an invitation to join a Slack Org.
 * ``users_filter_by`` - List users in a Slack team matching certain creterias.
 
