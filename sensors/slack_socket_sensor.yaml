@@ -1,0 +1,19 @@
+---
+  class_name: "SlackSocketSensor"
+  entry_point: "slack_socket_sensor.py"
+  description: "Sensor which monitors Slack for activity using the API and WebSocket"
+  trigger_types:
+    -
+      name: "peekaboo"
+      description: "Trigger which indicates a ping sensor check has been posted to a channel"
+      payload_schema:
+        type: "object"
+        properties:
+          user:
+            type: "string"
+          channel:
+            type: "string"
+          text:
+            type: "string"
+          command:
+            type: "string"
