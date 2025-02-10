@@ -1,5 +1,9 @@
 # Change Log
 
+# 2.2.1
+
+* fix "__all__" reference for `post_attachment`
+
 # 2.2.0
 
 * Added action `post_attachment`
