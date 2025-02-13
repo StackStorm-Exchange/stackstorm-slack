@@ -31,3 +31,4 @@ class FilesUploadAction(Action):
             assert e.response["ok"] is False
             assert e.response["error"]
             return False, e.response['error']
+
