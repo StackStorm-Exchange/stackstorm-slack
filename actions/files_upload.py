@@ -2,7 +2,9 @@ from st2common.runners.base_action import Action
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
+
 class FilesUploadAction(Action):
+
     def run(self, **kwargs):
         token = kwargs.get('token') if kwargs.get('token') else self.config['action_token']
         client = WebClient(token=token)
@@ -31,4 +33,3 @@ class FilesUploadAction(Action):
             assert e.response["ok"] is False
             assert e.response["error"]
             return False, e.response['error']
-
