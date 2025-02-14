@@ -1,5 +1,9 @@
 # Change Log
 
+# 2.3.0
+
+* migrate files_upload.py to use the slack_sdk helper method files_upload_v2. API endpoint files.upload is deprecated and will stop functioning on March 11, 2025. 
+
 # 2.2.1
 
 * fix "__all__" reference for `post_attachment`
